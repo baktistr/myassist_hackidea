@@ -125,3 +125,9 @@ nb-configuration.xml
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
