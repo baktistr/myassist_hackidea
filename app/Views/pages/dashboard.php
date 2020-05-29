@@ -119,23 +119,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-45" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-57" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-10" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-97" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -155,23 +141,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-70" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-31" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-17" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-64" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -191,23 +163,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-53" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-12" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-23" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-42" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -227,23 +185,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-34" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-54" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-92" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-11" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -263,23 +207,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-45" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-95" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-63" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-11" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -299,23 +229,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-45" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-95" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-63" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-11" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
@@ -335,23 +251,9 @@ div.scrollmenu a:hover {
 																	
 																	<div class="d-flex justify-content-center kt-widget-19">
 													
-																		<div class="kt-widget-19__data">
-
-																			<!--Doc: For the chart bars you can use state helper classes: kt-bg-success, kt-bg-info, kt-bg-danger. Refer: components/custom/colors.html -->
-																			<div class="mx-0 kt-widget-19__chart">
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-45" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="45"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-95" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="95"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-63" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="63"></div>
-																				</div>
-																				<div class="kt-widget-19__bar">
-																					<div class="kt-widget-19__bar-11" data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title="11"></div>
-																				</div>
-																			</div>
+																		<div class="kt-widget-9__chart">
+																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 																		</div>
 																	</div>
 
