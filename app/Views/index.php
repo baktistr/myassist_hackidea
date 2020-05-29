@@ -107,8 +107,11 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 		<!--begin::Page Vendors(used by this page) -->
 		<script src="<?php base_url() ?>assets/plugins/custom/flot/flot.bundle.js" type="text/javascript"></script>
-
+		
+		 <!--begin::Page Scripts(used by this page) -->
+		 <script src="<?php base_url() ?>assets/js/pages/components/keen-datatable/base/data-json.js" type="text/javascript"></script>
 		<!--end::Page Scripts -->
+
 	</body>
 
 	<!-- end::Body -->

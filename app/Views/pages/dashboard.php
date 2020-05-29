@@ -105,164 +105,36 @@ div.scrollmenu a:hover {
 													</div>
 													<div class="kt-portlet__head-toolbar">
 														<div class="kt-portlet__head-wrapper">
-															
+															<div class="">
+																<!-- <button type="button" class="btn btn-label-brand btn-sm btn-bold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																	Export
+																</button> -->
+																<!-- <div class="kt-slider__nav">
+																	<a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-1" role="button" data-slide="prev">
+																		<i class="fa fa-angle-left"></i>
+																	</a>
+																	<a class="kt-slider__nav-next carousel-control-next" href="#kt-widget-slider-13-1" role="button" data-slide="next">
+																		<i class="fa fa-angle-right"></i>
+																	</a>
+																</div> -->
+															</div>
 														</div>
 													</div>
 												</div>
-												
-												<div class="mt-5 scrollmenu mx-4 d-flex flex-row">
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 1</button>
-																	</div>
-															
+												<div class="kt-portlet__body kt-portlet__body--fluid">
+													<div class="kt-widget-9">
+														<div class="kt-widget-9__panel">
+															<div class="kt-widget-9__legends">
+																<div class="kt-widget-9__legend">
+																	<div class="kt-widget-9__legend-label"><h5>Region 1</h5></div>
 																</div>
+															</div>
+															
 														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
+														<div class="kt-widget-9__chart">
 
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 2</button>
-																	</div>
-															
-																</div>
-														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 3</button>
-																	</div>
-															
-																</div>
-														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 4</button>
-																	</div>
-															
-																</div>
-														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 5</button>
-																	</div>
-															
-																</div>
-														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 6</button>
-																	</div>
-															
-																</div>
-														</div>
-													</div>
-													<div class="text-center center mx-5 px-3">
-													<div class=" kt-portlet__body kt-portlet__body--fluid">
-																
-																<div class="text-center">
-																	<!--begin::Portlet-->
-																	
-																	<div class="d-flex justify-content-center kt-widget-19">
-													
-																		<div class="kt-widget-9__chart">
-																			<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-																			<canvas id="kt_chart_sales_statistics" height="250"></canvas>
-																		</div>
-																	</div>
-
-																	<!--end::Portlet-->
-																	<div class="mt-4">
-																		<button type="button" class="btn btn-primary">Region 7</button>
-																	</div>
-															
-																</div>
+															<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+															<canvas id="kt_chart_sales_statistics" height="250"></canvas>
 														</div>
 													</div>
 												</div>
@@ -270,6 +142,7 @@ div.scrollmenu a:hover {
 
 											<!--end::Portlet-->
 										</div>
+
 										<div class="col-lg-6 col-xl-6 order-lg-2 order-xl-1">
 
 											<!--begin::Portlet-->

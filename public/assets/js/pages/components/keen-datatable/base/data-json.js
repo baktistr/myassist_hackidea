@@ -42,24 +42,24 @@ var KTDatatableJsonRemoteDemo = function () {
 					textAlign: 'center',
 				}, {
 					field: 'employee_id',
-					title: 'Employee ID',
+					title: 'Kolom 1',
 				}, {
 					field: 'name',
-					title: 'Name',
+					title: 'Kolom 2',
 					template: function(row) {
 						return row.first_name + ' ' + row.last_name;
 					},
 				}, {
 					field: 'phone',
-					title: 'Phone',
+					title: 'Kolom 3',
 				}, {
 					field: 'hire_date',
-					title: 'Hire Date',
+					title: 'Kolom 4',
 					type: 'date',
 					format: 'MM/DD/YYYY',
 				}, {
 					field: 'status',
-					title: 'Status',
+					title: 'Kolom 5',
 					// callback function support for column rendering
 					template: function(row) {
 						var status = {
@@ -75,7 +75,7 @@ var KTDatatableJsonRemoteDemo = function () {
 					},
 				}, {
 					field: 'type',
-					title: 'Type',
+					title: 'Kolom 7',
 					autoHide: false,
 					// callback function support for column rendering
 					template: function(row) {
@@ -89,7 +89,7 @@ var KTDatatableJsonRemoteDemo = function () {
 					},
 				}, {
 					field: 'Actions',
-					title: 'Actions',
+					title: 'Kolom 8',
 					sortable: false,
 					width: 110,
 					autoHide: false,
