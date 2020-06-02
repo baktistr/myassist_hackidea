@@ -38,6 +38,11 @@ class Home extends BaseController
 		echo view('index', $data);
 	}
 
+	public function login()
+	{
+		echo view('pages/v_login');
+	}
+
 	//--------------------------------------------------------------------
 
 }
