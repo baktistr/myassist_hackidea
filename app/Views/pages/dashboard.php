@@ -98,43 +98,113 @@ div.scrollmenu a:hover {
 										<div class="col-lg-12 col-xl-8 order-lg-2 order-xl-1">
 
 											<!--begin::Portlet-->
-											<div class="kt-portlet kt-portlet--height-fluid">
-												<div class="kt-portlet__head">
-													<div class="kt-portlet__head-label">
-														<h3 class="kt-portlet__head-title">Asset Mapping</h3>
-													</div>
-													<div class="kt-portlet__head-toolbar">
-														<div class="kt-portlet__head-wrapper">
-															<div class="">
-																<!-- <button type="button" class="btn btn-label-brand btn-sm btn-bold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																	Export
-																</button> -->
-																<!-- <div class="kt-slider__nav">
-																	<a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-1" role="button" data-slide="prev">
-																		<i class="fa fa-angle-left"></i>
-																	</a>
-																	<a class="kt-slider__nav-next carousel-control-next" href="#kt-widget-slider-13-1" role="button" data-slide="next">
-																		<i class="fa fa-angle-right"></i>
-																	</a>
-																</div> -->
+											<div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
+												<div class="kt-portlet__body">
+													<div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
+														<div class="kt-slider__head">
+															<div class="kt-slider__label">Asset Mapping</div>
+															<div class="kt-slider__nav">
+																<a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-2" role="button" data-slide="prev">
+																	<i class="fa fa-angle-left"></i>
+																</a>
+																<a class="kt-slider__nav-next carousel-control-next" href="#kt-widget-slider-13-2" role="button" data-slide="next">
+																	<i class="fa fa-angle-right"></i>
+																</a>
 															</div>
 														</div>
-													</div>
-												</div>
-												<div class="kt-portlet__body kt-portlet__body--fluid">
-													<div class="kt-widget-9">
-														<div class="kt-widget-9__panel">
-															<div class="kt-widget-9__legends">
-																<div class="kt-widget-9__legend">
-																	<div class="kt-widget-9__legend-label"><h5>Region 1</h5></div>
+														<div class="carousel-inner">
+															<div class="carousel-item active kt-slider__body">
+																<div class="kt-widget-13">
+																	<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 1</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																	
 																</div>
 															</div>
-															
-														</div>
-														<div class="kt-widget-9__chart">
-
-															<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-															<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 2</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 3</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 4</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 5</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 6</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="carousel-item kt-slider__body">
+																<div class="kt-widget-13">
+																<div class="kt-widget-13__body">
+																		<a class="kt-widget-13__title" href="#">Region 7</a>
+																		<div class="kt-widget-13__desc">
+																			<div class="kt-widget-9__chart">
+																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
+																				<canvas id="kt_chart_sales_statistics" height="250"></canvas>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
