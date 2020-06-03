@@ -28,19 +28,19 @@ class BangunanController extends BaseController
     
     if (!empty($data)) {
       if ($this->bangunan->insert($data) === FALSE) {
-        return redirect()->to('/bangunan-lahan/create')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/aset-bangunan/create')->with('msg', 'Fail to insert new data');
       } else {
-        return redirect()->to('/bangunan-lahan')->with('msg', 'Success to insert new data');
+        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
       }
     } else {
-      return redirect()->to('/bangunan-lahan')->with('msg', 'No data submitted');
+      return redirect()->to('/aset-bangunan')->with('msg', 'No data submitted');
     }
   }
 
   // display edit form
   public function edit($id)
   {
-    $bangunan = $this->bangunan->where('id', $id)->get()->getRowArray();    
+    $bangunan = $this->bangunan->where('gedung_id', $id)->get()->getRowArray();    
     if (isset($bangunan)) {
       $data = [
         'title' => 'Buat Bangunan Lahan',
@@ -50,7 +50,7 @@ class BangunanController extends BaseController
       ];
       echo view('index', $data);
     } else {
-      return redirect()->to('/bangunan-lahan');
+      return redirect()->to('/aset-bangunan');
     }
   }
 
@@ -61,9 +61,9 @@ class BangunanController extends BaseController
 
     if (!empty($data)) {
       if ($this->bangunan->update($data) === FALSE) {
-        return redirect()->to('/bangunan-lahan/edit')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/aset-bangunan/edit')->with('msg', 'Fail to insert new data');
       } else {
-        return redirect()->to('/bangunan-lahan')->with('msg', 'Success to insert new data');
+        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
       }
     }
   }
@@ -74,9 +74,9 @@ class BangunanController extends BaseController
     $sql = $this->bangunan->where('gedung_id', $id)->delete();
 
     if ($this->bangunan->db->affectedRows()) {
-      return redirect()->to('/bangunan-lahan')->with('msg','Data is not exist');
+      return redirect()->to('/aset-bangunan')->with('msg','Data is not exist');
     } else {
-      return redirect()->to('/bangunan-lahan')->with('msg','Success delete data');
+      return redirect()->to('/aset-bangunan')->with('msg','Success delete data');
     }
   }
 }

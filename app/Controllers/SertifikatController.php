@@ -40,7 +40,7 @@ class SertifikatController extends BaseController
   // display edit form
   public function edit($id)
   {
-    $sertifikat = $this->sertifikat->where('id', $id)->get()->getRowArray();    
+    $sertifikat = $this->sertifikat->where('sertifikat_id', $id)->get()->getRowArray();    
     if (isset($sertifikat)) {
       $data = [
         'title' => 'Buat Sertifikat Lahan',
