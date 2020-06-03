@@ -13,11 +13,26 @@ class LahanController extends BaseController
 	}
 
 	//api /lahan
-	public function index($id_areal='')
+	public function index($id_areal='', $property='')
 	{
+		$lahan = [];
 		$this->sertifikat = new Sertifikat_model();
 		$this->gedung     = new Gedung_model();
 		if($id_areal!='') {
+			if($property!='') {
+				switch ($property) {
+					case 'bangunan':
+						$lahan = $this->gedung->where('id_areal_fix_old', $id_areal)->get()->getResultArray();
+						break;
+					case 'sertifikat':
+						$lahan = $this->sertifikat->where('id_areal', $id_areal)->get()->getResultArray();
+						break;
+					default:	
+						return $this->response->setStatusCode(404)->setJSON(['message' => 'Not Found!']);
+						break;
+				}
+				return $this->response->setJSON($lahan);		
+			}
 			$lahan = $this->lahan->where('id_areal_fix_old', $id_areal)->get()->getRowArray();
 			if(!empty($lahan)) {				
 				$lahan['sertifikat'] = $this->sertifikat->where('id_areal', $id_areal)->get()->getResultArray();
