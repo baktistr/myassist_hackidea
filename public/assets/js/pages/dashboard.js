@@ -628,6 +628,7 @@ var KTDashboard = function() {
                 }
             }
         });
+        
     }
 
     var widgetRevenueGrowthChart = function() {

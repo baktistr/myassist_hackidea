@@ -22,6 +22,16 @@ class Home extends BaseController
 		echo view('index', $data);
 	}
 
+	public function asetLahan2()
+	{
+		$data=[
+			'title' => 'Aset Lahan',
+			'isi' => 'pages/asetLahanCreate',
+			'subheader' => 'Data Asset Lahan'
+		];
+		echo view('index', $data);
+	}
+
 	public function asetBangunan()
 	{
 		$data=[
@@ -32,12 +42,31 @@ class Home extends BaseController
 		echo view('index', $data);
 	}
 
+	public function asetBangunanCreate()
+	{
+		$data=[
+			'title' => 'Create Aset Bangunan',
+			'isi' => 'pages/asetBangunanCreate',
+			'subheader' => 'Create Data Asset Bangunan'
+		];
+		echo view('index', $data);
+	}
+
 	public function sertifikatLahan()
 	{
 		$data=[
 			'title' => 'Sertifikat Lahan',
 			'isi' => 'pages/sertifikatLahan',
 			'subheader' => 'Data Sertifikat'
+		];
+		echo view('index', $data);
+	}
+	public function sertifikatLahanCreate()
+	{
+		$data=[
+			'title' => 'Create Sertifikat Lahan',
+			'isi' => 'pages/sertifikatLahanCreate',
+			'subheader' => 'Create Data Sertifikat'
 		];
 		echo view('index', $data);
 	}

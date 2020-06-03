@@ -64,7 +64,7 @@
             </div>
           </div>
           &nbsp;
-          <a href="#" class="btn btn-brand btn-bold btn-upper btn-font-sm">
+          <a href="<?= base_url('/aset-lahan-create');?>" class="btn btn-brand btn-bold btn-upper btn-font-sm">
             <i class="la la-plus"></i>
             New Record
           </a>

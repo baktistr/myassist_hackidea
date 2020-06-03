@@ -1,32 +1,3 @@
-<style> 
-       
-		.nowrap {
-        white-space:nowrap;
-    }
-	.center {
-  text-align: center;
-}
-div.scrollmenu {
-  overflow: auto;
-  white-space: nowrap;
-}
-
-div.scrollmenu a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
-
-div.scrollmenu a:hover {
-  background-color: #777;
-}
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
-    </style> 
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 
 <!-- begin:: Content -->
@@ -116,7 +87,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item active kt-slider__body">
 																<div class="kt-widget-13">
 																	<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 1</a>
+																		<h5 class="text-dark mb-4">Region 1</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -130,7 +101,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 2</a>
+																		<h5 class="text-dark mb-4">Region 2</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -143,7 +114,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 3</a>
+																		<h5 class="text-dark mb-4">Region 3</h5>	
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -156,7 +127,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 4</a>
+																		<h5 class="text-dark mb-4">Region 4</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -169,7 +140,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 5</a>
+																		<h5 class="text-dark mb-4">Region 5</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -182,7 +153,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 6</a>
+																		<h5 class="text-dark mb-4">Region 6</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -195,7 +166,7 @@ div.scrollmenu a:hover {
 															<div class="carousel-item kt-slider__body">
 																<div class="kt-widget-13">
 																<div class="kt-widget-13__body">
-																		<a class="kt-widget-13__title" href="#">Region 7</a>
+																		<h5 class="text-dark mb-4">Region 7</h5>
 																		<div class="kt-widget-13__desc">
 																			<div class="kt-widget-9__chart">
 																				<!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->

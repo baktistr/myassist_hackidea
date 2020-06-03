@@ -33,12 +33,14 @@ $routes->setAutoRoute(true);
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/aset-lahan', 'Home::asetLahan');
 $routes->get('/aset-bangunan', 'Home::asetBangunan');
+$routes->get('/aset-bangunan-create', 'Home::asetBangunanCreate');
 $routes->get('/sertifikat-lahan', 'Home::sertifikatLahan');
+$routes->get('/sertifikat-lahan-create', 'Home::sertifikatLahanCreate');
 $routes->get('/login', 'Home::login');
 
 //crud lahan
-$routes->get('/aset-lahan/create', 'LahanController::create');
-$routes->post('/aset-lahan/create', 'LahanController::store');
+$routes->get('/aset-lahan-create', 'LahanController::create');
+$routes->post('/aset-lahan/create-post', 'LahanController::store');
 $routes->get('/aset-lahan/edit/(:any)', 'LahanController::edit/$1');
 $routes->post('/aset-lahan/edit/(:any)', 'LahanController::update/$1');
 $routes->get('/aset-lahan/delete/(:any)', 'LahanController::delete/$1');
