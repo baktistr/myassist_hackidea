@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 	<head>
 		<base href="">
 		<meta charset="utf-8" />
-		<title>Dashboard</title>
+		<title>My Assist</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
