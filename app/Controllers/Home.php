@@ -7,6 +7,7 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Dashboard',
 			'isi' => 'pages/dashboard',
+			'subheader' => 'Dashboard'
 		];
 		echo view('index', $data);
 	}
@@ -16,6 +17,7 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Aset Lahan',
 			'isi' => 'pages/asetLahan',
+			'subheader' => 'Data Asset Lahan'
 		];
 		echo view('index', $data);
 	}
@@ -25,6 +27,7 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Aset Bangunan',
 			'isi' => 'pages/asetBangunan',
+			'subheader' => 'Data Asset Bangunan'
 		];
 		echo view('index', $data);
 	}
@@ -34,6 +37,7 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Sertifikat Lahan',
 			'isi' => 'pages/sertifikatLahan',
+			'subheader' => 'Data Sertifikat'
 		];
 		echo view('index', $data);
 	}

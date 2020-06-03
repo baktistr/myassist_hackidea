@@ -36,6 +36,16 @@ $routes->get('/aset-bangunan', 'Home::asetBangunan');
 $routes->get('/sertifikat-lahan', 'Home::sertifikatLahan');
 $routes->get('/login', 'Home::login');
 
+//crud lahan
+$routes->get('/asetLahan/create', 'LahanController::create');
+$routes->post('/asetLahan/create', 'LahanController::store');
+$routes->get('/asetLahan/edit/(:any)', 'LahanController::edit/$1');
+$routes->post('/asetLahan/edit/(:any)', 'LahanController::update/$1');
+$routes->get('/asetLahan/delete/(:any)', 'LahanController::delete/$1');
+
+//api
+$routes->get('/api/lahan', 'LahanController::index');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
