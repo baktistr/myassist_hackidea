@@ -40,8 +40,7 @@ class SertifikatController extends BaseController
   // display edit form
   public function edit($id)
   {
-    $sertifikat = $this->sertifikat->where('id', $id)->get()->getRowArray();
-    var_dump($sertifikat); exit;
+    $sertifikat = $this->sertifikat->where('id', $id)->get()->getRowArray();    
     if (isset($sertifikat)) {
       $data = [
         'title' => 'Buat Sertifikat Lahan',
@@ -58,7 +57,7 @@ class SertifikatController extends BaseController
   // // update sertifikat ke db
   public function update($id)
   {
-    $data = $this->request->getRawInput();
+    $data = $this->request->getPost();
 
     if (!empty($data)) {
       if ($this->sertifikat->update($data) === FALSE) {
@@ -72,7 +71,7 @@ class SertifikatController extends BaseController
   // //delete data sertifikat di db
   public function delete($id)
   {
-    $sql = $this->sertifikat->where('id', $id)->delete();
+    $this->sertifikat->where('sertifikat_id', $id)->delete();
 
     if ($this->sertifikat->db->affectedRows()) {
       return redirect()->to('/sertifikat-lahan')->with('msg','Data is not exist');

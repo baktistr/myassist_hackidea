@@ -43,6 +43,13 @@ $routes->get('/aset-lahan/edit/(:any)', 'LahanController::edit/$1');
 $routes->post('/aset-lahan/edit/(:any)', 'LahanController::update/$1');
 $routes->get('/aset-lahan/delete/(:any)', 'LahanController::delete/$1');
 
+//crud bangunan
+$routes->get('/aset-bangunan/create', 'BangunanController::create');
+$routes->get('/aset-bangunan/edit/(:any)', 'BangunanController::edit/$1');
+$routes->post('/aset-bangunan/create', 'BangunanController::store');
+$routes->post('/aset-bangunan/edit/(:any)', 'BangunanController::update/$1');
+$routes->get('/aset-bangunan/delete/(:any)', 'BangunanController::delete/$1');
+
 // crud sertifikat
 $routes->get('/sertifikat-lahan/create', 'SertifikatController::create');
 $routes->get('/sertifikat-lahan/edit/(:any)', 'SertifikatController::delete/$1');
