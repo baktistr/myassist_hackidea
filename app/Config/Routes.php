@@ -45,6 +45,7 @@ $routes->get('/aset-lahan/delete/(:any)', 'LahanController::delete/$1');
 
 //api
 $routes->get('/api/lahan', 'LahanController::index');
+$routes->get('/api/lahan/(:any)', 'LahanController::index/$1');
 
 /**
  * --------------------------------------------------------------------

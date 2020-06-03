@@ -21,10 +21,6 @@ class SertifikatTable extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 255
 			],
-			'id_areal_copy'		=> [
-				'type'			=> 'INT',
-				'constraint'	=> 11
-			],
 			'lokasi_aset'		=> [
 				'type'			=> 'TEXT',
 				'null'			=> FALSE

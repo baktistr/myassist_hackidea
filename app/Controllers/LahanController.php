@@ -2,20 +2,31 @@
 namespace App\Controllers;
 
 use App\Models\Lahan_model;
+use App\Models\Sertifikat_model;
+use App\Models\Gedung_model;
 
 class LahanController extends BaseController
 {	
 	public function __construct() 
 	{
-		$this->lahan = new Lahan_model();
+		$this->lahan = new Lahan_model();	
 	}
 
 	//api /lahan
-	public function index()
+	public function index($id_areal='')
 	{
-		$lahan = $this->lahan->get()->getResultArray();
-		
-		return $this->response->setJSON($lahan);
+		$this->sertifikat = new Sertifikat_model();
+		$this->gedung     = new Gedung_model();
+		if($id_areal!='') {
+			$lahan = $this->lahan->where('id_areal_fix_old', $id_areal)->get()->getRowArray();
+			if(!empty($lahan)) {				
+				$lahan['sertifikat'] = $this->sertifikat->where('id_areal', $id_areal)->get()->getResultArray();
+				$lahan['bangunan']	 = $this->gedung->where('id_areal_fix_old', $id_areal)->get()->getResultArray();
+			}
+		} else {
+			$lahan = $this->lahan->get()->getResultArray();
+		}
+		return $this->response->setJSON($lahan);	
 	}
 
 	//crud lahan

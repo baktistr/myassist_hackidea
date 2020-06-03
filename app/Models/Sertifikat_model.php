@@ -8,8 +8,7 @@
 		protected $table = 'sertifikat';
 		protected $allowedFields = [
 			'id_areal',			
-			'no_sertifikat',
-			'id_areal_copy',		
+			'no_sertifikat',		
 			'lokasi_aset',		
 			'provinsi',			
 			'kotamadya',			
@@ -35,7 +34,6 @@
 		protected $validationRules = [
 			'id_areal'			=> 'required',
 			'no_sertifikat'		=> 'required',
-			'id_areal_copy'		=> 'required',
 			'lokasi_aset'		=> 'required',
 			'provinsi'			=> 'required',
 			'kotamadya'			=> 'required',
