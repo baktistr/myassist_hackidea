@@ -3,7 +3,7 @@
 <div id="kt_header_mobile" class="kt-header-mobile ">
 	<div class="kt-header-mobile__logo">
 		<a href="index.html">
-			<img alt="Logo" src="assets/media/logos/logo-5.png" />
+		<img src="<?php base_url() ?>assets/media/logos/logo-myAsset.png" class="kt-header__brand-logo-default" />
 		</a>
 	</div>
 	<div class="kt-header-mobile__toolbar">

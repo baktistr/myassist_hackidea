@@ -18,7 +18,7 @@
 												<div class="kt-portlet__body">
 													<div id="kt-widget-slider-13-1" class="kt-slider carousel slide" data-ride="carousel" data-interval="8000">
 														<div class="text-center kt-slider__head">
-															<div class="text-dark kt-slider__label">Asset Lahan</div>
+															<div class="text-dark kt-slider__label">Aset Lahan</div>
 														</div>
 														<div class="carousel-inner">
 															<div class=" active kt-slider__body">
@@ -42,7 +42,7 @@
 												<div class="kt-portlet__body">
 													<div id="kt-widget-slider-13-1" class="kt-slider carousel slide" data-ride="carousel" data-interval="8000">
 														<div class="text-center kt-slider__head">
-															<div class="text-dark kt-slider__label">Asset Bangunan</div>
+															<div class="text-dark kt-slider__label">Aset Bangunan</div>
 														</div>
 														<div class="carousel-inner">
 															<div class=" active kt-slider__body">
@@ -73,7 +73,7 @@
 												<div class="kt-portlet__body">
 													<div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
 														<div class="kt-slider__head">
-															<div class="kt-slider__label">Asset Mapping</div>
+															<div class="kt-slider__label">Aset Mapping</div>
 															<div class="kt-slider__nav">
 																<a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-2" role="button" data-slide="prev">
 																	<i class="fa fa-angle-left"></i>
