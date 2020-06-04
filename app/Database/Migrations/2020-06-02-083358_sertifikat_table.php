@@ -29,7 +29,7 @@ class SertifikatTable extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 100
 			],
-			'kotamadya'			=> [
+			'kodya'			=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 100
 			],
@@ -41,7 +41,7 @@ class SertifikatTable extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 100
 			],
-			'div_regional'		=> [
+			'divisi_regional'	=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 255
 			],
@@ -76,9 +76,8 @@ class SertifikatTable extends Migration
 				'constraint'	=> 11
 			],
 			'status_hgb'		=> [
-				'type'			=> 'enum',
-				'constraint'	=> ['aktif', 'tidak aktif'],
-				'default'		=> 'aktif'
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 100
 			],
 			'loker'				=> [
 				'type'			=> 'INT',
@@ -93,19 +92,22 @@ class SertifikatTable extends Migration
 				'constraint'	=> 10
 			],
 			'status_penyimpanan'=> [
-				'type'			=> 'enum',
-				'constraint'	=> ['ada', 'tidak ada'],
-				'default'		=> 'ada'
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 100
 			],
-			'final_status'		=> [
-				'type'			=> 'enum',
-				'constraint'	=> ['aktif', 'tidak aktif'],
-				'default'		=> 'aktif'
+			// 'final_status'		=> [
+			// 	'type'			=> 'VARCHAR',
+			// 	'constraint'	=> 100
+			// ],
+			// 'keterangan'		=> [
+			// 	'type'			=> 'TEXT',
+			// 	'null'			=> TRUE
+			// ],
+			'scan_sertifikat'	=> [
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 255
 			],
-			'keterangan'		=> [
-				'type'			=> 'TEXT',
-				'null'			=> TRUE
-			]
+
 		]);
 		$this->forge->addKey('sertifikat_id', TRUE);
 		$this->forge->createTable('sertifikat');

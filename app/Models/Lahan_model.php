@@ -41,7 +41,7 @@
 			'takos_t_f'					=> 'required',
 			'luas_tanah'				=> 'required',
 			'luas_gedung'				=> 'required',
-			'penggunaan'				=> 'required',
+			// 'penggunaan'				=> 'required',
 			'sertifikat'				=> 'required',
 			'penyimpanan_sertifikat'	=> 'required',
 			'area_regional'				=> 'required',
