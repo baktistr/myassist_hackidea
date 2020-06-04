@@ -628,6 +628,111 @@ var KTDashboard = function() {
                 }
             }
         });
+
+        // chart 2
+    
+        var barChartData_2 = {
+            labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug'],
+            datasets: [{
+                label: 'Sales',
+                backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
+                borderWidth: 0,
+                data: [20, 30, 40, 35, 45, 55, 45]
+            }, {
+                label: 'Orders',
+                backgroundColor: color(KTApp.getBaseColor('shape', 1)).alpha(1).rgbString(),
+                borderWidth: 0,
+                data: [25, 35, 45, 40, 50, 60, 50]
+            }]
+        };
+
+        var ctx_2 = document.getElementById("kt_chart_sales_statistics2").getContext('2d');
+        var myBar_2 = new Chart(ctx_2, {
+            type: 'bar',
+            data: barChartData_2,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: false,
+                scales: {
+                    xAxes: [{
+                        categoryPercentage: 0.35,
+                        barPercentage: 0.70,
+                        display: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        },
+                        gridLines: false,
+                        ticks: {
+                            display: true,
+                            beginAtZero: true,
+                            fontColor: KTApp.getBaseColor('shape', 3),
+                            fontSize: 13,
+                            padding: 10
+                        }
+                    }],
+                    yAxes: [{
+                        categoryPercentage: 0.35,
+                        barPercentage: 0.70,
+                        display: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value'
+                        },
+                        gridLines: {
+                            color: KTApp.getBaseColor('shape', 2),
+                            drawBorder: false,
+                            offsetGridLines: false,
+                            drawTicks: false,
+                            borderDash: [3, 4],
+                            zeroLineWidth: 1,
+                            zeroLineColor: KTApp.getBaseColor('shape', 2),
+                            zeroLineBorderDash: [3, 4]
+                        },
+                        ticks: {
+                            max: 70,                            
+                            stepSize: 10,
+                            display: true,
+                            beginAtZero: true,
+                            fontColor: KTApp.getBaseColor('shape', 3),
+                            fontSize: 13,
+                            padding: 10
+                        }
+                    }]
+                },
+                title: {
+                    display: false
+                },
+                hover: {
+                    mode: 'index'
+                },
+                tooltips: {
+                    enabled: true,
+                    intersect: false,
+                    mode: 'nearest',
+                    bodySpacing: 5,
+                    yPadding: 10,
+                    xPadding: 10, 
+                    caretPadding: 0,
+                    displayColors: false,
+                    backgroundColor: KTApp.getStateColor('brand'),
+                    titleFontColor: '#ffffff', 
+                    cornerRadius: 4,
+                    footerSpacing: 0,
+                    titleSpacing: 0
+                },
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 5,
+                        bottom: 5
+                    }
+                }
+            }
+        });
+        // end chart 2
         
     }
 
