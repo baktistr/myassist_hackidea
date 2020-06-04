@@ -63,6 +63,9 @@ $routes->get('/sertifikat-lahan/delete(:any)', 'SertifikatController::delete/$1'
 $routes->get('/api/lahan', 'LahanController::index');
 $routes->get('/api/lahan/(:any)', 'LahanController::index/$1');
 $routes->get('/api/lahan/(:any)/(:any)', 'LahanController::index/$1/$2');
+$routes->post('/api/lahan', 'LahanController::api_create');
+$routes->put('/api/lahan/(:any)', 'LahanController::api_update/$1');
+$routes->delete('/api/lahan/(:any)', 'LahanController::api_delete/$1');
 
 $routes->get('/api/bangunan', 'BangunanController::index');
 $routes->get('/api/bangunan/(:any)', 'BangunanController::index/$1');

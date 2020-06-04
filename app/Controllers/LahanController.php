@@ -44,6 +44,76 @@ class LahanController extends BaseController
 		return $this->response->setJSON($lahan);	
 	}
 
+	//api section
+	public function api_create()
+	{
+		$req = $this->request->getJSON();
+		if(!empty($req)) {
+			if($this->lahan->insert($req) === FALSE) {	
+				$res = [
+					'status' 	=> 'ERROR',
+					'message' 	=> 'Fail insert data',
+					'data'		=> $this->lahan->errors()
+				];
+				return $this->response->setJSON($res);
+			} else {											
+				$res = [
+					'status' 	=> 'OK',
+					'message' 	=> 'Success insert data',
+					'data'		=> $req
+				];
+				return $this->response->setJSON($res);
+			}
+		}
+	}
+
+	public function api_update($id)
+	{
+		$req = $this->request->getJSON();
+		if(!empty($req)) {
+			if($this->lahan->update($id, $req) === FALSE) {	
+				$res = [
+					'status' 	=> 'ERROR',
+					'message' 	=> 'Fail update data',
+					'data'		=> $this->lahan->errors()
+				];
+				return $this->response->setJSON($res);
+			} else {											
+				$res = [
+					'status' 	=> 'OK',
+					'message' 	=> 'Success update data',
+					'data'		=> null
+				];
+				return $this->response->setJSON($res);
+			}
+		}
+	}
+
+	public function api_delete($id)
+	{				
+		if(!empty($id)) {
+			$this->lahan->where('lahan_id', $id)->delete();
+
+		    if ($this->lahan->db->affectedRows()) {
+		    	$res = [
+					'status' 	=> 'OK',
+					'message' 	=> 'Success delete data',
+					'data'		=> null
+				];
+				return $this->response->setJSON($res);
+		    } else {
+				$res = [
+					'status' 	=> 'ERROR',
+					'message' 	=> 'Fail delete data',
+					'data'		=> $this->lahan->errors()
+				];
+				return $this->response->setJSON($res);
+		    }
+		}
+	}
+
+	//end api section
+
 	//crud lahan
 	//create new lahan
 	public function create()

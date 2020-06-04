@@ -6,6 +6,7 @@
 	class Gedung_model extends Model
 	{
 		protected $table = 'gedung';
+		protected $primaryKey = 'gedung_id';
 		protected $allowedFields = [
 			'id_areal_fix_old',
 			'kode_lokasi',

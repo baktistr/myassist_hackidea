@@ -6,6 +6,7 @@
 	class Lahan_model extends Model
 	{
 		protected $table = 'lahan';
+		protected $primaryKey = 'lahan_id';
 		protected $allowedFields = [
 			'id_areal_fix_old',
 			'nama_lahan',

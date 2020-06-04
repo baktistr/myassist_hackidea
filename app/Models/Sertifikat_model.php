@@ -6,6 +6,7 @@
 	class Sertifikat_model extends Model
 	{
 		protected $table = 'sertifikat';
+		protected $primaryKey = 'sertifikat_id';
 		protected $allowedFields = [
 			'id_areal',			
 			'no_sertifikat',		
