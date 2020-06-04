@@ -22,6 +22,77 @@ class BangunanController extends BaseController
     return $this->response->setJSON($bangunan);  
   }
 
+  public function api_create()
+  {
+    $req = $this->request->getJSON();
+    if(!empty($req)) {
+      if($this->bangunan->insert($req) === FALSE) {  
+        $res = [
+          'status'  => 'ERROR',
+          'message'   => 'Fail insert data',
+          'data'    => $this->bangunan->errors()
+        ];
+        return $this->response->setJSON($res);
+      } else {    
+        $req->gedung_id = $this->bangunan->getInsertID();                  
+        $res = [
+          'status'  => 'OK',
+          'message'   => 'Success insert data',
+          'data'    => $req
+        ];
+        return $this->response->setJSON($res);
+      }
+    }
+  }
+
+  public function api_update($id)
+  {
+    $req = $this->request->getJSON();
+    if(!empty($req)) {
+      if($this->bangunan->update($id, $req) === FALSE) { 
+        $res = [
+          'status'  => 'ERROR',
+          'message'   => 'Fail update data',
+          'data'    => $this->bangunan->errors()
+        ];
+        return $this->response->setJSON($res);
+      } else {
+        $req->gedung_id = $id;                      
+        $res = [
+          'status'  => 'OK',
+          'message'   => 'Success update data',
+          'data'    => $req
+        ];
+        return $this->response->setJSON($res);
+      }
+    }
+  }
+
+  public function api_delete($id)
+  {       
+    if(!empty($id)) {
+      $this->bangunan->where('gedung_id', $id)->delete();
+
+      if ($this->bangunan->db->affectedRows()) {
+        $res = [
+        'status'  => 'OK',
+        'message'   => 'Success delete data',
+        'data'    => null
+      ];
+      return $this->response->setJSON($res);
+      } else {
+        $res = [
+          'status'  => 'ERROR',
+          'message'   => 'Fail delete data',
+          'data'    => $this->bangunan->errors()
+        ];
+        return $this->response->setJSON($res);
+      }
+    }
+  }
+
+  //end section api
+
   // display form insert
   public function create()
 	{

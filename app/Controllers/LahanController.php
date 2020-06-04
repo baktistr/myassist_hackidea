@@ -12,7 +12,7 @@ class LahanController extends BaseController
 		$this->lahan = new Lahan_model();	
 	}
 
-	//api /lahan
+	//api section /lahan
 	public function index($id_areal='', $property='')
 	{
 		$lahan = [];
@@ -43,8 +43,7 @@ class LahanController extends BaseController
 		}
 		return $this->response->setJSON($lahan);	
 	}
-
-	//api section
+	
 	public function api_create()
 	{
 		$req = $this->request->getJSON();
@@ -56,7 +55,8 @@ class LahanController extends BaseController
 					'data'		=> $this->lahan->errors()
 				];
 				return $this->response->setJSON($res);
-			} else {											
+			} else {				
+				$req->lahan_id = $this->bangunan->getInsertID();							
 				$res = [
 					'status' 	=> 'OK',
 					'message' 	=> 'Success insert data',
@@ -78,11 +78,12 @@ class LahanController extends BaseController
 					'data'		=> $this->lahan->errors()
 				];
 				return $this->response->setJSON($res);
-			} else {											
+			} else {	
+				$req->lahan_id = $id;      
 				$res = [
 					'status' 	=> 'OK',
 					'message' 	=> 'Success update data',
-					'data'		=> null
+					'data'		=> $req
 				];
 				return $this->response->setJSON($res);
 			}

@@ -41,6 +41,9 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		header('Access-Control-Allow-Origin: *');
+		header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+		header("Access-Control-Allow-Headers: Content-Type, Content-Length, Accept-Encoding");
 	}
 
 }
