@@ -10,8 +10,22 @@ var lahanDatatable = function () {
 		var datatable = $('#data-lahan').KTDatatable({
 			// datasource definition
 			data: {
-				type: 'local',
-				source: 'https://keenthemes.com/keen/tools/preview/api/datatables/datasource/employee.json',
+				type: 'remote',
+				source: {
+					read: {
+						url: 'http://localhost:8080/api/lahan',
+						method: 'GET',
+						map: function (raw) {
+							console.log(raw)
+							// sample data mapping
+							var dataSet = raw;
+							if (typeof raw.data !== 'undefined') {
+								dataSet = raw.data;
+							}
+							return dataSet;
+						},
+					},
+				},
 				pageSize: 10,
 			},
 
@@ -34,45 +48,42 @@ var lahanDatatable = function () {
 			// columns definition
 			columns: [
 				{
-					field: 'id',
+					field: 'lahan_id',
 					title: '#',
-					sortable: false,
-					type: 'number',
-					selector: {class: 'kt-checkbox--solid'},
 					textAlign: 'center',
 				},
 				{
-					field: 'id_areal',
+					field: 'id_areal_fix_old',
 					title: 'ID Areal',
 				},
 				{
-					field: 'no_sertifikat',
-					title: 'No. Sertifikat',
+					field: 'nama_lahan',
+					title: 'Nama Lahan',
 				},
 				{
-					field: 'lokasi_aset',
-					title: 'Lokasi Asset',
+					field: 'alamat',
+					title: 'Alamat',
 				},
 				{
-					field: 'provinsi',
+					field: 'provinsi_nama',
 					title: 'Provinsi',
 					autoHide: false,
 				},
 				{
-					field: 'kotamadya',
-					title: 'Kotamadya',
+					field: 'kota_nama',
+					title: 'Kota',
 				},
 				{
-					field: 'kecamatan',
+					field: 'kecamatan_nama',
 					title: 'Kecamatan'
 				},
 				{
-					field: 'kelurahan',
-					title: 'Kelurahan',
+					field: 'desa_nama',
+					title: 'Desa',
 				},
 				{
-					field: 'div_regional',
-					title: 'Divisi Reg'
+					field: 'penggunaan',
+					title: 'Penggunaan'
 				}
 			],
 		});
