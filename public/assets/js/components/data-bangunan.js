@@ -10,10 +10,27 @@ var bangunanDatatable = function () {
 		var datatableBangunan = $('#data-bangunan').KTDatatable({
 			// datasource definition
 			data: {
-				type: 'local',
-				source: 'https://keenthemes.com/keen/tools/preview/api/datatables/datasource/employee.json',
+				// type: 'local',
+				// source: 'https://keenthemes.com/keen/tools/preview/api/datatables/datasource/employee.json',
+				type: 'remote',
+				source: {
+					read: {
+						url: 'http://localhost:8080/api/bangunan',
+						method: 'GET',
+						map: function (raw) {
+							console.log(raw)
+							// sample data mapping
+							var dataSet = raw;
+							if (typeof raw.data !== 'undefined') {
+								dataSet = raw.data;
+							}
+							return dataSet;
+						},
+					},
+				},
 				pageSize: 10,
 			},
+
 
 			// layout definition
 			layout: {
@@ -34,45 +51,42 @@ var bangunanDatatable = function () {
 			// columns definition
 			columns: [
 				{
-					field: 'id',
+					field: 'gedung_id',
 					title: '#',
-					sortable: false,
-					type: 'number',
-					selector: {class: 'kt-checkbox--solid'},
 					textAlign: 'center',
 				},
 				{
-					field: 'id_areal',
+					field: 'id_areal_fix_old',
 					title: 'ID Areal',
 				},
 				{
-					field: 'no_sertifikat',
-					title: 'No. Sertifikat',
+					field: 'urut_gedung',
+					title: 'Urut Gedung',
 				},
 				{
-					field: 'lokasi_aset',
-					title: 'Lokasi Asset',
+					field: 'kode_gedung',
+					title: 'Kode Gedung',
 				},
 				{
-					field: 'provinsi',
-					title: 'Provinsi',
+					field: 'nama_gedung',
+					title: 'Nama Gedung',
 					autoHide: false,
 				},
 				{
-					field: 'kotamadya',
-					title: 'Kotamadya',
+					field: 'lat',
+					title: 'Lat',
 				},
 				{
-					field: 'kecamatan',
-					title: 'Kecamatan'
+					field: 'long',
+					title: 'Long'
 				},
 				{
-					field: 'kelurahan',
-					title: 'Kelurahan',
+					field: 'jumlah_lantai',
+					title: 'Jumlah Lantai',
 				},
 				{
-					field: 'div_regional',
-					title: 'Divisi Reg'
+					field: 'nop',
+					title: 'Nop'
 				}
 			],
 		});
