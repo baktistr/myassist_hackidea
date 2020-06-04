@@ -10,6 +10,18 @@ class SertifikatController extends BaseController
 		$this->sertifikat = new Sertifikat_model();
 	}
 
+  //api /sertifikat
+  public function index($sertifikat_id='')
+  {
+    $sertifikat = [];    
+    if($sertifikat_id!='') {      
+      $sertifikat = $this->sertifikat->where('sertifikat_id', $sertifikat_id)->get()->getRowArray();      
+    } else {
+      $sertifikat = $this->sertifikat->get()->getResultArray();
+    }
+    return $this->response->setJSON($sertifikat);  
+  }
+
   // display form insert
   public function create()
 	{

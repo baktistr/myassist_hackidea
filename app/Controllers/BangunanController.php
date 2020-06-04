@@ -10,6 +10,18 @@ class BangunanController extends BaseController
 		$this->bangunan = new Gedung_model();
 	}
 
+  //api /sertifikat
+  public function index($bangunan_id='')
+  {
+    $bangunan = [];        
+    if($bangunan_id!='') {      
+      $bangunan = $this->bangunan->where('gedung_id', $bangunan_id)->get()->getRowArray();      
+    } else {
+      $bangunan = $this->bangunan->get()->getResultArray();
+    }
+    return $this->response->setJSON($bangunan);  
+  }
+
   // display form insert
   public function create()
 	{
