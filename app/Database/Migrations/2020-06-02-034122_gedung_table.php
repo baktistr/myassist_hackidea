@@ -33,6 +33,14 @@ class GedungTable extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 255
 			],
+			'lat'		=> [
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 255
+			],
+			'long'		=> [
+				'type'			=> 'VARCHAR',
+				'constraint'	=> 255
+			],
 			'peruntukan'		=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 255
@@ -45,7 +53,7 @@ class GedungTable extends Migration
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 255
 			],
-			'luas_bangunan'		=> [
+			'luas_gedung'		=> [
 				'type'			=> 'INT',
 				'constraint'	=> 11
 			],

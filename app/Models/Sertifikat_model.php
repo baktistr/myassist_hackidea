@@ -11,10 +11,10 @@
 			'no_sertifikat',		
 			'lokasi_aset',		
 			'provinsi',			
-			'kotamadya',			
+			'kodya',			
 			'kecamatan',			
 			'kelurahan',			
-			'div_regional',
+			'divisi_regional',
 			'witel',				
 			'luas',				
 			'sk_hak',	
@@ -28,18 +28,19 @@
 			'bundel',			
 			'halaman',			
 			'status_penyimpanan',
-			'final_status',		
-			'keterangan'		
+			// 'final_status',		
+			// 'keterangan'	
+			'scan_sertifikat'	
 		];
 		protected $validationRules = [
 			'id_areal'			=> 'required',
 			'no_sertifikat'		=> 'required',
 			'lokasi_aset'		=> 'required',
 			'provinsi'			=> 'required',
-			'kotamadya'			=> 'required',
+			'kodya'				=> 'required',
 			'kecamatan'			=> 'required',
 			'kelurahan'			=> 'required',
-			'div_regional'		=> 'required',
+			'divisi_regional'	=> 'required',
 			'witel'				=> 'required',
 			'luas'				=> 'required',
 			'sk_hak'			=> 'required',
@@ -53,8 +54,9 @@
 			'bundel'			=> 'required',
 			'halaman'			=> 'required',
 			'status_penyimpanan'=> 'required',
-			'final_status'		=> 'required',
-			'keterangan'		=> 'required'
+			// 'final_status'	=> 'required',
+			// 'keterangan'		=> 'required'
+			'scan_sertifikat'	=> 'required'
 		];	
 	}
 ?>
