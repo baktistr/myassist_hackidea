@@ -40,7 +40,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 		<!--begin::Layout Skins(used by all pages) -->
 
 		<!--end::Layout Skins -->
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="<?php base_url() ?>assets/media/logos/favicon.ico" />
 	</head>
 
 	<!-- end::Head -->
