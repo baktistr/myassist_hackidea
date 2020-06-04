@@ -1,3 +1,6 @@
+<style type="text/css">
+          #map{ width:"100%"; height: 300px; }
+        </style>
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 
 <!-- begin:: Content -->
@@ -48,14 +51,25 @@
 																<input type="text" class="form-control" placeholder="Enter nama desa">
 															</div>
 														</div>
+														<div class="form-group">
+															<!-- <div id="map"></div> -->
+														</div>
 														<div class="form-row">
+														
 															<div class="form-group col-md-6">
-																<label>Lat</label>
-																<input type="number" class="form-control" placeholder="Enter lat">
+															
+            												<div>
+																	<label>Long</label>
+																	<input type="text" id="lng" class="form-control" readonly="yes">
+																</div>
+																<div>
+																	<label>Lat</label>
+																	<input type="text" id="lat" class="form-control" readonly="yes">
+																</div>	
 															</div>
 															<div class="form-group col-md-6">
-																<label>Long</label>
-																<input type="number" class="form-control" placeholder="Enter long">
+															<div id="map"></div>
+																
 															</div>
 														</div>
 														
