@@ -59,22 +59,18 @@ $routes->post('/sertifikat-lahan/create', 'SertifikatController::create');
 $routes->post('/sertifikat-lahan/edit/(:any)', 'SertifikatController::update/$1');
 $routes->get('/sertifikat-lahan/delete(:any)', 'SertifikatController::delete/$1');
 
-//api
-$routes->get('/api/lahan', 'LahanController::index');
-$routes->get('/api/lahan/(:any)', 'LahanController::index/$1');
-$routes->get('/api/lahan/(:any)/(:any)', 'LahanController::index/$1/$2');
-$routes->post('/api/lahan', 'LahanController::api_create');
-$routes->put('/api/lahan/(:any)', 'LahanController::api_update/$1');
-$routes->delete('/api/lahan/(:any)', 'LahanController::api_delete/$1');
+//api lahan
+$routes->resource('/api/lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);
+$routes->get('/api/lahan/(:segment)', 'Api\Lahan::show/$1');
+$routes->get('/api/lahan/(:segment)/sertifikat', 'Api\Lahan::show_sertifikat/$1');
+$routes->get('/api/lahan/(:segment)/bangunan', 'Api\Lahan::show_bangunan/$1');
 
-$routes->get('/api/bangunan', 'BangunanController::index');
-$routes->get('/api/bangunan/(:any)', 'BangunanController::index/$1');
-$routes->post('/api/bangunan', 'BangunanController::api_create');
-$routes->put('/api/bangunan/(:any)', 'BangunanController::api_update/$1');
-$routes->delete('/api/bangunan/(:any)', 'BangunanController::api_delete/$1');
+//api bangunan
+$routes->resource('/api/bangunan', ['controller' => 'Api\Bangunan', 'except' => 'new,edit']);
 
-$routes->get('/api/sertifikat/', 'SertifikatController::index');
-$routes->get('/api/sertifikat/(:any)', 'SertifikatController::index/$1');
+//api sertifikat 
+$routes->resource('/api/sertifikat', ['controller' => 'Api\Sertifikat', 'except' => 'new,edit']);
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
