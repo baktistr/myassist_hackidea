@@ -1,6 +1,9 @@
 <?php namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
+use App\Filters\PostRequestOnly;
+use App\Filters\AuthAdmin;
+use App\Filters\IsLogin;
 
 class Filters extends BaseConfig
 {
@@ -10,13 +13,27 @@ class Filters extends BaseConfig
 		'csrf'     => \CodeIgniter\Filters\CSRF::class,
 		'toolbar'  => \CodeIgniter\Filters\DebugToolbar::class,
 		'honeypot' => \CodeIgniter\Filters\Honeypot::class,
+		'PostRequestOnly' => PostRequestOnly::class,
+		'AuthAdmin'	=> AuthAdmin::class,
+		'IsLogin'	=> IsLogin::class,
 	];
 
 	// Always applied before every request
 	public $globals = [
 		'before' => [
 			//'honeypot'
-			// 'csrf',
+
+			// enable csrf when production
+			// 'csrf' => [
+			// 	'except' => [
+			// 		'api/*',						
+			// 	],						
+			// ],
+
+			//cek login
+			'IsLogin' => [
+				'except' => ['api','api/*'],
+			],
 		],
 		'after'  => [
 			'toolbar',
@@ -32,5 +49,21 @@ class Filters extends BaseConfig
 	// List filter aliases and any before/after uri patterns
 	// that they should run on, like:
 	//    'isLoggedIn' => ['before' => ['account/*', 'profiles/*']],
-	public $filters = [];
+	public $filters = [
+		// 'PostRequestOnly' => [
+		// 	'before' => [
+		// 		'/api/lahan',
+		// 	],
+		// ],
+		'AuthAdmin' => [
+			'before' => [
+				'/user-control',
+			],
+		],
+		// 'IsLogin' => [
+		// 	'before' => [
+		// 		'/dashboard',
+		// 	],
+		// ],
+	];
 }

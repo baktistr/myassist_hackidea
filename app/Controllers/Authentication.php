@@ -10,6 +10,11 @@ class Authentication extends BaseController
 		$this->session = session();
 	}
 
+	public function index()
+	{
+		echo view('c_login');
+	}
+
 	public function login()
 	{			
 		$email 		= $this->request->getVar('email');
@@ -29,7 +34,7 @@ class Authentication extends BaseController
 				'role'		=> $record['role'],
 				'logged_in'	=> TRUE
 				];
-				$this->session->set('token', $session_data);				
+				$this->session->set($session_data);				
 				return redirect()->to('/dashboard');
 			}				
 		}			
