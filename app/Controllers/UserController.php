@@ -77,4 +77,9 @@ class UserController extends BaseController
       return redirect()->to('/aset-user')->with('msg','Success delete data');
     }
   }
+
+  public function index()
+  {
+    echo view('pages/userControl.php');
+  }
 }

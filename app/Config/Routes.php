@@ -39,6 +39,7 @@ $routes->post('/register', 'Authentication::create');
 //view home
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/aset-lahan', 'Home::asetLahan');
+$routes->get('/user-control', 'Home::userControl');
 $routes->get('/aset-bangunan', 'Home::asetBangunan');
 $routes->get('/sertifikat-lahan', 'Home::sertifikatLahan');
 

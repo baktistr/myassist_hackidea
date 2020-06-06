@@ -51,6 +51,16 @@ class Home extends BaseController
 		echo view('index', $data);
 	}
 
+	public function userControl()
+	{
+		$data=[
+			'title' => 'User Control',
+			'isi' => 'pages/userControl',
+			'subheader' => 'User Control'
+		];
+		echo view('index', $data);
+	}
+
 	public function login()
 	{
 		echo view('pages/v_login');

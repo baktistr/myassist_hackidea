@@ -11,7 +11,7 @@
       <div class="kt-portlet__head-toolbar">
         <div class="kt-portlet__head-wrapper">
           <div class="dropdown dropdown-inline">
-            <button type="button" class="btn btn-default btn-bold btn-upper btn-font-sm dropdown-toggle"
+            <button type="button" class="btn btn-secondary btn-bold btn-upper btn-font-sm dropdown-toggle"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="la la-download"></i> Export
             </button>

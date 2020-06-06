@@ -591,53 +591,53 @@
     padding-right: 2rem;
     padding-left: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__header .kt-iconbox__icon {
-      color: #5867dd; }
+      color: #800000; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn {
       color: #ffffff;
-      background-color: #5867dd; }
+      background-color: #800000; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn:focus {
         background-color: #2e40d4; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn.btn-outline {
         background-color: #ffffff;
         border-width: 1px;
         border-style: solid;
-        border-color: #5867dd;
-        color: #5867dd; }
+        border-color: #800000;
+        color: #800000; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--primary .kt-pricing-v2__button .btn.btn-outline:focus {
           border-color: #ffffff;
           color: #ffffff;
-          background-color: #5867dd; }
+          background-color: #800000; }
   .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary {
     background-color: #ffffff;
     border-width: 1px;
     border-style: solid;
-    border-color: #5867dd;
+    border-color: #800000;
     padding-right: 2rem;
     padding-left: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__header .kt-iconbox__icon {
-      color: #5867dd; }
+      color: #800000; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn {
       color: #ffffff;
-      background-color: #5867dd; }
+      background-color: #800000; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn:focus {
         background-color: #2e40d4; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn.btn-outline {
         background-color: #ffffff;
         border-width: 1px;
         border-style: solid;
-        border-color: #5867dd;
-        color: #5867dd; }
+        border-color: #800000;
+        color: #800000; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-primary .kt-pricing-v2__button .btn.btn-outline:focus {
           border-color: #ffffff;
           color: #ffffff;
-          background-color: #5867dd; }
+          background-color: #800000; }
   .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary {
-    background-color: #5867dd;
+    background-color: #800000;
     color: #ffffff;
     padding-right: 2rem;
     padding-left: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-iconbox {
-      background-color: #5867dd; }
+      background-color: #800000; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-iconbox .kt-iconbox__icon .kt-iconbox__icon--bg {
         background-image: url(../../../media/misc/iconbox_bg-white.png); }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-iconbox .kt-iconbox__icon,
@@ -649,12 +649,12 @@
       color: #b1b8ef; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn {
       background-color: #ffffff;
-      color: #5867dd;
+      color: #800000;
       border-width: 1px;
       border-style: solid;
-      border-color: #5867dd; }
+      border-color: #800000; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn:focus {
-        background-color: #5867dd;
+        background-color: #800000;
         color: #ffffff;
         border-color: #ffffff; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn.btn-outline {
@@ -662,10 +662,10 @@
         border-style: solid;
         border-color: #ffffff;
         color: #ffffff;
-        background-color: #5867dd; }
+        background-color: #800000; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-primary .kt-pricing-v2__button .btn.btn-outline:focus {
-          border-color: #5867dd;
-          color: #5867dd;
+          border-color: #800000;
+          color: #800000;
           background-color: #ffffff; }
   .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--success {
     background-color: #ffffff;

@@ -26,9 +26,10 @@ class Authentication extends BaseController
 				'username'	=> $record['username'],
 				'email'		=> $record['email'],
 				'nama'		=> $record['nama'],
-				'role'		=> $record['role']
+				'role'		=> $record['role'],
+				'logged_in'	=> TRUE
 				];
-				$this->session->set($session_data);				
+				$this->session->set('token', $session_data);				
 				return redirect()->to('/dashboard');
 			}				
 		}			

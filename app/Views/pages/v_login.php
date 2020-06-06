@@ -86,6 +86,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 						<!--begin::Wrapper-->
 						<div class="kt-login-v2__wrapper">
 							<div class="kt-login-v2__container">
+								<?= $session->login; ?>
 								<div class="kt-login-v2__title">
 									<h3>Sign to Account</h3>
 								</div>
@@ -158,7 +159,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 						"metal": "#c4c5d6",
 						"light": "#ffffff",
 						"accent": "#00c5dc",
-						"primary": "#5867dd",
+						"primary": "#800000",
 						"success": "#34bfa3",
 						"info": "#36a3f7",
 						"warning": "#ffb822",

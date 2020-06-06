@@ -25,10 +25,14 @@
             class="kt-menu__link-text">Sertifikat</span></a>
       </div>
       <div
-        class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel <?= $subheader == 'Data Sertifikat' ? 'kt-menu__item--here' : ''; ?>">
+        class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel <?= $subheader == 'User Control' ? 'kt-menu__item--here' : ''; ?>">
         <a href="<?= base_url('/user-control');?>" class="kt-menu__link "><span
             class="kt-menu__link-text">User Control</span></a>
       </div>
+      <!-- <div
+        class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel <?= $subheader == 'User Control' ? 'kt-menu__item--here' : ''; ?>">
+          <img src="<?php base_url() ?>assets/media/logos/brand-logo-crop.png" class="kt-header__brand-logo-default" style="height: 100%;"/>
+      </div> -->
     </div>
   </div>
 </div>
