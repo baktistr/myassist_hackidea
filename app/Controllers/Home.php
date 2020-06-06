@@ -2,6 +2,10 @@
 
 class Home extends BaseController
 {
+	public function __construct()
+	{
+	}
+	
 	public function index()
 	{
 		$data=[
@@ -61,6 +65,17 @@ class Home extends BaseController
 		];
 		echo view('index', $data);
 	}
+
+	public function userControl()
+	{
+		$data=[
+			'title' => 'User Control',
+			'isi' => 'pages/userControl',
+			'subheader' => 'User Control'
+		];
+		echo view('index', $data);
+	}
+
 	public function sertifikatLahanCreate()
 	{
 		$data=[
