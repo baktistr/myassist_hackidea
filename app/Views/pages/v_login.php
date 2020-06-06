@@ -111,30 +111,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 								</form>
 
 								<!--end::Form-->
-
-								<!--begin::Separator-->
-								<div class="kt-separator kt-separator--space-lg  kt-separator--border-solid"></div>
-
-								<!--end::Separator-->
-
-								<!--begin::Options-->
-								<h3 class="kt-login-v2__desc">Or sign with social account</h3>
-								<div class="kt-login-v2__options">
-									<a href="<?= base_url('/dashboard');?>" class="btn btn-facebook btn-pill">
-										<i class="fab fa-facebook-f"></i>
-										Facebook
-									</a>
-									<a href="<?= base_url('/dashboard');?>" class="btn btn-twitter btn-pill">
-										<i class="fab fa-twitter"></i>
-										Twitter
-									</a>
-									<a href="<?= base_url('/dashboard');?>" class="btn btn-google btn-pill">
-										<i class="fab fa-google"></i>
-										Google
-									</a>
-								</div>
-
-								<!--end::Options-->
 							</div>
 						</div>
 
@@ -162,7 +138,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 							<a href="#" class="kt-link kt-font-brand">Contact</a>
 						</div>
 						<div class="kt-login-v2__info">
-							<a href="#" class="kt-link">&copy; 2018 KeenThemes</a>
+							<a href="#" class="kt-link">&copy; <?= date("Y"); ?> KeenThemes</a>
 						</div>
 					</div>
 				</div>

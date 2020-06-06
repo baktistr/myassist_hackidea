@@ -34301,7 +34301,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background: #191b2a;
+    background: #222831;
     position: relative;
     z-index: 2; }
     .kt-header .kt-header__top {
@@ -37850,7 +37850,7 @@ body {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  background: #191b2a; }
+  background: #222831; }
   .kt-footer .kt-footer__bottom {
     display: -webkit-box;
     display: -ms-flexbox;

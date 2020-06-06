@@ -4,9 +4,8 @@
 	<div class="kt-container ">
 		<div class="kt-footer__bottom">
 			<div class="kt-footer__copyright">
-				2018&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/keen" target="_blank" class="kt-link">Keenthemes Inc</a>
+				<?= date("Y"); ?>&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/keen" target="_blank" class="kt-link">Keenthemes Inc</a>
 			</div>
-			
 		</div>
 	</div>
 </div>
