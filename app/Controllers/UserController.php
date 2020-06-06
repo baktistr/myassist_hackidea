@@ -43,12 +43,12 @@ class UserController extends BaseController
     
     if (!empty($data)) {
       if ($this->user->insert($data) === FALSE) {
-        return redirect()->to('/aset-user-create')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/user-control-create')->with('msg', 'Fail to insert new data');
       } else {
-        return redirect()->to('/aset-user')->with('msg', 'Success to insert new data');
+        return redirect()->to('/user-control')->with('msg', 'Success to insert new data');
       }
     } else {
-      return redirect()->to('/aset-user')->with('msg', 'No data submitted');
+      return redirect()->to('/user-control')->with('msg', 'No data submitted');
     }
   }
 
@@ -59,9 +59,9 @@ class UserController extends BaseController
 
     if (!empty($data)) {
       if ($this->user->update($id, $data) === FALSE) {
-        return redirect()->to('/aset-user-edit/'.$id)->with('msg', 'Fail to insert new data');
+        return redirect()->to('/user-control-edit-'.$id)->with('msg', 'Fail to insert new data');
       } else {
-        return redirect()->to('/aset-user')->with('msg', 'Success to insert new data');
+        return redirect()->to('/user-control')->with('msg', 'Success to insert new data');
       }
     }
   }
@@ -72,14 +72,9 @@ class UserController extends BaseController
     $sql = $this->user->where('gedung_id', $id)->delete();
 
     if ($this->user->db->affectedRows()) {
-      return redirect()->to('/aset-user')->with('msg','Data is not exist');
+      return redirect()->to('/user-control')->with('msg','Data is not exist');
     } else {
-      return redirect()->to('/aset-user')->with('msg','Success delete data');
+      return redirect()->to('/user-control')->with('msg','Success delete data');
     }
-  }
-
-  public function index()
-  {
-    echo view('pages/userControl.php');
   }
 }

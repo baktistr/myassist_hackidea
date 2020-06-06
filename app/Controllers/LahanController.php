@@ -59,7 +59,7 @@ class LahanController extends BaseController
 		$data = $this->request->getPost();
 		if(!empty($data)) {
 			if($this->lahan->update($id, $data) === FALSE) {
-				return redirect()->to('/aset-lahan-edit/'.$id)->with('msg','Fail update data, please fill all field');
+				return redirect()->to('/aset-lahan-edit-'.$id)->with('msg','Fail update data, please fill all field');
 			} else {
 				return redirect()->to('/aset-lahan')->with('msg','Success update data');
 			}

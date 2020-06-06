@@ -59,7 +59,7 @@ class BangunanController extends BaseController
 
     if (!empty($data)) {
       if ($this->bangunan->update($id, $data) === FALSE) {
-        return redirect()->to('/aset-bangunan-edit/'.$id)->with('msg', 'Fail to insert new data');
+        return redirect()->to('/aset-bangunan-edit-'.$id)->with('msg', 'Fail to insert new data');
       } else {
         return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
       }
