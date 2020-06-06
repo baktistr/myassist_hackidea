@@ -32,37 +32,43 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 //auth route
+$routes->get('/login', 'Home::login');
 $routes->post('/login', 'Authentication::login');
 $routes->post('/register', 'Authentication::create');
 
+//view home
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/aset-lahan', 'Home::asetLahan');
 $routes->get('/aset-bangunan', 'Home::asetBangunan');
-$routes->get('/aset-bangunan-create', 'Home::asetBangunanCreate');
 $routes->get('/sertifikat-lahan', 'Home::sertifikatLahan');
-$routes->get('/sertifikat-lahan-create', 'Home::sertifikatLahanCreate');
-$routes->get('/login', 'Home::login');
 
 //crud lahan
 $routes->get('/aset-lahan-create', 'LahanController::create');
-$routes->post('/aset-lahan/create-post', 'LahanController::store');
-$routes->get('/aset-lahan/edit/(:any)', 'LahanController::edit/$1');
-$routes->post('/aset-lahan/edit/(:any)', 'LahanController::update/$1');
-$routes->get('/aset-lahan/delete/(:any)', 'LahanController::delete/$1');
+$routes->get('/aset-lahan-edit-(:segment)', 'LahanController::edit/$1');
+$routes->post('/aset-lahan-create', 'LahanController::store');
+$routes->post('/aset-lahan-edit-(:segment)', 'LahanController::update/$1');
+$routes->get('/aset-lahan-delete-(:segment)', 'LahanController::delete/$1');
 
 //crud bangunan
-$routes->get('/aset-bangunan/create', 'BangunanController::create');
-$routes->get('/aset-bangunan/edit/(:any)', 'BangunanController::edit/$1');
-$routes->post('/aset-bangunan/create', 'BangunanController::store');
-$routes->post('/aset-bangunan/edit/(:any)', 'BangunanController::update/$1');
-$routes->get('/aset-bangunan/delete/(:any)', 'BangunanController::delete/$1');
+$routes->get('/aset-bangunan-create', 'BangunanController::create');
+$routes->get('/aset-bangunan-edit-(:segment)', 'BangunanController::edit/$1');
+$routes->post('/aset-bangunan-create', 'BangunanController::store');
+$routes->post('/aset-bangunan-edit-(:segment)', 'BangunanController::update/$1');
+$routes->get('/aset-bangunan-delete-(:segment)', 'BangunanController::delete/$1');
 
 // crud sertifikat
-$routes->get('/sertifikat-lahan/create', 'SertifikatController::create');
-$routes->get('/sertifikat-lahan/edit/(:any)', 'SertifikatController::delete/$1');
-$routes->post('/sertifikat-lahan/create', 'SertifikatController::create');
-$routes->post('/sertifikat-lahan/edit/(:any)', 'SertifikatController::update/$1');
-$routes->get('/sertifikat-lahan/delete(:any)', 'SertifikatController::delete/$1');
+$routes->get('/sertifikat-lahan-create', 'SertifikatController::create');
+$routes->get('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::edit/$1');
+$routes->post('/sertifikat-lahan-create', 'SertifikatController::create');
+$routes->post('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::update/$1');
+$routes->get('/sertifikat-lahan-delete-(:segment)', 'SertifikatController::delete/$1');
+
+//crud user
+$routes->get('/user-control-create', 'UserController::create');
+$routes->get('/user-control-edit-(:segment)', 'UserController::edit/$1');
+$routes->post('/user-control-create', 'UserController::store');
+$routes->post('/user-control-edit-(:segment)', 'UserController::update/$1');
+$routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1');
 
 //api lahan
 $routes->resource('/api/lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);

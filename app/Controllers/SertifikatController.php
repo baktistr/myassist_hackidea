@@ -10,28 +10,32 @@ class SertifikatController extends BaseController
 		$this->sertifikat = new Sertifikat_model();
 	}
 
-  //api /sertifikat
-  public function index($sertifikat_id='')
+  public function create()
   {
-    $sertifikat = [];    
-    if($sertifikat_id!='') {      
-      $sertifikat = $this->sertifikat->where('sertifikat_id', $sertifikat_id)->get()->getRowArray();      
-    } else {
-      $sertifikat = $this->sertifikat->get()->getResultArray();
-    }
-    return $this->response->setJSON($sertifikat);  
+    $data=[
+      'title' => 'Create Sertifikat Lahan',
+      'isi' => 'pages/sertifikatLahanCreate',
+      'subheader' => 'Create Data Sertifikat'
+    ];
+    echo view('index', $data);
   }
 
-  // display form insert
-  public function create()
-	{
-		$data=[
-      'title' => 'Buat Sertifikat Lahan',
-      'isi' => 'pages/sertifikatLahanCreate',
-      'subheader' => 'Buat Sertifikat Lahan'
-		];
-		echo view('index', $data);
-	}
+  // display edit form
+  public function edit($id=NULL)
+  {
+    $record = $this->sertifikat->find($id);
+    if(empty($record)) {
+      throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+    }
+
+    $data=[
+      'title' => 'Edit Sertifikat Lahan',
+      'isi' => 'pages/sertifikatLahanEdit',
+      'subheader' => 'Edit Data Sertifikat Lahan',
+      'sertifikat' => $record
+    ];
+    echo view('index', $data);
+  }
 
   // simpan new data ke db
   public function store()
@@ -40,29 +44,12 @@ class SertifikatController extends BaseController
     
     if (!empty($data)) {
       if ($this->sertifikat->insert($data) === FALSE) {
-        return redirect()->to('/sertifikat-lahan/create')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data');
       } else {
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data');
       }
     } else {
       return redirect()->to('/sertifikat-lahan')->with('msg', 'No data submitted');
-    }
-  }
-
-  // display edit form
-  public function edit($id)
-  {
-    $sertifikat = $this->sertifikat->where('sertifikat_id', $id)->get()->getRowArray();    
-    if (isset($sertifikat)) {
-      $data = [
-        'title' => 'Buat Sertifikat Lahan',
-        'isi' => 'pages/sertifikatLahanEdit',
-        'subheader' => 'Buat Sertifikat Lahan',
-        'sertifikat'  => $sertifikat
-      ];
-      echo view('index', $data);
-    } else {
-      return redirect()->to('/sertifikat-lahan');
     }
   }
 
@@ -72,8 +59,8 @@ class SertifikatController extends BaseController
     $data = $this->request->getPost();
 
     if (!empty($data)) {
-      if ($this->sertifikat->update($data) === FALSE) {
-        return redirect()->to('/sertifikat-lahan/edit')->with('msg', 'Fail to insert new data');
+      if ($this->sertifikat->update($id, $data) === FALSE) {
+        return redirect()->to('/sertifikat-lahan-edit/'.$id)->with('msg', 'Fail to insert new data');
       } else {
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data');
       }
