@@ -11,7 +11,7 @@
       <div class="kt-portlet__head-toolbar">
         <div class="kt-portlet__head-wrapper">
           <div class="dropdown dropdown-inline">
-            <button type="button" class="btn btn-default btn-bold btn-upper btn-font-sm dropdown-toggle"
+            <button type="button" class="btn btn-secondary btn-bold btn-upper btn-font-sm dropdown-toggle"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="la la-download"></i> Export
             </button>
@@ -64,7 +64,7 @@
             </div>
           </div>
           &nbsp;
-          <a  href="<?= base_url('/sertifikat-lahan-create');?>" class="btn btn-brand btn-bold btn-upper btn-font-sm">
+          <a href="<?= base_url('/sertifikat-lahan-create');?>" class="btn btn-brand btn-bold btn-upper btn-font-sm">
             <i class="la la-plus"></i>
             New Record
           </a>
@@ -86,8 +86,8 @@
                   </span>
                 </div>
               </div>
-              
-             
+
+
             </div>
           </div>
           <div class="col-xl-4 order-1 order-xl-2 kt-align-right">

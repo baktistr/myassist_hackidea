@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 						"metal": "#c4c5d6",
 						"light": "#ffffff",
 						"accent": "#00c5dc",
-						"primary": "#5867dd",
+						"primary": "#800000",
 						"success": "#34bfa3",
 						"info": "#36a3f7",
 						"warning": "#ffb822",
