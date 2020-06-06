@@ -20,12 +20,37 @@ class Sertifikat extends ResourceController
 
   public function create()
   {
-    $data = $this->request->getJSON();
-    if (! $this->model->save($data))
-    {
+    $data = $this->request->getJSON(TRUE);    
+    if(isset($data['scan_sertifikat'])) {
+      $tmp = $data['scan_sertifikat'];
+      $data['scan_sertifikat'] = '';
+      if (! $this->model->save($data))
+      {
         return $this->fail($this->model->errors());
+      }
+      $data['scan_sertifikat'] = $tmp;
+      $data['id'] = $this->model->getInsertID();
+    } else {
+      return $this->fail('Please provide a file scan sertifikat');
     }
-    $data->id = $this->model->getInsertID();
+
+    $bin = base64_decode($data['scan_sertifikat'], true);
+
+    // // sanitize the PDF contents
+    if (strpos($bin, '%PDF') !== 0) {
+      throw new Exception('Missing the PDF file signature');
+    }
+
+
+    $data['kelurahan'] = preg_replace('/\s+/', '_', $data['kelurahan']);      
+    $data['scan_sertifikat'] = $data['no_sertifikat'].'_'.$data['kelurahan'].'_'.$data['id'].'.pdf';
+        
+    // Write the PDF contents to a local file
+    file_put_contents('./sertifikat_file/'.$data['scan_sertifikat'], $bin);
+    
+    //store name file
+    $this->model->update($data['id'], ['scan_sertifikat' => $data['scan_sertifikat']]);
+    
     return $this->respondCreated($data);
   }
 

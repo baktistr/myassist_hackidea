@@ -57,7 +57,7 @@
 			'status_penyimpanan'=> 'required',
 			// 'final_status'	=> 'required',
 			// 'keterangan'		=> 'required'
-			'scan_sertifikat'	=> 'required'
+			// 'scan_sertifikat'	=> 'required'
 		];	
 	}
 ?>

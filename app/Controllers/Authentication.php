@@ -20,6 +20,7 @@ class Authentication extends BaseController
 		
 		if($record) {
 			$check = password_verify($password, $record['password']);
+			
 			if($check) {
 				$session_data = [
 				'username'	=> $record['username'],
@@ -27,17 +28,19 @@ class Authentication extends BaseController
 				'nama'		=> $record['nama'],
 				'role'		=> $record['role']
 				];
-				$this->session->set($session_data);
+				$this->session->set($session_data);				
 				return redirect()->to('/dashboard');
 			}				
-		}			
-				
+		}					
 		return redirect()->to('/login')->with('msg', '<span class="text-danger">Username atau Password Salah</span>');
 	}
 
 	public function create()
 	{
-		$req = $this->request->getPost();
+		//under maintenance
+		$req = $this->request->getPost(TRUE);
+		$req['password'] = password_hash($req['password'], PASSWORD_DEFAULT);
+
 		return $this->user->register($req);
 	}
 }
