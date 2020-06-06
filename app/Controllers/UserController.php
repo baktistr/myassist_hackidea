@@ -10,4 +10,9 @@ class UserController extends Controller
   {
     $this->sertifikat = new Sertifikat_model();
   }
+
+  public function index()
+  {
+    echo view('pages/userControl.php');
+  }
 }
