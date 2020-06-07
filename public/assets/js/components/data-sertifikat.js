@@ -71,8 +71,32 @@ var sertifikatDatatable = function () {
 					title: 'Kelurahan',
 				},
 				{
-					field: 'div_regional',
-					title: 'Divisi Reg'
+					field: 'Actions',
+					title: 'Actions',
+					sortable: false,
+					width: 110,
+					overflow: 'visible',
+					autoHide: false,
+					template: function() {
+						return '\
+						<div class="dropdown">\
+							<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown">\
+                                <i class="la la-cog"></i>\
+                            </a>\
+						  	<div class="dropdown-menu dropdown-menu-right">\
+						    	<a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>\
+						    	<a class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>\
+						    	<a class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>\
+						  	</div>\
+						</div>\
+						<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
+							<i class="la la-edit"></i>\
+						</a>\
+						<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">\
+							<i class="la la-trash"></i>\
+						</a>\
+					';
+					},
 				}
 			],
 		});
