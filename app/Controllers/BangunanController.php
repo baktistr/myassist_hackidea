@@ -13,9 +13,9 @@ class BangunanController extends BaseController
   public function create()
   {
     $data=[
-      'title' => 'Create Aset Bangunan',
+      'title' => 'Data Bangunan',
       'isi' => 'pages/asetBangunanCreate',
-      'subheader' => 'Create Data Aset Bangunan'
+      'subheader' => 'Data Asset Bangunan'
     ];
     echo view('index', $data);
   }

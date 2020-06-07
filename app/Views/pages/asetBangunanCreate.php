@@ -12,7 +12,7 @@
 
     <!--begin::Form-->
 		<?= \Config\Services::validation()->listErrors(); ?>
-		<form action="/api/bangunan" method="post" class="kt-form">
+		<form action="<?= base_url('/aset-bangunan-create');?>" method="post" class="kt-form">
       <div class="kt-portlet__body">
 
         <div class="form-group">
@@ -36,29 +36,29 @@
         </div>
         <div class="form-group">
           <label>Kode Gedung</label>
-          <input type="text" class="form-control" placeholder="Enter kode gedung (x-xx-xx-xx-x)">
+          <input type="text" class="form-control" name="kode_gedung" placeholder="Enter kode gedung (x-xx-xx-xx-x)">
         </div>
         <div class="form-group">
           <label>Nama Gedung</label>
-          <input type="text" class="form-control" placeholder="Enter nama gedung">
+          <input type="text" class="form-control" placeholder="Enter nama gedung" name="nama_gedung">
         </div>
         <div class="form-group">
           <label>Peruntukan</label>
-          <input type="text" class="form-control" placeholder="Enter peruntukan">
+          <input type="text" class="form-control" placeholder="Enter peruntukan" name="peruntukan">
         </div>
         <div class="form-group">
           <label>Jumlah Lantai</label>
-          <input type="number" class="form-control" value="1">
+          <input type="number" class="form-control" value="1" name="jumlah_lantai">
         </div>
         <div class="form-group">
           <label>NOP</label>
-          <input type="text" class="form-control" placeholder="Enter NOP">
+          <input type="text" class="form-control" placeholder="Enter NOP" name="nop">
         </div>
 
       </div>
       <div class="kt-portlet__foot">
-        <div class="kt-form__actions">
-          <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="">
+          <button id="btn_submit" class="btn btn-primary">Submit</button>
           <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
@@ -69,3 +69,24 @@
 </div>
 
 <!-- end:: Content -->
+
+<script>
+
+// $("#btn_submit").on("click", (e) => {
+//   e.preventDefault();
+//   let data = $("#submitBangunan").serialize();
+//   console.log(data);
+//   $.ajax({
+//     url: '<?= base_url('/aset-bangunan-create');?>',
+//     type: 'post',
+//     dataType: 'json',
+//     data: JSON.stringify(data),
+//     success: (resp) => {
+//       console.info(resp)
+//     },
+//     error: (err) => {
+//       console.error(err)
+//     }
+//   })
+// })
+</script>
