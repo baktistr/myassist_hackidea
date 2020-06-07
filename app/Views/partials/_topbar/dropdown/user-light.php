@@ -14,6 +14,6 @@
 </div>
 <ul class="kt-nav kt-margin-b-10">
 	<li class="kt-nav__custom kt-space-between">
-		<a href="<?= base_url('/login');?>" target="_blank" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
+		<a href="<?= base_url('/logout');?>" class="btn btn-label-brand btn-upper btn-sm btn-bold">Sign Out</a>
 	</li>
 </ul>
