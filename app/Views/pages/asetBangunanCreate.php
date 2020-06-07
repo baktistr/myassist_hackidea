@@ -53,6 +53,18 @@
           <label>Peruntukan</label>
           <input type="text" class="form-control" placeholder="Enter peruntukan" name="peruntukan">
         </div>
+        <div class="form-group">
+          <label>Jumlah Lantai</label>
+          <input type="number" class="form-control" value="1" name="jumlah_lantai">
+        </div>
+        <div class="form-group">
+          <label>Luas Gedung</label>
+          <input type="number" class="form-control" value="1" name="luas_gedung">
+        </div>
+        <div class="form-group">
+          <label>NOP</label>
+          <input type="text" class="form-control" placeholder="Enter NOP" name="nop">
+        </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <div>
@@ -67,18 +79,6 @@
           <div class="form-group col-md-6">
             <div id="map"></div>
           </div>
-        </div>
-        <div class="form-group">
-          <label>Jumlah Lantai</label>
-          <input type="number" class="form-control" value="1" name="jumlah_lantai">
-        </div>
-        <div class="form-group">
-          <label>Luas Gedung</label>
-          <input type="number" class="form-control" value="1" name="luas_gedung">
-        </div>
-        <div class="form-group">
-          <label>NOP</label>
-          <input type="text" class="form-control" placeholder="Enter NOP" name="nop">
         </div>
       </div>
       <div class="kt-portlet__foot">
