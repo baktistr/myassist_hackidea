@@ -11,7 +11,7 @@ class AuthAdmin implements FilterInterface
         $role = session('role');
         if($role!=1) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();	
-        }        
+        }
     }
 
     //--------------------------------------------------------------------
