@@ -10,8 +10,21 @@ var sertifikatDatatable = function () {
 		var datatable = $('#data-sertifikat').KTDatatable({
 			// datasource definition
 			data: {
-				type: 'local',
-				source: 'https://keenthemes.com/keen/tools/preview/api/datatables/datasource/employee.json',
+				type: 'remote',
+				source: {
+					read: {
+						url: 'http://localhost:8080/api/sertifikat',
+						method: 'GET',
+						map: function (raw) {
+							// sample data mapping
+							var dataSet = raw;
+							if (typeof raw.data !== 'undefined') {
+								dataSet = raw.data;
+							}
+							return dataSet;
+						},
+					},
+				},
 				pageSize: 10,
 			},
 
@@ -34,11 +47,9 @@ var sertifikatDatatable = function () {
 			// columns definition
 			columns: [
 				{
-					field: 'id',
+					field: 'sertifikat_id',
 					title: '#',
-					sortable: false,
 					type: 'number',
-					selector: {class: 'kt-checkbox--solid'},
 					textAlign: 'center',
 				},
 				{
@@ -59,7 +70,7 @@ var sertifikatDatatable = function () {
 					autoHide: false,
 				},
 				{
-					field: 'kotamadya',
+					field: 'kodya',
 					title: 'Kotamadya',
 				},
 				{
@@ -101,8 +112,8 @@ var sertifikatDatatable = function () {
 			],
 		});
 
-    $('#kt_form_status').on('change', function() {
-      datatable.search($(this).val().toLowerCase(), 'status');
+    $('#kt_form_provinsi').on('change', function() {
+      datatable.search($(this).val().toLowerCase(), 'provinsi');
     });
 
     $('#kt_form_type').on('change', function() {
