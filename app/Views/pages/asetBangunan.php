@@ -28,35 +28,14 @@
                 <li class="kt-nav__item">
                   <a href="#" class="kt-nav__link">
                     <i class="kt-nav__link-icon flaticon2-drop"></i>
-                    <span class="kt-nav__link-text">Members</span>
+                    <span class="kt-nav__link-text">xlsx</span>
                   </a>
                 </li>
                 <li class="kt-nav__item">
                   <a href="#" class="kt-nav__link">
                     <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
-                    <span class="kt-nav__link-text">Orders</span>
+                    <span class="kt-nav__link-text">pdf</span>
                   </a>
-                </li>
-                <li class="kt-nav__item">
-                  <a href="#" class="kt-nav__link">
-                    <i class="kt-nav__link-icon flaticon2-drop"></i>
-                    <span class="kt-nav__link-text">Settings</span>
-                  </a>
-                </li>
-                <li class="kt-nav__item">
-                  <a href="#" class="kt-nav__link">
-                    <i class="kt-nav__link-icon flaticon2-new-email"></i>
-                    <span class="kt-nav__link-text">Support</span>
-                    <span class="kt-nav__link-badge">
-                      <span class="kt-badge kt-badge--danger">9</span>
-                    </span>
-                  </a>
-                </li>
-                <li class="kt-nav__separator"></li>
-                <li class="kt-nav__foot">
-                  <a class="btn btn-label-brand btn-bold btn-sm" href="#">Proceed</a>
-                  <a class="btn btn-clean btn-bold btn-sm" href="#" data-toggle="kt-tooltip" data-placement="right"
-                    title="Click to learn more...">Learn more</a>
                 </li>
               </ul>
 
