@@ -22,7 +22,7 @@
 
         <div class="form-group">
           <label>ID Areal</label>
-          <input type="text" class="form-control" name="id_areal" placeholder="Enter id areal">
+          <input type="text" class="form-control" name="id_areal_fix_old" placeholder="Enter id areal">
 
         </div>
         <div class="form-group">
@@ -37,21 +37,21 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Provinsi</label>
-            <input type="text" class="form-control" placeholder="Enter provinsi" name="provinsi">
+            <input type="text" class="form-control" placeholder="Enter provinsi" name="provinsi_nama">
           </div>
           <div class="form-group col-md-6">
             <label>Kota</label>
-            <input type="text" class="form-control" placeholder="Enter nama kota" name="kota">
+            <input type="text" class="form-control" placeholder="Enter nama kota" name="kota_nama">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Kecamatan</label>
-            <input type="text" class="form-control" placeholder="Enter nama kecamatan" name="kecamatan">
+            <input type="text" class="form-control" placeholder="Enter nama kecamatan" name="kecamatan_nama">
           </div>
           <div class="form-group col-md-6">
             <label>Desa</label>
-            <input type="text" class="form-control" placeholder="Enter nama desa" name="desa">
+            <input type="text" class="form-control" placeholder="Enter nama desa" name="desa_nama">
           </div>
         </div>
         <div class="form-row">
@@ -84,14 +84,14 @@
         </div>
         <div class="form-group">
           <label for="dropdownSertifikat">Sertifikat</label>
-          <select class="form-control" id="dropdownSertifikat" name="Sertifikat">
+          <select class="form-control" id="dropdownSertifikat" name="sertifikat">
             <option value="ADA SERTIFIKAT">ADA SERTIFIKAT</option>
             <option value="TIDAK ADA SERTIFIKAT">TIDAK ADA SERTIFIKAT</option>
           </select>
         </div>
         <div class="form-group">
           <label for="dropdownTakos">Takos</label>
-          <select class="form-control" id="dropdownTakos" name="takos">
+          <select class="form-control" id="dropdownTakos" name="takos_t_f">
             <option value="TRUE">TRUE</option>
             <option value="FALSE">FALSE</option>
           </select>
@@ -117,7 +117,7 @@
         </div>
         <div class="form-group">
           <label>Kode Provinsi</label>
-          <input type="number" class="form-control" value="12" name="kode_provinsi">
+          <input type="number" class="form-control" value="12" name="kode_prov">
         </div>
         <div class="form-group">
           <label>WITEL</label>

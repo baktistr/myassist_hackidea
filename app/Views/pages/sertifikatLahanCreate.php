@@ -22,11 +22,6 @@
           <input type="text" class="form-control" placeholder="Enter no sertifikat" name="no_sertifikat">
         </div>
         <div class="form-group">
-          <label>ID Areal CPY</label>
-          <input type="text" class="form-control" placeholder="Enter id areal cpy" name="id_areal_cpy">
-
-        </div>
-        <div class="form-group">
           <label>Lokasi Aset</label>
           <textarea class="form-control" id="lokasiAsetTextarea" name="lokasi_aset" rows="3"></textarea>
         </div>
@@ -76,7 +71,7 @@
         </div>
         <div class="form-group">
           <label>Jenis Sertifikat</label>
-          <input type="text" class="form-control" placeholder="Enter jenis sertifikat" name="jenis_sertifikat">
+          <input type="text" class="form-control" placeholder="Enter jenis sertifikat" name="jenis">
         </div>
         <div class="form-group">
           <label for="dateAkhir">Akhir</label>
@@ -92,10 +87,6 @@
         <div class="form-group">
           <label>Loker</label>
           <input type="number" class="form-control" value="2144" name="loker">
-        </div>
-        <div class="form-group">
-          <label>Kode WITEL</label>
-          <input type="number" class="form-control" value="16" name="kode_witel">
         </div>
         <div class="form-group">
           <label>Bundel</label>

@@ -1,3 +1,10 @@
+<style type="text/css">
+#map {
+  width: "100%";
+  height: 300px;
+}
+</style>
+
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 
 <!-- begin:: Content -->
@@ -11,13 +18,13 @@
     </div>
 
     <!--begin::Form-->
-		<?= \Config\Services::validation()->listErrors(); ?>
-		<form action="<?= base_url('/aset-bangunan-create');?>" method="post" class="kt-form">
+    <?= \Config\Services::validation()->listErrors(); ?>
+    <form action="<?= base_url('/aset-bangunan-create');?>" method="post" class="kt-form">
       <div class="kt-portlet__body">
 
         <div class="form-group">
           <label>ID Areal</label>
-          <input type="text" class="form-control" name="id_areal" placeholder="Enter id area">
+          <input type="text" class="form-control" name="id_areal_fix_old" placeholder="Enter id area">
 
         </div>
         <div class="form-group">
@@ -25,8 +32,8 @@
           <input type="text" class="form-control" name="kode_lokasi" placeholder="Enter kode lokasi (x-xx-xx-xx)">
         </div>
         <div class="form-group">
-          <label for="exampleSelect1">Urutan Gedung</label>
-          <select class="form-control" name="urutan_gedung" id="exampleSelect1">
+          <label for="dropdownUrutanGedung">Urutan Gedung</label>
+          <select class="form-control" name="urut_gedung" id="dropdownUrutanGedung">
             <option>a</option>
             <option value="1">b</option>
             <option value="1">c</option>
@@ -46,15 +53,33 @@
           <label>Peruntukan</label>
           <input type="text" class="form-control" placeholder="Enter peruntukan" name="peruntukan">
         </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div>
+              <label>Long</label>
+              <input type="text" id="lng" class="form-control" readonly="yes" name="long">
+            </div>
+            <div>
+              <label>Lat</label>
+              <input type="text" id="lat" class="form-control" readonly="yes" name="lat">
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <div id="map"></div>
+          </div>
+        </div>
         <div class="form-group">
           <label>Jumlah Lantai</label>
           <input type="number" class="form-control" value="1" name="jumlah_lantai">
         </div>
         <div class="form-group">
+          <label>Luas Gedung</label>
+          <input type="number" class="form-control" value="1" name="luas_gedung">
+        </div>
+        <div class="form-group">
           <label>NOP</label>
           <input type="text" class="form-control" placeholder="Enter NOP" name="nop">
         </div>
-
       </div>
       <div class="kt-portlet__foot">
         <div class="">
@@ -71,7 +96,6 @@
 <!-- end:: Content -->
 
 <script>
-
 // $("#btn_submit").on("click", (e) => {
 //   e.preventDefault();
 //   let data = $("#submitBangunan").serialize();
