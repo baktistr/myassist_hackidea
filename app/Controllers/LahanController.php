@@ -46,6 +46,10 @@ class LahanController extends BaseController
 		
 		if(!empty($data)) {
 			if($this->lahan->insert($data) === FALSE) {	
+				echo '<pre>';
+				var_dump($this->lahan->errors());
+				echo '</pre>';
+				return;
 				return redirect()->to('/aset-lahan-create')->with('msg','Fail insert new data, please fill all field');
 			} else {							
 				return redirect()->to('/aset-lahan')->with('msg','Success insert new data');

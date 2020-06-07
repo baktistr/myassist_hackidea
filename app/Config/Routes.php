@@ -60,7 +60,7 @@ $routes->get('/aset-bangunan-delete-(:segment)', 'BangunanController::delete/$1'
 // crud sertifikat
 $routes->get('/sertifikat-lahan-create', 'SertifikatController::create');
 $routes->get('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::edit/$1');
-$routes->post('/sertifikat-lahan-create', 'SertifikatController::create');
+$routes->post('/sertifikat-lahan-create', 'SertifikatController::store');
 $routes->post('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::update/$1');
 $routes->get('/sertifikat-lahan-delete-(:segment)', 'SertifikatController::delete/$1');
 

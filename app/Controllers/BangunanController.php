@@ -40,9 +40,13 @@ class BangunanController extends BaseController
   public function store()
   {
     $data = $this->request->getPost();
-    
+    // return var_dump($data); 
     if (!empty($data)) {
       if ($this->bangunan->insert($data) === FALSE) {
+        echo '<pre>';
+        var_dump($this->lahan->errors());
+        echo '</pre>';
+        return;
         return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data');
       } else {
         return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
