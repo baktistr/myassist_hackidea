@@ -16,7 +16,6 @@ var lahanDatatable = function () {
 						url: 'http://localhost:8080/api/lahan',
 						method: 'GET',
 						map: function (raw) {
-							console.log(raw)
 							// sample data mapping
 							var dataSet = raw;
 							if (typeof raw.data !== 'undefined') {

@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 //auth route
 $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Authentication::login');
+$routes->post('/logout', 'Authentication::logout');
 $routes->post('/register', 'Authentication::create');
 
 //view home

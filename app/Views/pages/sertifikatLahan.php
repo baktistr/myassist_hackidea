@@ -65,8 +65,6 @@
                   </span>
                 </div>
               </div>
-
-
             </div>
           </div>
           <div class="col-xl-4 order-1 order-xl-2 kt-align-right">
