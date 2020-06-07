@@ -41,17 +41,15 @@ class SertifikatController extends BaseController
   public function store()
   {
     $data = $this->request->getPost();
-    var_dump($data); exit;
-    
-    if (!empty($data)) {
-      if ($this->sertifikat->insert($data) === FALSE) {
-        return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data');
-      } else {
+    $file = $this->request->getFile('scan_sertifikat');
+    if($file && $file->getExtension()=='pdf') {
+      if($this->sertifikat->insert($data) {
+        $data['id'] = $this->sertifikat->getInsertID();
+        $file_name = $data['no_sertifikat'].'_'.$data['kelurahan'].'_'.$data['id'].'.pdf';
+        $file->move('/sertifikat_file', $file_name);
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data');
-      }
-    } else {
-      return redirect()->to('/sertifikat-lahan')->with('msg', 'No data submitted');
-    }
+    } 
+    return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data');
   }
 
   // // update sertifikat ke db
