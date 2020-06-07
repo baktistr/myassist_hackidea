@@ -32,7 +32,7 @@ class Authentication extends BaseController
 				'email'		=> $record['email'],
 				'nama'		=> $record['nama'],
 				'role'		=> $record['role'],
-				'logged_in'	=> TRUE
+				'isLogin'	=> TRUE
 				];
 				$this->session->set($session_data);				
 				return redirect()->to('/dashboard');
