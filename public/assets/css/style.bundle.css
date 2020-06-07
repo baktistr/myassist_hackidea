@@ -9024,11 +9024,11 @@ button.btn {
   .btn-brand:hover {
     color: #fff;
     background-color: #800000;
-    border-color: #163bda; }
+    border-color: #800000; }
   .btn-brand:focus, .btn-brand.focus {
     color: #fff;
     background-color: #800000;
-    border-color: #163bda;
+    border-color: #800000;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(86, 115, 238, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(86, 115, 238, 0.5); }
   .btn-brand.disabled, .btn-brand:disabled {
@@ -9038,7 +9038,7 @@ button.btn {
   .btn-brand:not(:disabled):not(.disabled):active, .btn-brand:not(:disabled):not(.disabled).active,
   .show > .btn-brand.dropdown-toggle {
     color: #fff;
-    background-color: #163bda;
+    background-color: #800000;
     border-color: #1538ce; }
     .btn-brand:not(:disabled):not(.disabled):active:focus, .btn-brand:not(:disabled):not(.disabled).active:focus,
     .show > .btn-brand.dropdown-toggle:focus {
@@ -30769,9 +30769,9 @@ code {
 .kt-link.kt-link--brand {
   color: #800000; }
   .kt-link.kt-link--brand:hover {
-    color: #163bda; }
+    color: #800000; }
     .kt-link.kt-link--brand:hover:after {
-      border-bottom: 1px solid #163bda;
+      border-bottom: 1px solid #800000;
       opacity: 0.5; }
 
 .kt-link.kt-link--metal {
