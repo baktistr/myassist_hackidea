@@ -9,7 +9,7 @@ class AuthAdmin implements FilterInterface
     public function before(RequestInterface $request)
     {
         $role = session('role');
-        if($role!=1) {
+        if($role!='admin') {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();	
         }
     }

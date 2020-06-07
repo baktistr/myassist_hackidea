@@ -16,22 +16,35 @@ class Authentication extends BaseController
 	}
 
 	public function login()
-	{			
-		$email 		= $this->request->getVar('email');
+	{					
 		$username 	= $this->request->getVar('username');
 		$password 	= $this->request->getVar('password');
 		
-		$record = $this->user->where('username', $username)->orWhere('email', $email)->first();
+		$record = $this->user->where('username', $username)->orWhere('email', $username)->first();
 		
 		if($record) {
 			$check = password_verify($password, $record['password']);
 			
 			if($check) {
+				$role = '';
+				switch ($record['role']) {
+					case 1:
+						$role = 'admin';
+						break;
+					case 2:
+						$role = 'amc';
+						break;
+					case 3:
+						$role = 'treg';
+						break;
+					default:						
+						break;
+				}				
 				$session_data = [
 				'username'	=> $record['username'],
 				'email'		=> $record['email'],
 				'nama'		=> $record['nama'],
-				'role'		=> $record['role'],
+				'role'		=> $role,
 				'isLogin'	=> TRUE
 				];
 				$this->session->set($session_data);				
