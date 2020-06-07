@@ -17,133 +17,124 @@
     </div>
 
     <!--begin::Form-->
-    <form class="kt-form">
+    <form class="kt-form" action="<?= base_url('/aset-lahan-create');?>" method="post">
       <div class="kt-portlet__body">
 
         <div class="form-group">
           <label>ID Areal</label>
-          <input type="text" class="form-control" placeholder="Enter id areal">
+          <input type="text" class="form-control" name="id_areal" placeholder="Enter id areal">
 
         </div>
         <div class="form-group">
           <label>Nama Lahan</label>
-          <input type="text" class="form-control" placeholder="Enter nama lahan">
+          <input type="text" class="form-control" placeholder="Enter nama lahan" name="nama_lahan">
 
         </div>
         <div class="form-group">
           <label>Alamat</label>
-          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          <textarea class="form-control" id="alamatTextArea" rows="3" name="alamat"></textarea>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Provinsi</label>
-            <input type="text" class="form-control" placeholder="Enter provinsi">
+            <input type="text" class="form-control" placeholder="Enter provinsi" name="provinsi">
           </div>
           <div class="form-group col-md-6">
             <label>Kota</label>
-            <input type="text" class="form-control" placeholder="Enter nama kota">
+            <input type="text" class="form-control" placeholder="Enter nama kota" name="kota">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Kecamatan</label>
-            <input type="text" class="form-control" placeholder="Enter nama kecamatan">
+            <input type="text" class="form-control" placeholder="Enter nama kecamatan" name="kecamatan">
           </div>
           <div class="form-group col-md-6">
             <label>Desa</label>
-            <input type="text" class="form-control" placeholder="Enter nama desa">
+            <input type="text" class="form-control" placeholder="Enter nama desa" name="desa">
           </div>
         </div>
-        <div class="form-group">
-          <!-- <div id="map"></div> -->
-        </div>
         <div class="form-row">
-
           <div class="form-group col-md-6">
-
             <div>
               <label>Long</label>
-              <input type="text" id="lng" class="form-control" readonly="yes">
+              <input type="text" id="lng" class="form-control" readonly="yes" name="long">
             </div>
             <div>
               <label>Lat</label>
-              <input type="text" id="lat" class="form-control" readonly="yes">
+              <input type="text" id="lat" class="form-control" readonly="yes" name="lat">
             </div>
           </div>
           <div class="form-group col-md-6">
             <div id="map"></div>
-
           </div>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleSelect1">Urutan Gedung</label>
-          <select class="form-control" id="exampleSelect1">
-            <option>TRUE</option>
-            <option>FALSE</option>
-          </select>
         </div>
         <div class="form-group">
           <label>Luas Tanah</label>
-          <input type="number" class="form-control" value="1000">
+          <input type="number" class="form-control" value="1000" name="luas_tanah">
         </div>
         <div class="form-group">
           <label>Luas Gedung</label>
-          <input type="number" class="form-control" value="1000">
+          <input type="number" class="form-control" value="1000" name="luas_gedung">
         </div>
         <div class="form-group">
           <label>Penggunaan</label>
-          <input type="text" class="form-control" placeholder="Enter penggunaan">
+          <input type="text" class="form-control" placeholder="Enter penggunaan" name="penggunaan">
 
         </div>
         <div class="form-group">
-          <label for="exampleSelect2">Urutan Gedung</label>
-          <select class="form-control" id="exampleSelect2">
-            <option>ADA</option>
-            <option>TIDAK ADA</option>
+          <label for="dropdownSertifikat">Sertifikat</label>
+          <select class="form-control" id="dropdownSertifikat" name="Sertifikat">
+            <option value="ADA SERTIFIKAT">ADA SERTIFIKAT</option>
+            <option value="TIDAK ADA SERTIFIKAT">TIDAK ADA SERTIFIKAT</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleSelect1">Penyimpanan Sertifikat</label>
-          <select class="form-control" id="exampleSelect1">
-            <option>TERSIMPAN</option>
-            <option>TIDAK TERSIMPAN</option>
+          <label for="dropdownTakos">Takos</label>
+          <select class="form-control" id="dropdownTakos" name="takos">
+            <option value="TRUE">TRUE</option>
+            <option value="FALSE">FALSE</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleSelect1">Area Regional</label>
-          <select class="form-control" id="exampleSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
+          <label for="dropdownPenyimpananSertifikat">Penyimpanan Sertifikat</label>
+          <select class="form-control" id="dropdownPenyimpananSertifikat" name="penyimpanan_sertifikat">
+            <option value="TERSIMPAN">TERSIMPAN</option>
+            <option value="TIDAK TERSIMPAN">TIDAK TERSIMPAN</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dropdownAreaRegional">Area Regional</label>
+          <select class="form-control" id="dropdownAreaRegional" name="area_regional">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
           </select>
         </div>
         <div class="form-group">
           <label>Kode Provinsi</label>
-          <input type="number" class="form-control" value="12">
+          <input type="number" class="form-control" value="12" name="kode_provinsi">
         </div>
         <div class="form-group">
           <label>WITEL</label>
-          <input type="text" class="form-control" placeholder="Enter penggunaan">
-
+          <input type="text" class="form-control" placeholder="Enter penggunaan" name="witel">
         </div>
         <div class="form-group">
           <label>Kode WITEL</label>
-          <input type="number" class="form-control" value="16">
+          <input type="number" class="form-control" value="16" name="kode_witel">
         </div>
         <div class="form-group">
           <label>Kode Lokasi</label>
-          <input type="text" class="form-control" placeholder="Enter kode lokasi (x-xx-xx-xx)">
-
+          <input type="text" class="form-control" placeholder="Enter kode lokasi (x-xx-xx-xx)" name="kode_lokasi">
         </div>
       </div>
       <div class="kt-portlet__foot">
         <div class="kt-form__actions">
-          <button class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
           <button type="reset" class="btn btn-secondary">Cancel</button>
         </div>
       </div>

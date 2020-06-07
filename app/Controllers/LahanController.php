@@ -17,7 +17,7 @@ class LahanController extends BaseController
 		$data=[
 			'title' => 'Aset Lahan',
 			'isi' => 'pages/asetLahanCreate',
-			'subheader' => 'Data Aset Lahan'
+      'subheader' => 'Data Asset Lahan'
 		];
 		echo view('index', $data);
 	}
