@@ -15,7 +15,7 @@ class SertifikatController extends BaseController
     $data=[
       'title' => 'Create Sertifikat Lahan',
       'isi' => 'pages/sertifikatLahanCreate',
-      'subheader' => 'Create Data Sertifikat'
+      'subheader' => 'Data Asset Sertifikat'
     ];
     echo view('index', $data);
   }

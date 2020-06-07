@@ -21,7 +21,7 @@ class IsLogin implements FilterInterface
         {
             if($request->uri->getPath() != 'login')
             {
-                return redirect()->to('login');
+                return redirect()->to('login')->with('login', 'Anda harus login terlebih dahulu');
             }
         }
     }

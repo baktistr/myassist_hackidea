@@ -41,6 +41,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 		<!--end::Layout Skins -->
 		<link rel="shortcut icon" href="<?php base_url() ?>assets/media/logos/favicon.ico" />
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	</head>
 
 	<!-- end::Head -->
