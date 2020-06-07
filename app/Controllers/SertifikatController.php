@@ -15,7 +15,7 @@ class SertifikatController extends BaseController
     $data=[
       'title' => 'Create Sertifikat Lahan',
       'isi' => 'pages/sertifikatLahanCreate',
-      'subheader' => 'Create Data Sertifikat'
+      'subheader' => 'Data Asset Sertifikat'
     ];
     echo view('index', $data);
   }
@@ -41,6 +41,7 @@ class SertifikatController extends BaseController
   public function store()
   {
     $data = $this->request->getPost();
+    var_dump($data); exit;
     
     if (!empty($data)) {
       if ($this->sertifikat->insert($data) === FALSE) {
