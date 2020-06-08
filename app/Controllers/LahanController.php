@@ -76,9 +76,9 @@ class LahanController extends BaseController
 		$this->lahan->where('lahan_id', $id)->delete();
 
 	    if ($this->lahan->db->affectedRows()) {
-	      return redirect()->to('/lahan-lahan')->with('msg','Data is not exist');
+	      return redirect()->to('/aset-lahan')->with('msg','Data is not exist');
 	    } else {
-	      return redirect()->to('/lahan-lahan')->with('msg','Success delete data');
+	      return redirect()->to('/aset-lahan')->with('msg','Success delete data');
 	    }
 	}
 
