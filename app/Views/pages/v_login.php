@@ -89,7 +89,7 @@ License: You must have a valid license purchased only from https://themes.getboo
           <!--begin::Wrapper-->
           <div class="kt-login-v2__wrapper">
             <div class="kt-login-v2__container">
-              <?php if($_SESSION['login']) { ?>
+              <?php if(session()->getFlashdata('login')) { ?>
               <div class="alert alert-danger" role="alert">
                 <?= $_SESSION['login']; ?>
               </div>

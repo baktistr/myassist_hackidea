@@ -84,6 +84,7 @@ class Lahan extends ResourceController
   {
     $data    = $this->request->getJSON();      
     $record  = $this->model->find($id);
+    return var_dump($record);
     if(empty($record)) {
       return $this->failNotFound(sprintf(
         'Lahan dengan id %d tidak ditemukan',
