@@ -119,10 +119,10 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 		 <script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/map.js"></script>
-
 		<!--end::Page Scripts -->
 
 	</body>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 	<!-- end::Body -->
 </html>
