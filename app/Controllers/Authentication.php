@@ -51,7 +51,7 @@ class Authentication extends BaseController
 				return redirect()->to('/dashboard');
 			}				
 		}				
-		return redirect()->to('/login')->with('login', '<span class="text-danger">Username atau Password Salah</span>');
+		return redirect()->to('/login')->with('login', 'Username atau Password Salah');
 	}
 
 	public function create()
