@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
           <label>Luas</label>
-          <input type="number" class="form-control" value="1000" placeholder="enter luas" name="luas" value="<?= $sertifikat['luas'];?>">
+          <input type="number" class="form-control" placeholder="enter luas" name="luas" value="<?= $sertifikat['luas'];?>">
         </div>
         <div class="form-group">
           <label>SK HAK</label>

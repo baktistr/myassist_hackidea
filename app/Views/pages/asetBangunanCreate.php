@@ -94,23 +94,3 @@
 </div>
 
 <!-- end:: Content -->
-
-<script>
-// $("#btn_submit").on("click", (e) => {
-//   e.preventDefault();
-//   let data = $("#submitBangunan").serialize();
-//   console.log(data);
-//   $.ajax({
-//     url: '<?= base_url('/aset-bangunan-create');?>',
-//     type: 'post',
-//     dataType: 'json',
-//     data: JSON.stringify(data),
-//     success: (resp) => {
-//       console.info(resp)
-//     },
-//     error: (err) => {
-//       console.error(err)
-//     }
-//   })
-// })
-</script>
