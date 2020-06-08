@@ -195,12 +195,12 @@
     .kt-pricing-v1.kt-pricing-v1--warning .kt-pricing-v1__button .btn:hover, .kt-pricing-v1.kt-pricing-v1--warning .kt-pricing-v1__button .btn:focus {
       background-color: #eea200; }
   .kt-pricing-v1.kt-pricing-v1--danger .kt-pricing-v1__header .kt-iconbox__icon {
-    color: #fd397a; }
+    color: #F62D2D; }
   .kt-pricing-v1.kt-pricing-v1--danger .kt-pricing-v1__price .kt-pricing-v1__price-currency {
     color: #fe9ebe; }
   .kt-pricing-v1.kt-pricing-v1--danger .kt-pricing-v1__button .btn {
-    background-color: #fd397a;
+    background-color: #F62D2D;
     color: #ffffff;
-    border-color: #fd397a; }
+    border-color: #F62D2D; }
     .kt-pricing-v1.kt-pricing-v1--danger .kt-pricing-v1__button .btn:hover, .kt-pricing-v1.kt-pricing-v1--danger .kt-pricing-v1__button .btn:focus {
       background-color: #fc0758; }
