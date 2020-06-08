@@ -8,8 +8,8 @@
 		<span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
 	</div>
 	<div class="kt-user-card-v4__name">
-		<?= $_SESSION['nama']; ?>
-		<small><?= $_SESSION['role']; ?></small>
+		<?= $_SESSION['token']['nama']; ?>
+		<small><?= $_SESSION['token']['role']; ?></small>
 	</div>
 </div>
 <ul class="kt-nav kt-margin-b-10">
