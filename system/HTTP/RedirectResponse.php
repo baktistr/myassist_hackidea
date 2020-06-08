@@ -151,11 +151,11 @@ class RedirectResponse extends Response
 	 *
 	 * @return $this
 	 */
-	public function with(string $key, $message)
+	public function with(string $key, $message, string $type = 'light')
 	{
 		$session = $this->ensureSession();
 
-		$session->setFlashdata($key, $message);
+		$session->setFlashdata($key, '<div class="alert alert-'.$type.' alert-dismissable"> <a href="#" class="close" data-dismiss="alert" aria-label="close" style="margin-right: 5px;">&times;</a>'.$message.'</div>');
 
 		return $this;
 	}
