@@ -32,7 +32,7 @@ class Authentication extends BaseController
 	{					
 		$username 	= $this->request->getVar('username');
 		$password 	= $this->request->getVar('password');
-		
+
 		$record = $this->user->where('username', $username)->orWhere('email', $username)->first();
 		
 		if($record) {
@@ -60,11 +60,11 @@ class Authentication extends BaseController
 				'role'		=> $role,
 				'isLogin'	=> TRUE
 				];
-				$this->session->set($session_data);				
-				return redirect()->to('/dashboard');
+				$this->session->set('token', $session_data);				
+				return redirect()->to('/dashboard')->with('msg', 'Berhasil login', 'success');
 			}				
 		}				
-		return redirect()->to('/login')->with('login', 'Username atau Password Salah');
+		return redirect()->to('/login')->with('msg', 'Username atau Password Salah', 'danger');
 	}
 
 	public function create()

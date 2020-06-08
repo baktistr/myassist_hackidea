@@ -69,10 +69,10 @@ License: You must have a valid license purchased only from https://themes.getboo
               <!-- LOGO HERE -->
             </a>
           </div>
-          <div class="kt-login-v2__signup">
+          <!-- <div class="kt-login-v2__signup">
             <span>Don't have an account?</span>
             <a href="#" class="kt-link kt-font-brand">Sign Up</a>
-          </div>
+          </div> -->
         </div>
 
         <!--begin::Head-->
@@ -89,11 +89,7 @@ License: You must have a valid license purchased only from https://themes.getboo
           <!--begin::Wrapper-->
           <div class="kt-login-v2__wrapper">
             <div class="kt-login-v2__container">
-              <?php if(session()->getFlashdata('login')) { ?>
-              <div class="alert alert-danger" role="alert">
-                <?= $_SESSION['login']; ?>
-              </div>
-              <?php } ?>
+              <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
               <div class="kt-login-v2__title">
                 <h3>Sign to Account</h3>
               </div>
