@@ -4,6 +4,7 @@ use CodeIgniter\Config\BaseConfig;
 use App\Filters\PostRequestOnly;
 use App\Filters\AuthAdmin;
 use App\Filters\IsLogin;
+use App\Filters\AuthAPIAdmin;
 
 class Filters extends BaseConfig
 {
@@ -16,6 +17,7 @@ class Filters extends BaseConfig
 		'PostRequestOnly' => PostRequestOnly::class,
 		'AuthAdmin'	=> AuthAdmin::class,
 		'IsLogin'	=> IsLogin::class,
+		'AuthAPIAdmin' => AuthAPIAdmin::class,
 	];
 
 	// Always applied before every request
@@ -57,9 +59,17 @@ class Filters extends BaseConfig
 		// ],
 		'AuthAdmin' => [
 			'before' => [
-				'/user-control',
+				'user-control*',
 			],
 		],
+		// 'AuthAPIAdmin' => [
+		// 	'before' => [
+		// 		'api/*',
+		// 	],
+		// 	'except' => [
+		// 		'/api/gettoken',
+		// 	],
+		// ],
 		// 'IsLogin' => [
 		// 	'before' => [
 		// 		'/dashboard',

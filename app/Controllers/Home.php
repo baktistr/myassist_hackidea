@@ -36,7 +36,8 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Aset Bangunan',
 			'isi' => 'pages/asetBangunan',
-			'subheader' => 'Data Asset Bangunan'
+			'subheader' => 'Data Asset Bangunan',
+			'bangunan'	=> $this->bangunan->findAll()
 		];
 		echo view('index', $data);
 	}

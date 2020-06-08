@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use App\Models\User_model;
+use Ahc\Jwt\JWT;
 
 class Authentication extends BaseController 
 {
@@ -11,8 +12,20 @@ class Authentication extends BaseController
 	}
 
 	public function index()
-	{
-		echo view('c_login');
+	{		
+		$jwt = new JWT('secret');
+		$token = $jwt->encode([
+		    'uid'    => 1,
+		    'aud'    => 'http://site.com',
+		    'scopes' => ['username'=>'admin','email'=>'admin@gmail.com','nama'=>'admin','role' => 'admin'],
+		    'iss'    => 'http://api.mysite.com',
+		]);
+
+		$payload = $jwt->decode($token);
+		echo '<pre>';
+		print_r(['token' => $token, 'payload' => $payload]);
+		echo '</pre>';
+		return ;
 	}
 
 	public function login()

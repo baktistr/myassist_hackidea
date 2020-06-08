@@ -36,6 +36,7 @@ $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Authentication::login');
 $routes->post('/logout', 'Authentication::logout');
 $routes->post('/register', 'Authentication::create');
+$routes->get('/api/gettoken', 'Authentication::index');
 
 //view home
 $routes->get('/dashboard', 'Home::index');

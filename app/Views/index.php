@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 		 <script src="<?php base_url() ?>assets/js/components/data-lahan.js" type="text/javascript"></script>
 		 <script src="<?php base_url() ?>assets/js/components/data-sertifikat.js" type="text/javascript"></script>
-		 <script src="<?php base_url() ?>assets/js/components/data-bangunan.js" type="text/javascript"></script>
+		 
 
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 		 <script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/map.js"></script>
