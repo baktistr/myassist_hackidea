@@ -13,6 +13,7 @@
   <div class="row">
     <div class="col-lg-12 col-xl-8 order-lg-2 order-xl-1">
       <!--begin::Portlet-->
+      <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
       <div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
         <div class="kt-portlet__body">
           <div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
