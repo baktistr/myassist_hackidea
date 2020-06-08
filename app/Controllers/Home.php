@@ -2,12 +2,14 @@
 
 use App\Models\Gedung_model;
 use App\Models\Sertifikat_model;
+use App\Models\Lahan_model;
 
 class Home extends BaseController
 {
 	public function __construct()
 	{
 		$this->bangunan = new Gedung_model();
+		$this->lahan = new Lahan_model();
 		$this->sertifikat = new Sertifikat_model();
 	}
 
@@ -26,7 +28,8 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Aset Lahan',
 			'isi' => 'pages/asetLahan',
-			'subheader' => 'Data Asset Lahan'
+			'subheader' => 'Data Asset Lahan',
+			'lahan'	=> $this->lahan->findAll()
 		];
 		echo view('index', $data);
 	}
