@@ -89,13 +89,18 @@ License: You must have a valid license purchased only from https://themes.getboo
           <!--begin::Wrapper-->
           <div class="kt-login-v2__wrapper">
             <div class="kt-login-v2__container">
-              <?= $_SESSION['login']; ?>
+              <?php if($_SESSION['login']) { ?>
+              <div class="alert alert-danger" role="alert">
+                <?= $_SESSION['login']; ?>
+              </div>
+              <?php } ?>
               <div class="kt-login-v2__title">
                 <h3>Sign to Account</h3>
               </div>
 
               <!--begin::Form-->
-              <form class="kt-login-v2__form kt-form" action="<?= base_url('/login');?>" method="post" autocomplete="off">
+              <form class="kt-login-v2__form kt-form" action="<?= base_url('/login');?>" method="post"
+                autocomplete="off">
                 <div class="form-group">
                   <input class="form-control" type="text" placeholder="Username" name="username" autocomplete="off">
                 </div>
@@ -105,9 +110,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 
                 <!--begin::Action-->
                 <div class="kt-login-v2__actions">
-                  <a href="#" class="kt-link kt-link--brand">
-                    Forgot Password ?
-                  </a>
                   <button type="submit" class="btn btn-brand btn-elevate btn-pill">Sign In</button>
                 </div>
 

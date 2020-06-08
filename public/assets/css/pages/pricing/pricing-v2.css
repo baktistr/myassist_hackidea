@@ -915,53 +915,53 @@
     padding-left: 2rem;
     padding-right: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__header .kt-iconbox__icon {
-      color: #fd397a; }
+      color: #F62D2D; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn {
       color: #ffffff;
-      background-color: #fd397a; }
+      background-color: #F62D2D; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn:focus {
         background-color: #fc0758; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn.btn-outline {
         background-color: #ffffff;
         border-width: 1px;
         border-style: solid;
-        border-color: #fd397a;
-        color: #fd397a; }
+        border-color: #F62D2D;
+        color: #F62D2D; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--danger .kt-pricing-v2__button .btn.btn-outline:focus {
           border-color: #ffffff;
           color: #ffffff;
-          background-color: #fd397a; }
+          background-color: #F62D2D; }
   .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger {
     background-color: #ffffff;
     border-width: 1px;
     border-style: solid;
-    border-color: #fd397a;
+    border-color: #F62D2D;
     padding-left: 2rem;
     padding-right: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__header .kt-iconbox__icon {
-      color: #fd397a; }
+      color: #F62D2D; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn {
       color: #ffffff;
-      background-color: #fd397a; }
+      background-color: #F62D2D; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn:focus {
         background-color: #fc0758; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn.btn-outline {
         background-color: #ffffff;
         border-width: 1px;
         border-style: solid;
-        border-color: #fd397a;
-        color: #fd397a; }
+        border-color: #F62D2D;
+        color: #F62D2D; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--outline-danger .kt-pricing-v2__button .btn.btn-outline:focus {
           border-color: #ffffff;
           color: #ffffff;
-          background-color: #fd397a; }
+          background-color: #F62D2D; }
   .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger {
-    background-color: #fd397a;
+    background-color: #F62D2D;
     color: #ffffff;
     padding-left: 2rem;
     padding-right: 2rem; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-iconbox {
-      background-color: #fd397a; }
+      background-color: #F62D2D; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-iconbox .kt-iconbox__icon .kt-iconbox__icon--bg {
         background-image: url(../../../media/misc/iconbox_bg-white.png); }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-iconbox .kt-iconbox__icon,
@@ -973,12 +973,12 @@
       color: #fea3c1; }
     .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn {
       background-color: #ffffff;
-      color: #fd397a;
+      color: #F62D2D;
       border-width: 1px;
       border-style: solid;
-      border-color: #fd397a; }
+      border-color: #F62D2D; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn:focus {
-        background-color: #fd397a;
+        background-color: #F62D2D;
         color: #ffffff;
         border-color: #ffffff; }
       .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn.btn-outline {
@@ -986,8 +986,8 @@
         border-style: solid;
         border-color: #ffffff;
         color: #ffffff;
-        background-color: #fd397a; }
+        background-color: #F62D2D; }
         .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn.btn-outline:hover, .kt-pricing-v2 .kt-pricing-v2__item.kt-pricing-v2--fill-danger .kt-pricing-v2__button .btn.btn-outline:focus {
-          border-color: #fd397a;
-          color: #fd397a;
+          border-color: #F62D2D;
+          color: #F62D2D;
           background-color: #ffffff; }

@@ -15,7 +15,7 @@
 				Demo 1
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo2.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo2.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -27,7 +27,7 @@
 				Demo 2
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo3.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo3.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -39,7 +39,7 @@
 				Demo 3
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo1-1.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo1-1.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -51,7 +51,7 @@
 				Demo 4
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo4.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo4.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -63,7 +63,7 @@
 				Demo 5
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo5.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo5.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -75,7 +75,7 @@
 				Demo 6
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos/demo6.jpg" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos/demo6.jpg" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
 					<a href="index&rtl=1.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -87,7 +87,7 @@
 				Demo 7
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-1.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-1.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -98,7 +98,7 @@
 				Demo 8
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-2.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-2.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -109,7 +109,7 @@
 				Demo 9
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-3.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-3.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -120,7 +120,7 @@
 				Demo 10
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-4.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-4.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -131,7 +131,7 @@
 				Demo 11
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-5.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-5.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -142,7 +142,7 @@
 				Demo 12
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-6.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-6.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -153,7 +153,7 @@
 				Demo 13
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-7.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-7.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -164,7 +164,7 @@
 				Demo 14
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-8.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-8.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -175,7 +175,7 @@
 				Demo 15
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-9.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-9.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -186,7 +186,7 @@
 				Demo 16
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-10.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-10.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -197,7 +197,7 @@
 				Demo 17
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-11.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-11.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -208,7 +208,7 @@
 				Demo 18
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-12.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-12.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -219,7 +219,7 @@
 				Demo 19
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-14.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-14.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
@@ -230,7 +230,7 @@
 				Demo 20
 			</div>
 			<div class="kt-demo-panel__item-preview">
-				<img src="assets/../../../../doc/assets/img/demos-small/Demo-13.png" alt="" />
+				<img src="<?= base_url();?>assets/doc/assets/img/demos-small/Demo-13.png" alt="" />
 				<div class="kt-demo-panel__item-preview-overlay">
 					<a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
 				</div>
