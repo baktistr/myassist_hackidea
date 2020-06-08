@@ -54,21 +54,6 @@
             <input type="text" class="form-control" placeholder="Enter nama desa" name="desa_nama">
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <div>
-              <label>Long</label>
-              <input type="text" id="lng" class="form-control" readonly="yes" name="long">
-            </div>
-            <div>
-              <label>Lat</label>
-              <input type="text" id="lat" class="form-control" readonly="yes" name="lat">
-            </div>
-          </div>
-          <div class="form-group col-md-6">
-            <div id="map"></div>
-          </div>
-        </div>
         <div class="form-group">
           <label>Luas Tanah</label>
           <input type="number" class="form-control" value="1000" name="luas_tanah">
@@ -130,6 +115,21 @@
         <div class="form-group">
           <label>Kode Lokasi</label>
           <input type="text" class="form-control" placeholder="Enter kode lokasi (x-xx-xx-xx)" name="kode_lokasi">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <div>
+              <label>Long</label>
+              <input type="text" id="lng" class="form-control" readonly="yes" name="long">
+            </div>
+            <div>
+              <label>Lat</label>
+              <input type="text" id="lat" class="form-control" readonly="yes" name="lat">
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <div id="map"></div>
+          </div>
         </div>
       </div>
       <div class="kt-portlet__foot">
