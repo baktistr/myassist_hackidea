@@ -112,11 +112,6 @@ License: You must have a valid license purchased only from https://themes.getboo
 
 		<!-- SERTIFIKAT KEEN DATATABLE -->
 		 <!--begin::Page Scripts(used by this page) -->
-
-		 <script src="<?php base_url() ?>assets/js/components/data-lahan.js" type="text/javascript"></script>
-		 <script src="<?php base_url() ?>assets/js/components/data-sertifikat.js" type="text/javascript"></script>
-		 
-
 		 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 		 <script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/map.js"></script>
 		<!--end::Page Scripts -->
