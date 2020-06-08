@@ -50,9 +50,9 @@ class LahanController extends BaseController
 				var_dump($this->lahan->errors());
 				echo '</pre>';
 				return;
-				return redirect()->to('/aset-lahan-create')->with('msg','Fail insert new data, please fill all field');
+				return redirect()->to('/aset-lahan-create')->with('msg','Fail insert new data, please fill all field', 'warning');
 			} else {							
-				return redirect()->to('/aset-lahan')->with('msg','Success insert new data');
+				return redirect()->to('/aset-lahan')->with('msg','Success insert new data', 'success');
 			}
 		}
 	}
@@ -63,9 +63,9 @@ class LahanController extends BaseController
 		$data = $this->request->getPost();
 		if(!empty($data)) {
 			if($this->lahan->update($id, $data) === FALSE) {
-				return redirect()->to('/aset-lahan-edit-'.$id)->with('msg','Fail update data, please fill all field');
+				return redirect()->to('/aset-lahan-edit-'.$id)->with('msg','Fail update data, please fill all field', 'warning');
 			} else {
-				return redirect()->to('/aset-lahan')->with('msg','Success update data');
+				return redirect()->to('/aset-lahan')->with('msg','Success update data', 'success');
 			}
 		}
 	}
@@ -76,9 +76,9 @@ class LahanController extends BaseController
 		$this->lahan->where('lahan_id', $id)->delete();
 
 	    if ($this->lahan->db->affectedRows()) {
-	      return redirect()->to('/aset-lahan')->with('msg','Data is not exist');
+	      return redirect()->to('/aset-lahan')->with('msg','Data is not exist', 'dark');
 	    } else {
-	      return redirect()->to('/aset-lahan')->with('msg','Success delete data');
+	      return redirect()->to('/aset-lahan')->with('msg','Success delete data', 'success');
 	    }
 	}
 

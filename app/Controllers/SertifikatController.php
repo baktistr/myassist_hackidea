@@ -48,7 +48,7 @@ class SertifikatController extends BaseController
         $data['id'] = $this->sertifikat->getInsertID();
         $file_name = $data['no_sertifikat'].'_'.$data['kelurahan'].'_'.$data['id'].'.pdf';
         $file->move('/sertifikat_file', $file_name);
-        return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data');
+        return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data', 'success');
       } else {
         echo '<pre>';
         var_dump($this->sertifikat->errors());

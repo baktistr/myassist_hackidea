@@ -47,9 +47,9 @@ class BangunanController extends BaseController
         var_dump($this->lahan->errors());
         echo '</pre>';
         return;
-        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data', 'warning');
       } else {
-        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
+        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data', 'success');
       }
     } else {
       return redirect()->to('/aset-bangunan')->with('msg', 'No data submitted');
@@ -63,9 +63,9 @@ class BangunanController extends BaseController
 
     if (!empty($data)) {
       if ($this->bangunan->update($id, $data) === FALSE) {
-        return redirect()->to('/aset-bangunan-edit-'.$id)->with('msg', 'Fail to insert new data');
+        return redirect()->to('/aset-bangunan-edit-'.$id)->with('msg', 'Fail to insert new data', 'warning');
       } else {
-        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data');
+        return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data', 'success');
       }
     }
   }
@@ -76,9 +76,9 @@ class BangunanController extends BaseController
     $sql = $this->bangunan->where('gedung_id', $id)->delete();
 
     if ($this->bangunan->db->affectedRows()) {
-      return redirect()->to('/aset-bangunan')->with('msg','Data is not exist');
+      return redirect()->to('/aset-bangunan')->with('msg','Data is not exist', 'dark');
     } else {
-      return redirect()->to('/aset-bangunan')->with('msg','Success delete data');
+      return redirect()->to('/aset-bangunan')->with('msg','Success delete data', 'success');
     }
   }
 }
