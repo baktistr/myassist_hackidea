@@ -69,7 +69,7 @@ class UserController extends BaseController
   // //delete data user di db
   public function delete($id)
   {
-    $sql = $this->user->where('gedung_id', $id)->delete();
+    $this->user->where('gedung_id', $id)->delete();
 
     if ($this->user->db->affectedRows()) {
       return redirect()->to('/user-control')->with('msg','Data is not exist');
