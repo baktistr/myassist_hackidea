@@ -178,7 +178,7 @@ var bangunanDatatable = function () {
 					width: 110,
 					overflow: 'visible',
 					autoHide: false,
-					template: function() {
+					template: function(row) {						
 						return '\
 						<div class="dropdown">\
 							<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown">\
@@ -190,10 +190,10 @@ var bangunanDatatable = function () {
 						    	<a class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>\
 						  	</div>\
 						</div>\
-						<a href="<?= base_url('aset-bangunan-edit-') ?>" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
+						<a href="<?= base_url('aset-bangunan-edit-') ?>'+row.gedung_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\
-						<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">\
+						<a href="<?= base_url('aset-bangunan-delete-') ?>'+row.gedung_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">\
 							<i class="la la-trash"></i>\
 						</a>\
 					';
