@@ -75,14 +75,11 @@
           </div>
         </div>
       </div>
-
       <!--end: Search Form -->
     </div>
     <div class="kt-portlet__body kt-portlet__body--fit">
-
       <!--begin: Datatable -->
       <div class="kt_datatable" id="data-lahan"></div>
-
       <!--end: Datatable -->
     </div>
   </div>
@@ -133,8 +130,8 @@ var lahanDatatable = function () {
 					textAlign: 'center',
 				},
 				{
-					field: 'id_areal_fix_old',
-					title: 'ID Areal',
+					field: 'kode_lokasi',
+					title: 'Kode Lokasi',
 				},
 				{
 					field: 'nama_lahan',
@@ -147,15 +144,14 @@ var lahanDatatable = function () {
 				{
 					field: 'provinsi_nama',
 					title: 'Provinsi',
-					autoHide: false,
 				},
 				{
 					field: 'kota_nama',
 					title: 'Kota',
 				},
 				{
-					field: 'kecamatan_nama',
-					title: 'Kecamatan'
+					field: 'area_regional',
+					title: 'Regional'
 				},
 				{
 					field: 'Actions',
@@ -166,6 +162,9 @@ var lahanDatatable = function () {
 					autoHide: false,
 					template: function(row) {
 						return '\
+            <a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See details">\
+							<i class="la la-eye"></i>\
+						</a>\
 						<a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\

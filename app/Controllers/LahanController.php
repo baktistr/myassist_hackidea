@@ -22,6 +22,22 @@ class LahanController extends BaseController
 		echo view('index', $data);
 	}
 
+		public function show($id)
+	{
+		$record = $this->lahan->find($id);
+    if(empty($record)) {
+      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+    }
+
+		$data=[
+		  'title' => 'Edit Aset Lahan',
+		  'isi' => 'pages/asetLahanView',
+		  'subheader' => 'Asset Detail',
+		  'lahan' => $record
+		];
+		echo view('index', $data);
+	}
+
 	//edit data lahan
 	public function edit($id=NULL)
 	{
@@ -78,7 +94,5 @@ class LahanController extends BaseController
 	      return redirect()->to('/aset-lahan')->with('msg','Success delete data', 'success');
 	    }
 	}
-
 	//--------------------------------------------------------------------
-
 }
