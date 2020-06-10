@@ -75,12 +75,7 @@ class Home extends BaseController
 	}
 
 	public function showDetail()
-	{
-		// $record = $this->lahan->find($id);
-    // if(empty($record)) {
-    //   throw new \CodeIgniter\Database\Exceptions\DatabaseException();
-		// }
-		
+	{	
 		$url = file_get_contents('http://myassistrepo.com/api/lahan/2144');
 		$aset = json_decode($url, TRUE);
 
