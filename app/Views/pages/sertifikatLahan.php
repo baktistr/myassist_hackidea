@@ -100,25 +100,12 @@ var sertifikatDatatable = function () {
 
 	// basic demo
 	var demo = function () {
-
+		var dataSet = <?= json_encode($sertifikat) ?>;
 		var datatable = $('#data-sertifikat').KTDatatable({
 			// datasource definition
-			data: {
-				type: 'remote',
-				source: {
-					read: {
-						url: 'http://localhost:8080/api/sertifikat',
-						method: 'GET',
-						map: function (raw) {
-							// sample data mapping
-							var dataSet = raw;
-							if (typeof raw.data !== 'undefined') {
-								dataSet = raw.data;
-							}
-							return dataSet;
-						},
-					},
-				},
+			data: { 
+				type: 'local',
+				source: dataSet,
 				pageSize: 10,
 			},
 
@@ -184,16 +171,6 @@ var sertifikatDatatable = function () {
 					autoHide: false,
 					template: function(row) {
 						return '\
-						<div class="dropdown">\
-							<a href="javascript:;" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="dropdown">\
-                                <i class="la la-cog"></i>\
-                            </a>\
-						  	<div class="dropdown-menu dropdown-menu-right">\
-						    	<a class="dropdown-item" href="#"><i class="la la-edit"></i> Edit Details</a>\
-						    	<a class="dropdown-item" href="#"><i class="la la-leaf"></i> Update Status</a>\
-						    	<a class="dropdown-item" href="#"><i class="la la-print"></i> Generate Report</a>\
-						  	</div>\
-						</div>\
 						<a href="<?= base_url('sertifikat-lahan-edit-') ?>'+row.sertifikat_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\

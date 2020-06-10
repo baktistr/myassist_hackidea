@@ -50,7 +50,8 @@ class Home extends BaseController
 		$data=[
 			'title' => 'Sertifikat Lahan',
 			'isi' => 'pages/sertifikatLahan',
-			'subheader' => 'Data Sertifikat'
+			'subheader' => 'Data Sertifikat',
+			'sertifikat' => $this->sertifikat->findAll()
 		];
 		echo view('index', $data);
 	}
