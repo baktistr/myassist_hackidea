@@ -4,7 +4,7 @@
 	<div class="kt-container ">
 		<div class="kt-footer__bottom">
 			<div class="kt-footer__copyright">
-				<?= date("Y"); ?>&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/keen" target="_blank" class="kt-link">Keenthemes Inc</a>
+				<?= date("Y"); ?>&nbsp;&copy;&nbsp;<a href="<?= base_url();?>" target="_blank" class="kt-link">MyAssets</a>
 			</div>
 		</div>
 	</div>

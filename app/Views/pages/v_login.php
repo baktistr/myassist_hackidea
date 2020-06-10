@@ -140,7 +140,7 @@ License: You must have a valid license purchased only from https://themes.getboo
             <a href="#" class="kt-link kt-font-brand">Contact</a>
           </div>
           <div class="kt-login-v2__info">
-            <a href="#" class="kt-link">&copy; <?= date("Y"); ?> KeenThemes</a>
+            <a href="#" class="kt-link">&copy; <?= date("Y"); ?> MyAssets</a>
           </div>
         </div>
       </div>
