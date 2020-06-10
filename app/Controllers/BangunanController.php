@@ -20,6 +20,22 @@ class BangunanController extends BaseController
     echo view('index', $data);
   }
 
+  public function show($id=NULL)
+  {
+    $record = $this->bangunan->find($id);
+    if(empty($record)) {
+      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+    }
+
+    $data=[
+      'title' => 'Edit Aset Bangunan',
+      'isi' => 'pages/asetBangunanView',
+		  'subheader' => 'Asset Detail',
+      'bangunan' => $record
+    ];
+    echo view('index', $data);
+  }
+
   public function edit($id=NULL)
   {
     $record = $this->bangunan->find($id);

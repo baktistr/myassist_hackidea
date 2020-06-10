@@ -74,6 +74,25 @@ class Home extends BaseController
 		echo view('pages/v_login');
 	}
 
+	public function showDetail()
+	{
+		// $record = $this->lahan->find($id);
+    // if(empty($record)) {
+    //   throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+		// }
+		
+		$url = file_get_contents('http://myassistrepo.com/api/lahan/2144');
+		$aset = json_decode($url, TRUE);
+
+		$data=[
+		  'title' => 'Edit Aset Lahan',
+		  'isi' => 'pages/asetDetail',
+			'subheader' => 'Asset Detail',
+			'detail'	=> $aset
+		];
+		echo view('index', $data);
+	}
+
 	//--------------------------------------------------------------------
 
 }
