@@ -17,6 +17,7 @@
     </div>
 
     <!--begin::Form-->
+    <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
     <form class="kt-form" action="<?= base_url('/aset-lahan-edit-' . $lahan['lahan_id']);?>" method="post">
       <div class="kt-portlet__body">
 

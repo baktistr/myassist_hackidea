@@ -18,7 +18,7 @@
     </div>
 
     <!--begin::Form-->
-    <?= \Config\Services::validation()->listErrors(); ?>
+    <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
     <form action="<?= base_url('/aset-bangunan-create');?>" method="post" class="kt-form">
       <div class="kt-portlet__body">
 

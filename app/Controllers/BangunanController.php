@@ -43,11 +43,8 @@ class BangunanController extends BaseController
     // return var_dump($data); 
     if (!empty($data)) {
       if ($this->bangunan->insert($data) === FALSE) {
-        echo '<pre>';
-        var_dump($this->lahan->errors());
-        echo '</pre>';
-        return;
-        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data', 'warning');
+        $err = implode(' ', $this->bangunan->errors());        
+        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data. '.$err, 'warning');
       } else {
         return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data', 'success');
       }

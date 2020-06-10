@@ -11,6 +11,7 @@
     </div>
 
     <!--begin::Form-->
+    <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
     <form class="kt-form" action="/sertifikat-lahan-edit-<?= $sertifikat['sertifikat_id']; ?>" method="post" enctype="multipart/form-data">
       <div class="kt-portlet__body">
         <div class="form-group">
