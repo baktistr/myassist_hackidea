@@ -171,6 +171,9 @@ var sertifikatDatatable = function () {
 					autoHide: false,
 					template: function(row) {
 						return '\
+						<a href="<?= base_url('sertifikat-lahan-view-') ?>'+row.sertifikat_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See details">\
+							<i class="la la-eye"></i>\
+						</a>\
 						<a href="<?= base_url('sertifikat-lahan-edit-') ?>'+row.sertifikat_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\

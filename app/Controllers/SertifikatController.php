@@ -37,6 +37,22 @@ class SertifikatController extends BaseController
     echo view('index', $data);
   }
 
+  public function show($id=NULL)
+  {
+    $record = $this->sertifikat->find($id);
+    if(empty($record)) {
+      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+    }
+
+    $data=[
+      'title' => 'Edit Aset Bangunan',
+      'isi' => 'pages/sertifikatLahanView',
+		  'subheader' => 'Asset Detail',
+      'sertifikat' => $record
+    ];
+    echo view('index', $data);
+  }
+
   // simpan new data ke db
   public function store()
   {
