@@ -5,11 +5,12 @@ use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 use Ahc\Jwt\JWT;
 
-class AuthAPIAdmin implements FilterInterface
+class AuthAPI implements FilterInterface
 {  
   public function before(RequestInterface $request)
   {
-    $response = service('response');
+    $method = $request->getMethod();
+    $response = service('response');    
     if($request->hasHeader('x-token-api')) {
       $jwt = new JWT('secret');
       $token = $request->getHeaderLine('x-token-api');
@@ -18,16 +19,25 @@ class AuthAPIAdmin implements FilterInterface
         $payload = $jwt->decode($token);
       } catch (\Exception $e) {
         $err = $e->getMessage();
-        return $response->setStatusCode(401);
+        return $response->setStatusCode(401)->setBody('Invalid Token!');
       }
       
       if(isset($payload['scopes'])) {
-        if($payload['scopes']->role == 'admin') {
+        $token_role = $payload['scopes']->role;
+        if($token_role == 'admin' || $token_role == 'amc') {
           return;
-        } 
+        }         
+        if($token_role == 'treg' && ($method === 'get' || $method === 'post')) {
+          return;
+        }
+        if($token_role == 'user' && $method === 'get') {
+          return;
+        }
       }
+    } else {
+      return $response->setStatusCode(401)->setBody(var_dump($token));
     }
-    return $response->setStatusCode(401)->setBody(print_r($payload));
+    return $response->setStatusCode(401)->setBody('aaa');
   }
 
   //--------------------------------------------------------------------

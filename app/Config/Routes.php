@@ -73,17 +73,22 @@ $routes->post('/user-control-create', 'UserController::store');
 $routes->post('/user-control-edit-(:segment)', 'UserController::update/$1');
 $routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1');
 
-//api lahan
-$routes->resource('/api/lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);
-$routes->get('/api/lahan/(:segment)', 'Api\Lahan::show/$1');
-$routes->get('/api/lahan/(:segment)/sertifikat', 'Api\Lahan::show_sertifikat/$1');
-$routes->get('/api/lahan/(:segment)/bangunan', 'Api\Lahan::show_bangunan/$1');
+//routes for API
+$routes->group('api', ['filter' => 'AuthAPI'], function($routes){
+	//api lahan
+	$routes->resource('lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);
+	$routes->get('lahan/(:segment)', 'Api\Lahan::show/$1');
+	$routes->get('lahan/(:segment)/sertifikat', 'Api\Lahan::show_sertifikat/$1');
+	$routes->get('lahan/(:segment)/bangunan', 'Api\Lahan::show_bangunan/$1');
 
-//api bangunan
-$routes->resource('/api/bangunan', ['controller' => 'Api\Bangunan', 'except' => 'new,edit']);
+	//api bangunan
+	$routes->resource('bangunan', ['controller' => 'Api\Bangunan', 'except' => 'new,edit']);
 
-//api sertifikat 
-$routes->resource('/api/sertifikat', ['controller' => 'Api\Sertifikat', 'except' => 'new,edit']);
+	//api sertifikat 
+	$routes->resource('sertifikat', ['controller' => 'Api\Sertifikat', 'except' => 'new,edit']);
+});
+
+
 
 /**
  * --------------------------------------------------------------------
