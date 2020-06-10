@@ -20,7 +20,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(true);
+$routes->setAutoRoute(false);
 
 /**
  * --------------------------------------------------------------------
@@ -37,8 +37,10 @@ $routes->post('/login', 'Authentication::login');
 $routes->post('/logout', 'Logout::index');
 $routes->post('/register', 'Authentication::create');
 $routes->get('/api/gettoken', 'Authentication::index');
+$routes->post('/api/login', 'Api\Auth::login');
 
 //view home
+$routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/aset-lahan', 'Home::asetLahan');
 $routes->get('/user-control', 'Home::userControl');
