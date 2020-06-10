@@ -3,6 +3,7 @@
 use App\Models\Gedung_model;
 use App\Models\Sertifikat_model;
 use App\Models\Lahan_model;
+use App\Models\User_model;
 
 class Home extends BaseController
 {
@@ -11,6 +12,7 @@ class Home extends BaseController
 		$this->bangunan = new Gedung_model();
 		$this->lahan = new Lahan_model();
 		$this->sertifikat = new Sertifikat_model();
+		$this->user = new User_model();
 	}
 
 	public function index()
@@ -61,7 +63,8 @@ class Home extends BaseController
 		$data=[
 			'title' => 'User Control',
 			'isi' => 'pages/userControl',
-			'subheader' => 'User Control'
+			'subheader' => 'User Control',
+			'user' => $this->user->findAll()
 		];
 		echo view('index', $data);
 	}
