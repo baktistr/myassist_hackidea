@@ -155,9 +155,6 @@ var bangunanDatatable = function () {
 					autoHide: false,
 					template: function(row) {						
 						return '\
-						<a href="<?= base_url('user-control-view-') ?>'+row.user_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See Details">\
-							<i class="la la-eye"></i>\
-						</a>\
 						<a href="<?= base_url('user-control-edit-') ?>'+row.user_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\

@@ -162,7 +162,7 @@ var lahanDatatable = function () {
 					autoHide: false,
 					template: function(row) {
 						return '\
-            <a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See details">\
+            <a href="<?= base_url('aset-lahan-view-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See details">\
 							<i class="la la-eye"></i>\
 						</a>\
 						<a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
