@@ -64,17 +64,6 @@ class SertifikatTable extends Migration
 			'akhir'				=> [
 				'type'			=> 'date'
 			],
-			'tahun'				=> [
-				'type'			=> 'year'
-			],
-			'bulan'				=> [
-				'type'			=> 'INT',
-				'constraint'	=> 11
-			],
-			'tanggal'			=> [
-				'type'			=> 'INT',
-				'constraint'	=> 11
-			],
 			'status_hgb'		=> [
 				'type'			=> 'VARCHAR',
 				'constraint'	=> 100

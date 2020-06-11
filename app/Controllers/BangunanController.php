@@ -59,8 +59,8 @@ class BangunanController extends BaseController
     // return var_dump($data); 
     if (!empty($data)) {
       if ($this->bangunan->insert($data) === FALSE) {
-        $err = implode(' ', $this->bangunan->errors());        
-        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data. '.$err, 'warning');
+        $err = implode('<br>', $this->bangunan->errors());        
+        return redirect()->to('/aset-bangunan-create')->with('msg', 'Fail to insert new data. <br>'.$err, 'warning');
       } else {
         return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data', 'success');
       }
@@ -76,7 +76,8 @@ class BangunanController extends BaseController
 
     if (!empty($data)) {
       if ($this->bangunan->update($id, $data) === FALSE) {
-        return redirect()->to('/aset-bangunan-edit-'.$id)->with('msg', 'Fail to insert new data', 'warning');
+        $err = implode('<br>', $this->bangunan->errors());        
+        return redirect()->to('/aset-bangunan-edit-'.$id)->with('msg', 'Fail to update data. <br>'.$err, 'warning');        
       } else {
         return redirect()->to('/aset-bangunan')->with('msg', 'Success to insert new data', 'success');
       }

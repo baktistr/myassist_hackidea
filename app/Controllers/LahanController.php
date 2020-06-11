@@ -62,8 +62,8 @@ class LahanController extends BaseController
 		
 		if(!empty($data)) {
 			if($this->lahan->insert($data) === FALSE) {	
-				$err = implode(' ', $this->lahan->errors());        
-	    		return redirect()->to('/aset-lahan-create')->with('msg', 'Fail to insert new data. '.$err, 'warning');				
+				$err = implode('<br>', $this->lahan->errors());        
+	    		return redirect()->to('/aset-lahan-create')->with('msg', 'Fail to insert new data. <br>'.$err, 'warning');				
 			} else {							
 				return redirect()->to('/aset-lahan')->with('msg','Success insert new data', 'success');
 			}
@@ -76,7 +76,8 @@ class LahanController extends BaseController
 		$data = $this->request->getPost();
 		if(!empty($data)) {
 			if($this->lahan->update($id, $data) === FALSE) {
-				return redirect()->to('/aset-lahan-edit-'.$id)->with('msg','Fail update data, please fill all field', 'warning');
+				$err = implode('<br>', $this->lahan->errors());        
+        		return redirect()->to('/aset-lahan-edit-'.$id)->with('msg', 'Fail to update data. <br>'.$err, 'warning'); 
 			} else {
 				return redirect()->to('/aset-lahan')->with('msg','Success update data', 'success');
 			}

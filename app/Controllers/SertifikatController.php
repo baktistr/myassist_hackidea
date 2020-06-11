@@ -66,11 +66,11 @@ class SertifikatController extends BaseController
         $file->move('/sertifikat_file', $file_name);
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data', 'success');
       } else {
-        $err = implode(' ', $this->sertifikat->errors());        
-        return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data. '.$err, 'warning');
+        $err = implode('<br>', $this->sertifikat->errors());        
+        return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data. <br>'.$err, 'warning');
       }
     } 
-    return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data. Provide pdf file', 'warning');
+    return redirect()->to('/sertifikat-lahan-create')->with('msg', 'Fail to insert new data. Please provide pdf file', 'warning');
   }
 
   // // update sertifikat ke db
@@ -80,7 +80,8 @@ class SertifikatController extends BaseController
 
     if (!empty($data)) {
       if ($this->sertifikat->update($id, $data) === FALSE) {
-        return redirect()->to('/sertifikat-lahan-edit/'.$id)->with('msg', 'Fail to insert new data', 'success');
+        $err = implode('<br>', $this->sertifikat->errors());        
+        return redirect()->to('/sertifikat-lahan-edit-'.$id)->with('msg', 'Fail to update data. <br>'.$err, 'warning'); 
       } else {
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data', 'danger');
       }
