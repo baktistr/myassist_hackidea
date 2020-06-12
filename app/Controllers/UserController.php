@@ -43,12 +43,12 @@ class UserController extends BaseController
     
     if (!empty($data)) {
       if ($this->user->insert($data) === FALSE) {
-        return redirect()->to('/user-control-create')->with('msg', 'Fail to insert new data');
+        return redirect()->to('/user-control-create')->with('msg', 'Fail to insert new data', 'warning');
       } else {
-        return redirect()->to('/user-control')->with('msg', 'Success to insert new data');
+        return redirect()->to('/user-control')->with('msg', 'Success to insert new data', 'success');
       }
     } else {
-      return redirect()->to('/user-control')->with('msg', 'No data submitted');
+      return redirect()->to('/user-control')->with('msg', 'No data submitted', 'dark');
     }
   }
 
@@ -59,9 +59,9 @@ class UserController extends BaseController
 
     if (!empty($data)) {
       if ($this->user->update($id, $data) === FALSE) {
-        return redirect()->to('/user-control-edit-'.$id)->with('msg', 'Fail to insert new data');
+        return redirect()->to('/user-control-edit-'.$id)->with('msg', 'Fail to update data', 'warning');
       } else {
-        return redirect()->to('/user-control')->with('msg', 'Success to insert new data');
+        return redirect()->to('/user-control')->with('msg', 'Success to update data', 'success');
       }
     }
   }

@@ -45,6 +45,7 @@ $routes->get('/user-control', 'Home::userControl');
 $routes->get('/aset-bangunan', 'Home::asetBangunan');
 $routes->get('/sertifikat-lahan', 'Home::sertifikatLahan');
 $routes->get('/aset-detail', 'Home::showDetail');
+$routes->get('/home', 'Landing::index');
 
 //crud lahan
 $routes->get('/aset-lahan-create', 'LahanController::create');

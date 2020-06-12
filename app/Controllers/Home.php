@@ -74,6 +74,11 @@ class Home extends BaseController
 		echo view('pages/v_login');
 	}
 
+	public function home()
+	{
+		echo view('pages/landingPage');
+	}
+
 	public function showDetail()
 	{	
 		$url = file_get_contents('http://myassistrepo.com/api/lahan/2144');
