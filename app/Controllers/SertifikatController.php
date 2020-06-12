@@ -94,9 +94,9 @@ class SertifikatController extends BaseController
     $this->sertifikat->where('sertifikat_id', $id)->delete();
 
     if ($this->sertifikat->db->affectedRows()) {
-      return redirect()->to('/sertifikat-lahan')->with('msg','Data is not exist', 'warning');
-    } else {
       return redirect()->to('/sertifikat-lahan')->with('msg','Success delete data', 'success');
+    } else {
+      return redirect()->to('/sertifikat-lahan')->with('msg','Data is not exist', 'warning');
     }
   }
 }

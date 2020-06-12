@@ -85,6 +85,26 @@
   </div>
 </div>
 
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModal">Konfirmasi</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Apakah anda yakin ingin menghapus data ini?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a id="urlDelete" class="btn btn-primary">Hapus</a>
+          </div>
+        </div>
+      </div>
+    </div>
 <!-- end:: Content -->
 
 
@@ -171,9 +191,9 @@ var lahanDatatable = function () {
 						<a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\
-						<a href="<?= base_url('aset-lahan-delete-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">\
-							<i class="la la-trash"></i>\
-						</a>\
+						<a id="'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete"  data-toggle="modal" data-target="#deleteModal">\
+              <i class="la la-trash"></i>\
+            </a>\
 					';
 					},
 				}
@@ -205,5 +225,10 @@ jQuery(document).ready(function () {
 });
 </script>
 
-
+<script type="text/javascript">
+  $(document).on("click", ".btn-clean", function () {    
+    var clickedBtnID = $(this).attr('id');
+    $("#urlDelete").attr("href", "<?= base_url('/aset-lahan-delete-') ?>"+clickedBtnID);
+   });
+</script>
 <!--end::Page Scripts -->

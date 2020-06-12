@@ -99,7 +99,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Hapus</button>
+            <a id="urlDelete" class="btn btn-primary">Hapus</a>
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@ var bangunanDatatable = function() {
 						<a href="<?= base_url('user-control-edit-') ?>' + row.user_id + '" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
 						</a>\
-						<a href="<?= base_url('user-control-delete-') ?>' + row.user_id +'" id="btnHapus" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete"  data-toggle="modal" data-target="#deleteModal">\
+						<a id="'+row.user_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete"  data-toggle="modal" data-target="#deleteModal">\
 							<i class="la la-trash"></i>\
 						</a>\
 					';
@@ -215,5 +215,11 @@ var bangunanDatatable = function() {
 jQuery(document).ready(function() {
   bangunanDatatable.init();
 });
+</script>
+<script type="text/javascript">
+  $(document).on("click", ".btn-clean", function () {    
+    var clickedBtnID = $(this).attr('id');
+    $("#urlDelete").attr("href", "<?= base_url('/user-control-delete-') ?>"+clickedBtnID);
+   });
 </script>
 <!-- end:: Content -->

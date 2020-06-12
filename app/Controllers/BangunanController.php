@@ -89,10 +89,10 @@ class BangunanController extends BaseController
   {
     $sql = $this->bangunan->where('gedung_id', $id)->delete();
 
-    if ($this->bangunan->db->affectedRows()) {
-      return redirect()->to('/aset-bangunan')->with('msg','Data is not exist', 'dark');
-    } else {
+    if ($this->bangunan->db->affectedRows()) {      
       return redirect()->to('/aset-bangunan')->with('msg','Success delete data', 'success');
+    } else {
+      return redirect()->to('/aset-bangunan')->with('msg','Data is not exist', 'dark');
     }
   }
 }
