@@ -1355,6 +1355,7 @@ var KTDashboard = function() {
 
             widgetSalesStatisticsChart();
             widgetRevenueGrowthChart();
+            asetMappingChart();
         }
     };
 }();
