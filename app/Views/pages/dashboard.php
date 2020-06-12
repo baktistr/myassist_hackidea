@@ -10,6 +10,7 @@
   <!--begin::Dashboard 5-->
 
   <!--begin::Row-->
+  <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
   <div class="row">
     <div class="col-lg-4 col-xl-4">
       <div class="row">
@@ -108,12 +109,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-12 col-xl-12 order-lg-8 order-xl-1">
-      <!--begin::Portlet-->
-      <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
-
-      <!--end::Portlet-->
     </div>
 
     <div class="col-lg-6 col-xl-6 order-lg-2 order-xl-1">
