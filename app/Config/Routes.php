@@ -34,7 +34,7 @@ $routes->setAutoRoute(false);
 //auth route
 $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Authentication::login');
-$routes->post('/logout', 'Logout::index');
+$routes->get('/logout', 'Authentication::logout');
 $routes->post('/api/login', 'Api\Auth::login');
 
 //view home
