@@ -36,7 +36,7 @@ class Filters extends BaseConfig
 
 			//cek login
 			'IsLogin' => [
-				'except' => ['api','api/*'],
+				'except' => ['api','api/*', 'home'],
 			],
 		],
 		'after'  => [

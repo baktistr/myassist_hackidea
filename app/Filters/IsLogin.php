@@ -11,7 +11,7 @@ class IsLogin implements FilterInterface
         $session = session();
                 
         if ($session->has('token'))
-        { 
+        {
             if ($request->uri->getPath() == 'login')
             {
                 return redirect()->to('dashboard');
@@ -19,7 +19,11 @@ class IsLogin implements FilterInterface
         } 
         else
         {
-            if($request->uri->getPath() != 'login')
+            if($request->uri->getPath() == '/')
+            {
+                return true;
+            }
+            else if ($request->uri->getPath() != 'login')
             {
                 return redirect()->to('login')->with('msg', 'Anda harus login terlebih dahulu', 'danger');
             }

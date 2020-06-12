@@ -16,7 +16,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('Landing');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -38,7 +38,7 @@ $routes->get('/logout', 'Authentication::logout');
 $routes->post('/api/login', 'Api\Auth::login');
 
 //view home
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Landing::index');
 $routes->get('/dashboard', 'Home::index');
 $routes->get('/aset-lahan', 'Home::asetLahan');
 $routes->get('/user-control', 'Home::userControl');

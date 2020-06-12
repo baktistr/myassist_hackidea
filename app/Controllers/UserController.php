@@ -72,9 +72,9 @@ class UserController extends BaseController
     $this->user->where('user_id', $id)->delete();
 
     if ($this->user->db->affectedRows()) {
-      return redirect()->to('/user-control')->with('msg','Success delete data');
+      return redirect()->to('/user-control')->with('msg','Success delete data', 'success');
     } else {
-      return redirect()->to('/user-control')->with('msg','Data is not exist');
+      return redirect()->to('/user-control')->with('msg','Data is not exist', 'warning');
     }
   }
 }
