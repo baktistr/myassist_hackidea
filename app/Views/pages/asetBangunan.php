@@ -143,16 +143,12 @@ var bangunanDatatable = function () {
 			columns: [
 				{
 					field: 'gedung_id',
-					title: '#',
+					title: 'No.',
 					textAlign: 'center',
 				},
 				{
 					field: 'id_areal_fix_old',
 					title: 'ID Areal',
-				},
-				{
-					field: 'urut_gedung',
-					title: 'Urut Gedung',
 				},
 				{
 					field: 'kode_gedung',
@@ -161,15 +157,18 @@ var bangunanDatatable = function () {
 				{
 					field: 'nama_gedung',
 					title: 'Nama Gedung',
-					autoHide: false,
 				},
 				{
-					field: 'lat',
-					title: 'Lat',
+					field: 'peruntukan',
+					title: 'Peruntukan',
 				},
 				{
-					field: 'long',
-					title: 'Long'
+					field: 'jumlah_lantai',
+					title: 'Jumlah Lantai'
+				},
+				{
+					field: 'luas_gedung',
+					title: 'Luas Gedung',
 				},
 				{
 					field: 'Actions',

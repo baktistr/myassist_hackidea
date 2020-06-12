@@ -11,9 +11,69 @@
 
   <!--begin::Row-->
   <div class="row">
-    <div class="col-lg-12 col-xl-8 order-lg-2 order-xl-1">
-      <!--begin::Portlet-->
-      <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
+    <div class="col-lg-4 col-xl-4">
+      <div class="row">
+        <div class="kt-portlet kt-portlet--height-fluid kt-widget ">
+          <div class="kt-portlet__body">
+            <div id="kt-widget-slider-13-1" class="kt-slider carousel slide" data-ride="carousel" data-interval="8000">
+              <div class="text-center kt-slider__head">
+                <div class="text-dark kt-slider__label">Aset Lahan</div>
+
+                <!-- button detail -->
+                <div class="kt-portlet__head-toolbar">
+                  <div class="kt-portlet__head-toolbar-wrapper">
+                    <div class="dropdown dropdown-inline">
+                      <div class="kt-slider__nav">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-inner">
+                <div class=" active kt-slider__body">
+                  <div class="kt-widget-13">
+                    <div class="text-center kt-widget-13__body">
+                      <h5>Luas: 1xxxxxx m2</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
+          <div class="kt-portlet__body">
+            <div id="kt-widget-slider-13-1" class="kt-slider carousel slide" data-ride="carousel" data-interval="8000">
+              <div class="text-center kt-slider__head">
+                <div class="text-dark kt-slider__label">Aset Bangunan</div>
+
+                <!-- button detail -->
+                <div class="kt-portlet__head-toolbar">
+                  <div class="kt-portlet__head-toolbar-wrapper">
+                    <div class="dropdown dropdown-inline">
+                      <div class="kt-slider__nav">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-inner">
+                <div class=" active kt-slider__body">
+                  <div class="kt-widget-13">
+                    <div class="text-center kt-widget-13__body">
+                      <h5>Luas: 1xxxxxx m2</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-xl-8">
       <div class="kt-portlet kt-portlet--height-fluid kt-widget-13">
         <div class="kt-portlet__body">
           <div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
@@ -34,7 +94,7 @@
               <div class="carousel-item active kt-slider__body">
                 <div class="kt-widget-13">
                   <div class="kt-widget-13__body">
-                    <h5 class="text-dark mb-4">Region 1</h5>
+                    <h5 class="text-dark mb-4">Regional</h5>
                     <div class="kt-widget-13__desc">
                       <div class="kt-widget-9__chart">
                         <!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
@@ -50,6 +110,10 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="col-lg-12 col-xl-12 order-lg-8 order-xl-1">
+      <!--begin::Portlet-->
+      <?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
 
       <!--end::Portlet-->
     </div>

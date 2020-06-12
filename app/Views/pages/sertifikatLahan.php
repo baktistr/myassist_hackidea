@@ -129,13 +129,9 @@ var sertifikatDatatable = function () {
 			columns: [
 				{
 					field: 'sertifikat_id',
-					title: '#',
+					title: 'No.',
 					type: 'number',
 					textAlign: 'center',
-				},
-				{
-					field: 'id_areal',
-					title: 'ID Areal',
 				},
 				{
 					field: 'no_sertifikat',
@@ -161,6 +157,18 @@ var sertifikatDatatable = function () {
 				{
 					field: 'kelurahan',
 					title: 'Kelurahan',
+				},
+				{
+					field: 'luas',
+					title: 'Luas'
+				},
+				{
+					field: 'jenis',
+					title: 'Jenis'
+				},
+				{
+					field: 'status_penyimpanan',
+					title: 'Status Penyimpanan'
 				},
 				{
 					field: 'Actions',

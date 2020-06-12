@@ -108,7 +108,7 @@ var lahanDatatable = function () {
 
 			// layout definition
 			layout: {
-				scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
+				scroll: false, // enable/disable datatable scroll both horizontal and vertical when needed.
 				footer: false // display/hide footer
 			},
 
@@ -126,7 +126,7 @@ var lahanDatatable = function () {
 			columns: [
 				{
 					field: 'lahan_id',
-					title: '#',
+					title: 'No.',
 					textAlign: 'center',
 				},
 				{
@@ -152,12 +152,15 @@ var lahanDatatable = function () {
 				{
 					field: 'area_regional',
 					title: 'Regional'
-				},
+        },
+        {
+          field: 'luas_tanah',
+          title: 'Luas Tanah'
+        },
 				{
 					field: 'Actions',
 					title: 'Actions',
 					sortable: false,
-					width: 110,
 					overflow: 'visible',
 					autoHide: false,
 					template: function(row) {

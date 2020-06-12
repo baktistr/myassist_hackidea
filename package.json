@@ -1,5 +1,5 @@
 {
-  "name": "myAssistTemplate4",
+  "name": "myassisttemplate4",
   "version": "1.0.0",
   "description": "CodeIgniter is a PHP full-stack web framework that is light, fast, flexible, and secure. \r More information can be found at the [official site](http://codeigniter.com).",
   "main": "index.js",
@@ -105,17 +105,24 @@
     "wnumb": "^1.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url public/sass/mystyles.scss public/assets/css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/baktistr/myassist_hackidea.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bakti Adhityatama",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/baktistr/myassist_hackidea/issues"
   },
-  "homepage": "https://github.com/baktistr/myassist_hackidea#readme"
+  "homepage": "https://github.com/baktistr/myassist_hackidea#readme",
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
+  }
 }

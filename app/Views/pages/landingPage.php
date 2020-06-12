@@ -8,6 +8,8 @@
   <link href="<?php base_url() ?>assets/bulma/css/bulma.min.css" rel="stylesheet" type="text/css" />
   <link href="<?php base_url() ?>assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet"
     type="text/css" />
+  <link rel="stylesheet" href="<?php base_url();?>assets/css/mystyles.css">
+
 </head>
 
 <body>
@@ -51,10 +53,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            MyAssets
+            MyAssists: Repository
           </h1>
           <h2 class="subtitle">
-            Hero subtitle
+            Documentation page
           </h2>
         </div>
       </div>
@@ -66,8 +68,21 @@
         <h2 class="subtitle">
           A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
         </h2>
-        <button class="button is-primary is-rounded is">OPEN API</button>
+        <a href="https://app.swaggerhub.com/apis/mohsulthana/myAssets/1.0.0" target="_blank"
+          class="button is-primary is-rounded is">OPEN API</a>
       </div>
+    </section>
+
+    <section id="footer">
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
     </section>
   </main>
 </body>

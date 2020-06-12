@@ -141,7 +141,7 @@ var bangunanDatatable = function() {
       // columns definition
       columns: [{
           field: 'user_id',
-          title: '#',
+          title: 'No.',
           textAlign: 'center',
         },
         {

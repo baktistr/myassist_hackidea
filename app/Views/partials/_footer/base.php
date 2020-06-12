@@ -4,7 +4,7 @@
 	<div class="kt-container ">
 		<div class="kt-footer__bottom">
 			<div class="kt-footer__copyright">
-				<?= date("Y"); ?>&nbsp;&copy;&nbsp;<a href="<?= base_url();?>" target="_blank" class="kt-link">MyAssets</a>
+				<?= date("Y"); ?>&nbsp;&copy;&nbsp;<a href="<?= base_url();?>" target="_blank" class="kt-link">MyAssists: Repository</a>
 			</div>
 		</div>
 	</div>

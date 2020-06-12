@@ -528,17 +528,12 @@ var KTDashboard = function() {
 
         var color = Chart.helpers.color;
         var barChartData = {
-            labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug'],
+            labels: ['Regional 1', 'Regional 2', 'Regional 3', 'Regional 4'],
             datasets: [{
                 label: 'Sales',
                 backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
                 borderWidth: 0,
                 data: [20, 30, 40, 35, 45, 55, 45]
-            }, {
-                label: 'Orders',
-                backgroundColor: color(KTApp.getBaseColor('shape', 1)).alpha(1).rgbString(),
-                borderWidth: 0,
-                data: [25, 35, 45, 40, 50, 60, 50]
             }]
         };
 
@@ -632,17 +627,12 @@ var KTDashboard = function() {
         // chart 2
     
         var barChartData_2 = {
-            labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 Aug'],
+            labels: ['Regional 1', 'Regional 2', 'Regional 3', 'Regional 4'],
             datasets: [{
                 label: 'Sales',
                 backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
                 borderWidth: 0,
                 data: [20, 30, 40, 35, 45, 55, 45]
-            }, {
-                label: 'Orders',
-                backgroundColor: color(KTApp.getBaseColor('shape', 1)).alpha(1).rgbString(),
-                borderWidth: 0,
-                data: [25, 35, 45, 40, 50, 60, 50]
             }]
         };
 
