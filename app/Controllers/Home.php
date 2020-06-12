@@ -25,7 +25,14 @@ class Home extends BaseController
 		];
 		$asset_lahan = model('Lahan_model')->selectSum('luas_tanah')->get()->getRowArray();
 		$asset_bangunan = model('Lahan_model')->selectSum('luas_gedung')->get()->getRowArray();
-
+		$asset_mapping = model('Asset_mapping_model')->query("
+			SELECT 
+			area_regional, 
+		    count(IF(asset_mapping='q1', asset_mapping, NULL)) as q1,
+		    count(IF(asset_mapping='q2', asset_mapping, NULL)) as q2,
+		    count(IF(asset_mapping='q3', asset_mapping, NULL)) as q3,
+		    count(IF(asset_mapping='q4', asset_mapping, NULL)) as q4
+    			FROM asset_mapping JOIN lahan ON lahan.id_areal_fix_old=asset_mapping.id_areal GROUP BY area_regional")->getResultArray();
 		$data=[
 			'title' => 'Dashboard',
 			'isi' => 'pages/dashboard',
@@ -35,7 +42,10 @@ class Home extends BaseController
 			'asset_lahan' => $asset_lahan['luas_tanah'],
 			'asset_bangunan' => $asset_bangunan['luas_gedung']
 		];
-		
+		// echo '<pre>';
+		// var_dump($asset_mapping);
+		// echo '</pre>';
+		// return;
 		echo view('index', $data);
 	}
 
