@@ -93,6 +93,11 @@ $routes->group('api', ['filter' => 'AuthAPI'], function($routes){
 	$routes->resource('sertifikat', ['controller' => 'Api\Sertifikat', 'except' => 'new,edit']);
 });
 
+$routes->group('api', ['filter' => 'AuthAPIAdmin'], function($routes){
+	$routes->resource('asset_mapping', ['controller' => 'Api\AssetMapping', 'except' => 'new,edit']);
+	$routes->resource('riwayat_sengketa', ['controller' => 'Api\RiwayatSengketa', 'except' => 'new,edit']);
+});
+
 
 
 /**

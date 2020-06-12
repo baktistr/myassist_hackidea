@@ -5,7 +5,7 @@ use App\Filters\PostRequestOnly;
 use App\Filters\AuthAdmin;
 use App\Filters\IsLogin;
 use App\Filters\AuthAPI;
-// use App\Filters\AuthAPIAdmin;
+use App\Filters\AuthAPIAdmin;
 
 class Filters extends BaseConfig
 {
@@ -19,7 +19,7 @@ class Filters extends BaseConfig
 		'AuthAdmin'	=> AuthAdmin::class,
 		'IsLogin'	=> IsLogin::class,
 		'AuthAPI' => AuthAPI::class,
-		// 'AuthAPIAdmin' => AuthAPIAdmin::class,
+		'AuthAPIAdmin' => AuthAPIAdmin::class,
 	];
 
 	// Always applied before every request

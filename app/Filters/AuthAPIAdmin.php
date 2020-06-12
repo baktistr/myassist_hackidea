@@ -16,18 +16,17 @@ class AuthAPIAdmin implements FilterInterface
       
       try {
         $payload = $jwt->decode($token);
-      } catch (\Exception $e) {
-        $err = $e->getMessage();
+      } catch (\Exception $e) {        
         return $response->setStatusCode(401);
       }
       
       if(isset($payload['scopes'])) {
-        if($payload['scopes']->role == 'admin') {
+        if($payload['scopes']->role == 'admin' || $payload['scopes']->role == 'amc') {
           return;
         } 
       }
     }
-    return $response->setStatusCode(401)->setBody(print_r($payload));
+    return $response->setStatusCode(401);
   }
 
   //--------------------------------------------------------------------

@@ -17,9 +17,8 @@ class AuthAPI implements FilterInterface
       
       try {
         $payload = $jwt->decode($token);
-      } catch (\Exception $e) {
-        $err = $e->getMessage();
-        return $response->setStatusCode(401)->setBody('Invalid Token!');
+      } catch (\Exception $e) {        
+        return $response->setStatusCode(401);
       }
       
       if(isset($payload['scopes'])) {
@@ -34,10 +33,8 @@ class AuthAPI implements FilterInterface
           return;
         }
       }
-    } else {
-      return $response->setStatusCode(401)->setBody(var_dump($token));
-    }
-    return $response->setStatusCode(401)->setBody('aaa');
+    } 
+    return $response->setStatusCode(401);
   }
 
   //--------------------------------------------------------------------
