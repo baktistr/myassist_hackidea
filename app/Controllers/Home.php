@@ -40,7 +40,8 @@ class Home extends BaseController
 			'status_sertifikat_lahan' => $status_sertifikat_lahan,
 			'status_riwayat_sengketa' => $status_riwayat_sengketa,
 			'asset_lahan' => $asset_lahan['luas_tanah'],
-			'asset_bangunan' => $asset_bangunan['luas_gedung']
+			'asset_bangunan' => $asset_bangunan['luas_gedung'],
+			'asset_mapping'=>$asset_mapping
 		];
 		// echo '<pre>';
 		// var_dump($asset_mapping);
