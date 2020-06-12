@@ -155,6 +155,16 @@ var bangunanDatatable = function() {
         {
           field: 'role',
           title: 'Role',
+          template: function(row) {
+            var status = {
+              1: {'title': 'admin', 'state': 'danger'},
+              2: {'title': 'amc', 'state': 'primary'},
+              3: {'title': 'treg', 'state': 'accent'},
+              4: {'title': 'user', 'state': 'warning'},
+            };
+            return '<span class="kt-badge kt-badge--' + status[row.role].state + ' kt-badge--dot"></span>&nbsp;<span class="kt-font-bold kt-font-' + status[row.role].state + '">' +
+                status[row.role].title + '</span>';
+          }
         },
         {
           field: 'email',
@@ -167,7 +177,8 @@ var bangunanDatatable = function() {
           width: 110,
           overflow: 'visible',
           autoHide: false,
-          template: function(row) {
+          template: function(row, index, datatable) {
+            console.log(datatable);
             return '\
 						<a href="<?= base_url('user-control-edit-') ?>' + row.user_id + '" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
