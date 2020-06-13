@@ -99,7 +99,7 @@
                     <div class="kt-widget-13__desc">
                       <div class="kt-widget-9__chart">
                         <!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-                        <canvas id="aset_mapping" height="150"></canvas>
+                        <canvas id="aset_mapping" height="100"></canvas>
                       </div>
                     </div>
                   </div>
