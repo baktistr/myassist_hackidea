@@ -80,7 +80,7 @@
           <div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
             <div class="kt-slider__head">
               <div class="kt-slider__label">Aset Mapping</div>
-              <div class="kt-slider__nav">
+              <!-- <div class="kt-slider__nav">
                 <a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-2" role="button"
                   data-slide="prev">
                   <i class="fa fa-angle-left"></i>
@@ -89,13 +89,12 @@
                   data-slide="next">
                   <i class="fa fa-angle-right"></i>
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active kt-slider__body">
                 <div class="kt-widget-13">
-                  <div class="kt-widget-13__body">
-                    <h5 class="text-dark mb-4">Regional</h5>
+                  <div class="kt-widget-13__body">                    
                     <div class="kt-widget-13__desc">
                       <div class="kt-widget-9__chart">
                         <!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
