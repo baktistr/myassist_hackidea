@@ -77,7 +77,7 @@
         </div>
         <div class="form-group">
           <label for="dateAkhir">Akhir</label>
-          <input class="form-control" type="date" id="dateAkhir" name="akhir" value="<?= $sertifikat['akhir']; ?>">
+          <input class="form-control" type="date" id="dateAkhir" name="akhir" value="<?= $sertifikat['tanggal']; ?>">
         </div>
         <div class="form-group">
           <label for="dropdownStatusHGB">Status HGB</label>

@@ -71,7 +71,7 @@
         </div>
         <div class="form-group">
           <label for="dateAkhir">Akhir</label>
-          <input class="form-control" type="date" value="2037-01-18" id="dateAkhir" name="akhir">
+          <input class="form-control" type="date" value="2037-01-18" id="dateAkhir" name="tanggal">
         </div>
         <div class="form-group">
           <label for="dropdownStatusHGB">Status HGB</label>
