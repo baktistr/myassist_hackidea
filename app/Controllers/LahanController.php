@@ -22,18 +22,21 @@ class LahanController extends BaseController
 		echo view('index', $data);
 	}
 
-		public function show($id)
+	public function show($id_areal)
 	{
-		$record = $this->lahan->find($id);
-    if(empty($record)) {
-      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
-    }
-
+		$record = $this->lahan->where('id_areal_fix_old', $id_areal)->get()->getRowArray();
+	    if(empty($record)) {
+	      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+	    }
+	    $sertifikat = model('Sertifikat_model')->where('id_areal', $id_areal)->get()->getResultArray();
+	    $bangunan = model('Gedung_model')->where('id_areal_fix_old', $id_areal)->get()->getResultArray();
 		$data=[
 		  'title' => 'Edit Aset Lahan',
 		  'isi' => 'pages/asetLahanView',
 		  'subheader' => 'Asset Detail',
-		  'lahan' => $record
+		  'lahan' => $record,
+		  'sertifikat' => $sertifikat,
+		  'bangunan' => $bangunan
 		];
 		echo view('index', $data);
 	}

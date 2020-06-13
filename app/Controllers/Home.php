@@ -104,10 +104,14 @@ class Home extends BaseController
 		echo view('pages/landingPage');
 	}
 
-	public function showDetail()
+	public function showDetail($id_areal)
 	{	
-		$url = file_get_contents('http://myassistrepo.com/api/lahan/2144');
-		$aset = json_decode($url, TRUE);
+		$aset['lahan'] = model('Lahan_model')->where('id_areal_fix_old', $id_areal)->get()->getRowArray();
+	    if(empty($aset['lahan'])) {
+	      throw new \CodeIgniter\Database\Exceptions\DatabaseException();
+	    }
+	    $aset['sertifikat'] = model('Sertifikat_model')->where('id_areal', $id_areal)->get()->getResultArray();
+	    $aset['bangunan'] = model('Gedung_model')->where('id_areal_fix_old', $id_areal)->get()->getResultArray();
 
 		$data=[
 		  'title' => 'Edit Aset Lahan',
