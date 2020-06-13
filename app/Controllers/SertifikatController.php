@@ -63,7 +63,9 @@ class SertifikatController extends BaseController
       if($this->sertifikat->insert($data)) {
         $data['id'] = $this->sertifikat->getInsertID();
         $file_name = $data['no_sertifikat'].'_'.$data['kelurahan'].'_'.$data['id'].'.pdf';
-        $file->move('/sertifikat_file', $file_name);
+        $data['scan_sertifikat'] = $file_name;
+        $this->sertifikat->update($data['id'], $data);
+        $file->move('./sertifikat_file', $file_name);
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data', 'success');
       } else {
         $err = implode('<br>', $this->sertifikat->errors());        
@@ -77,12 +79,18 @@ class SertifikatController extends BaseController
   public function update($id)
   {
     $data = $this->request->getPost();
+    $file = $this->request->getFile('scan_sertifikat');
 
     if (!empty($data)) {
       if ($this->sertifikat->update($id, $data) === FALSE) {
         $err = implode('<br>', $this->sertifikat->errors());        
         return redirect()->to('/sertifikat-lahan-edit-'.$id)->with('msg', 'Fail to update data. <br>'.$err, 'warning'); 
       } else {
+        if($file && $file->getExtension()=='pdf') {                    
+          $file_name = $data['no_sertifikat'].'_'.$data['kelurahan'].'_'.$id.'.pdf';          
+          $file->move('./sertifikat_file', $file_name);          
+          $this->sertifikat->update($id, ['scan_sertifikat' => $file_name]);
+        }
         return redirect()->to('/sertifikat-lahan')->with('msg', 'Success to insert new data', 'danger');
       }
     }
