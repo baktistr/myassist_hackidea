@@ -177,18 +177,32 @@
   if (!document.getElementById('aset_mapping')) {
     return;
   }
-  var asset_mapping = <?= $asset_mapping; ?>
+    
+    var aset = <?php echo json_encode($asset_mapping); ?>;
+    var label = new Array();
+    for (var i = 0; i < aset.length; i++) {
+      label.push(`Regional ${aset[i].area_regional}`)
+    }
 
   var color = Chart.helpers.color;
   var barChartData = {
-    labels: ['Regional 1', 'Regional 2', 'Regional 3', 'Regional 4'],
-    datasets: [{
-      label: 'Sales',
-      backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
-      borderWidth: 0,
-      data: asset_mapping
-    }]
+    labels: label,
+    datasets: []
   };
+
+ for (var i = 0; i < aset.length + 1; i++) {
+    console.log(aset[i])
+    barChartData.labels = label,
+    barChartData.datasets.push(
+      {
+        label: `q${i + 1}`,
+        backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
+        borderWidth: 0,
+        data: [aset[i], aset[i], aset[i], aset[i]]
+      }
+    )
+  };
+  console.log(barChartData)
 
   var ctx = document.getElementById('aset_mapping').getContext('2d');
   var myBar = new Chart(ctx, {
