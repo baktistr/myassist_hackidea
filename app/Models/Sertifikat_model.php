@@ -43,7 +43,7 @@
 			'luas'				=> 'required',
 			'sk_hak'			=> 'required',
 			'jenis'				=> 'required',			
-			'tanggal'			=> 'required',
+			'akhir'				=> 'required',
 			'status_hgb'		=> 'required',
 			'loker'				=> 'required',
 			'bundel'			=> 'required',
