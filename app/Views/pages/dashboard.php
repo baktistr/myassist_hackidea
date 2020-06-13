@@ -192,11 +192,7 @@
       data_q3.push(item.q3)
       data_q4.push(item.q4)
     });
-    console.log(label_mapping)
-    console.log(data_q1)
-    console.log(data_q2)
-    console.log(data_q3)
-    console.log(data_q4)
+    
     var ctx = document.getElementById('aset_mapping').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
