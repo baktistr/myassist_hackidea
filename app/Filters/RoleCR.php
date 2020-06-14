@@ -4,17 +4,17 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
-class AuthAdmin implements FilterInterface
+class RoleCR implements FilterInterface
 {
     public function before(RequestInterface $request)
     {
         $token = session('token');
-        if(isset($token['role'])) {
-            if($token['role']!='admin') {
+
+        if(isset($token['role'])) {            
+            if($token['role']=='user') {
                 throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound(); 
             }    
         }
-        
     }
 
     //--------------------------------------------------------------------

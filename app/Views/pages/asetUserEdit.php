@@ -19,6 +19,10 @@
         <div class="form-group">
           <label>Email</label>
           <input type="email" class="form-control" placeholder="Masukkan email" name="email" value="<?= $user['email']; ?>">
+        </div> 
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Masukkan password" name="password">
         </div>
         <div class="form-group">
           <label>Role</label>

@@ -1,6 +1,7 @@
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 <!-- begin:: Content -->
 <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+	<?= session()->getFlashdata('msg') ? $_SESSION['msg'] : ''; ?>
   <div class="kt-portlet kt-portlet--mobile">
     <div class="kt-portlet__head kt-portlet__head--lg">
       <div class="kt-portlet__head-label">

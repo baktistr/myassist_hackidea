@@ -51,32 +51,32 @@ $routes->get('/home', 'Landing::index');
 $routes->get('/aset-lahan-create', 'LahanController::create');
 $routes->get('/aset-lahan-edit-(:segment)', 'LahanController::edit/$1');
 $routes->get('/aset-lahan-view-(:segment)', 'LahanController::show/$1');
-$routes->post('/aset-lahan-create', 'LahanController::store');
-$routes->post('/aset-lahan-edit-(:segment)', 'LahanController::update/$1');
-$routes->get('/aset-lahan-delete-(:segment)', 'LahanController::delete/$1');
+$routes->post('/aset-lahan-create', 'LahanController::store', ['filter' => 'RoleCR']);
+$routes->post('/aset-lahan-edit-(:segment)', 'LahanController::update/$1', ['filter' => 'RoleUD']);
+$routes->get('/aset-lahan-delete-(:segment)', 'LahanController::delete/$1', ['filter' => 'RoleUD']);
 
 //crud bangunan
 $routes->get('/aset-bangunan-create', 'BangunanController::create');
 $routes->get('/aset-bangunan-edit-(:segment)', 'BangunanController::edit/$1');
 $routes->get('/aset-bangunan-view-(:segment)', 'BangunanController::show/$1');
-$routes->post('/aset-bangunan-create', 'BangunanController::store');
-$routes->post('/aset-bangunan-edit-(:segment)', 'BangunanController::update/$1');
-$routes->get('/aset-bangunan-delete-(:segment)', 'BangunanController::delete/$1');
+$routes->post('/aset-bangunan-create', 'BangunanController::store', ['filter' => 'RoleCR']);
+$routes->post('/aset-bangunan-edit-(:segment)', 'BangunanController::update/$1', ['filter' => 'RoleUD']);
+$routes->get('/aset-bangunan-delete-(:segment)', 'BangunanController::delete/$1', ['filter' => 'RoleUD']);
 
 // crud sertifikat
 $routes->get('/sertifikat-lahan-create', 'SertifikatController::create');
 $routes->get('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::edit/$1');
 $routes->get('/sertifikat-lahan-view-(:segment)', 'SertifikatController::show/$1');
-$routes->post('/sertifikat-lahan-create', 'SertifikatController::store');
-$routes->post('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::update/$1');
-$routes->get('/sertifikat-lahan-delete-(:segment)', 'SertifikatController::delete/$1');
+$routes->post('/sertifikat-lahan-create', 'SertifikatController::store', ['filter' => 'RoleCR']);
+$routes->post('/sertifikat-lahan-edit-(:segment)', 'SertifikatController::update/$1', ['filter' => 'RoleUD']);
+$routes->get('/sertifikat-lahan-delete-(:segment)', 'SertifikatController::delete/$1', ['filter' => 'RoleUD']);
 
 //crud user
 $routes->get('/user-control-create', 'UserController::create');
 $routes->get('/user-control-edit-(:segment)', 'UserController::edit/$1');
-$routes->post('/user-control-create', 'UserController::store');
-$routes->post('/user-control-edit-(:segment)', 'UserController::update/$1');
-$routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1');
+$routes->post('/user-control-create', 'UserController::store', ['filter' => 'RoleCR']);
+$routes->post('/user-control-edit-(:segment)', 'UserController::update/$1', ['filter' => 'RoleUD']);
+$routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1', ['filter' => 'RoleUD']);
 
 //routes for API
 $routes->group('api', ['filter' => 'AuthAPI'], function($routes){

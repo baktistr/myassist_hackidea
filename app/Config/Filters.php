@@ -6,7 +6,8 @@ use App\Filters\AuthAdmin;
 use App\Filters\IsLogin;
 use App\Filters\AuthAPI;
 use App\Filters\AuthAPIAdmin;
-
+use App\Filters\RoleCR;
+use App\Filters\RoleUD;
 class Filters extends BaseConfig
 {
 	// Makes reading things below nicer,
@@ -20,6 +21,8 @@ class Filters extends BaseConfig
 		'IsLogin'	=> IsLogin::class,
 		'AuthAPI' => AuthAPI::class,
 		'AuthAPIAdmin' => AuthAPIAdmin::class,
+		'RoleCR' => RoleCR::class,
+		'RoleUD' => RoleUD::class,
 	];
 
 	// Always applied before every request
