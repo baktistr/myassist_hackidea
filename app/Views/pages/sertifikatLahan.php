@@ -10,39 +10,7 @@
       </div>
       <div class="kt-portlet__head-toolbar">
         <div class="kt-portlet__head-wrapper">
-          <div class="dropdown dropdown-inline">
-            <button type="button" class="btn btn-secondary btn-bold btn-upper btn-font-sm dropdown-toggle"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="la la-download"></i> Export
-            </button>
-            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-
-              <!--begin::Nav-->
-              <ul class="kt-nav">
-                <li class="kt-nav__head">
-                  Choose Export Type
-                  <i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right"
-                    title="Click to learn more..."></i>
-                </li>
-                <li class="kt-nav__separator"></li>
-                <li class="kt-nav__item">
-                  <a href="#" class="kt-nav__link">
-                    <i class="kt-nav__link-icon flaticon2-drop"></i>
-                    <span class="kt-nav__link-text">xlsx</span>
-                  </a>
-                </li>
-                <li class="kt-nav__item">
-                  <a href="#" class="kt-nav__link">
-                    <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
-                    <span class="kt-nav__link-text">pdf</span>
-                  </a>
-                </li>
-              </ul>
-
-              <!--end::Nav-->
-            </div>
-          </div>
-          &nbsp;
+          
           <?php if ($_SESSION['token']['role'] !== 'user') { ?>
           <a href="<?= base_url('/sertifikat-lahan-create');?>" class="btn btn-brand btn-bold btn-upper btn-font-sm">
             <i class="la la-plus"></i>
@@ -208,9 +176,11 @@ var sertifikatDatatable = function () {
 							<i class="la la-edit"></i>\
             </a>\
             <?php } ?>
+            <?php if ($_SESSION['token']['role'] != 'user' && $_SESSION['token']['role'] != 'treg') { ?>
 						<a id="'+row.sertifikat_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete"  data-toggle="modal" data-target="#deleteModal">\
 							<i class="la la-trash"></i>\
 						</a>\
+            <?php } ?>
 					';
 					},
 				}

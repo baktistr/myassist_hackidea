@@ -59,11 +59,11 @@ class Filters extends BaseConfig
 		// 		'/api/lahan',
 		// 	],
 		// ],
-		// 'AuthAdmin' => [
-		// 	'before' => [
-		// 		'user-control*',
-		// 	],
-		// ],
+		'AuthAdmin' => [
+			'before' => [
+				'user-control*',
+			],
+		],
 		// 'AuthAPI' => [
 		// 	'except' => [
 		// 		'/api/gettoken',

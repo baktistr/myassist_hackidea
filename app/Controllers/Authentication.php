@@ -28,7 +28,7 @@ class Authentication extends BaseController
 			$check = password_verify($password, $record['password']);
 			
 			if($check) {
-				$role = '';
+				$role = 'user';
 				switch ($record['role']) {
 					case 1:
 						$role = 'admin';
@@ -38,7 +38,7 @@ class Authentication extends BaseController
 						break;
 					case 3:
 						$role = 'treg';
-						break;
+						break;					
 					default:						
 						break;
 				}				
