@@ -26,12 +26,14 @@ class BangunanController extends BaseController
     if(empty($record)) {
       throw new \CodeIgniter\Database\Exceptions\DatabaseException();
     }
+    $lahan = model('App\Models\Lahan_model')->where('id_areal_fix_old', $record['id_areal_fix_old'])->first();
 
     $data=[
       'title' => 'Edit Aset Bangunan',
       'isi' => 'pages/asetBangunanView',
 		  'subheader' => 'Asset Detail',
-      'bangunan' => $record
+      'bangunan' => $record,
+      'lahan' => $lahan
     ];
     echo view('index', $data);
   }

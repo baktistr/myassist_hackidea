@@ -43,12 +43,14 @@ class SertifikatController extends BaseController
     if(empty($record)) {
       throw new \CodeIgniter\Database\Exceptions\DatabaseException();
     }
+    $lahan = model('App\Models\Lahan_model')->where('id_areal_fix_old', $record['id_areal'])->first();
 
     $data=[
       'title' => 'Edit Aset Bangunan',
       'isi' => 'pages/sertifikatLahanView',
 		  'subheader' => 'Asset Detail',
-      'sertifikat' => $record
+      'sertifikat' => $record,
+      'lahan' => $lahan
     ];
     echo view('index', $data);
   }
