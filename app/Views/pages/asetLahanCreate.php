@@ -1,5 +1,5 @@
 <style type="text/css">
-#map {
+#mapLahan {
   width: "100%";
   height: 300px;
 }
@@ -23,13 +23,12 @@
 
         <div class="form-group">
           <label>ID Areal</label>
-          <input type="text" class="form-control" name="id_areal_fix_old" placeholder="Enter id areal">
+          <input type="text" class="form-control" name="id_areal_fix_old" placeholder="Masukkan id areal">
 
         </div>
         <div class="form-group">
           <label>Nama Lahan</label>
-          <input type="text" class="form-control" placeholder="Enter nama lahan" name="nama_lahan">
-
+          <input type="text" class="form-control" placeholder="Masukkan nama lahan" name="nama_lahan" required>
         </div>
         <div class="form-group">
           <label>Alamat</label>
@@ -38,21 +37,21 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Provinsi</label>
-            <input type="text" class="form-control" placeholder="Enter provinsi" name="provinsi_nama">
+            <input type="text" class="form-control" placeholder="Masukkan provinsi" name="provinsi_nama">
           </div>
           <div class="form-group col-md-6">
             <label>Kota</label>
-            <input type="text" class="form-control" placeholder="Enter nama kota" name="kota_nama">
+            <input type="text" class="form-control" placeholder="Masukkan nama kota" name="kota_nama">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Kecamatan</label>
-            <input type="text" class="form-control" placeholder="Enter nama kecamatan" name="kecamatan_nama">
+            <input type="text" class="form-control" placeholder="Masukkan nama kecamatan" name="kecamatan_nama">
           </div>
           <div class="form-group col-md-6">
             <label>Desa</label>
-            <input type="text" class="form-control" placeholder="Enter nama desa" name="desa_nama">
+            <input type="text" class="form-control" placeholder="Masukkan nama desa" name="desa_nama">
           </div>
         </div>
         <div class="form-group">
@@ -65,7 +64,7 @@
         </div>
         <div class="form-group">
           <label>Penggunaan</label>
-          <input type="text" class="form-control" placeholder="Enter penggunaan" name="penggunaan">
+          <input type="text" class="form-control" placeholder="Masukkan penggunaan" name="penggunaan">
 
         </div>
         <div class="form-group">
@@ -107,7 +106,7 @@
         </div>
         <div class="form-group">
           <label>WITEL</label>
-          <input type="text" class="form-control" placeholder="Enter penggunaan" name="witel">
+          <input type="text" class="form-control" placeholder="Masukkan penggunaan" name="witel">
         </div>
         <div class="form-group">
           <label>Kode WITEL</label>
@@ -115,18 +114,19 @@
         </div>
         <div class="form-group">
           <label>Kode Lokasi</label>
-          <input type="text" class="form-control" placeholder="Enter kode lokasi (x-xx-xx-xx)" name="kode_lokasi">
+          <input type="text" class="form-control" placeholder="Masukkan kode lokasi (x-xx-xx-xx)" name="kode_lokasi">
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <div>
               <label>Long</label>
-              <input type="text" id="lng" class="form-control" readonly="yes" name="long">
+              <input type="text" id="lng" class="form-control" readonly="yes" name="long" required>
             </div>
             <div>
               <label>Lat</label>
-              <input type="text" id="lat" class="form-control" readonly="yes" name="lat">
+              <input type="text" id="lat" class="form-control" readonly="yes" name="lat" required>
             </div>
+            <small class="text-danger">Atur lat/long melalui peta.</small>
           </div>
           <div class="form-group col-md-6">
             <div id="map"></div>
@@ -136,7 +136,8 @@
       <div class="kt-portlet__foot">
         <div class="kt-form__actions">
           <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-secondary">Cancel</button>
+
+          <button type="reset" onclick="window.history.back();" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
     </form>

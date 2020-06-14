@@ -38,15 +38,16 @@
                   </a>
                 </li>
               </ul>
-
               <!--end::Nav-->
             </div>
           </div>
           &nbsp;
+          <?php if ($_SESSION['token']['role'] !== 'user') { ?>
           <a href="<?= base_url('/aset-lahan-create');?>" class="btn btn-brand btn-bold btn-upper btn-font-sm">
             <i class="la la-plus"></i>
             New Record
           </a>
+          <?php }; ?>
         </div>
       </div>
     </div>
@@ -184,13 +185,15 @@ var lahanDatatable = function () {
 					overflow: 'visible',
 					autoHide: false,
 					template: function(row) {
-						return '\
+            return '\
             <a href="<?= base_url('aset-lahan-view-') ?>'+row.id_areal_fix_old+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="See details">\
 							<i class="la la-eye"></i>\
-						</a>\
+            </a>\
+            <?php if ($_SESSION['token']['role'] === 'admin' || $_SESSION['token']['role'] === 'amc') { ?>
 						<a href="<?= base_url('aset-lahan-edit-') ?>'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit details">\
 							<i class="la la-edit"></i>\
-						</a>\
+            </a>\
+            <?php } ?>
 						<a id="'+row.lahan_id+'" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete"  data-toggle="modal" data-target="#deleteModal">\
               <i class="la la-trash"></i>\
             </a>\

@@ -140,6 +140,7 @@
               <label>Lat</label>
               <input type="text" id="lat" class="form-control" readonly="yes" name="lat" value="<?= $lahan['lat'];?>">
             </div>
+            <small class="text-danger">Jika ingin mengganti nilai di atas, klik pada peta.</small>
           </div>
           <div class="form-group col-md-6">
             <div id="map"></div>
@@ -149,7 +150,8 @@
       <div class="kt-portlet__foot">
         <div class="kt-form__actions">
           <button type="submit" class="btn btn-primary">Update</button>
-          <button type="reset" class="btn btn-secondary">Cancel</button>
+
+          <button type="reset" onclick="window.history.back();" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
     </form>

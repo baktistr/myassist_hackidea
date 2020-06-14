@@ -83,7 +83,8 @@
       <div class="kt-portlet__foot">
         <div class="">
           <button type="submit" class="btn btn-primary">Update</button>
-          <button type="reset" class="btn btn-secondary">Cancel</button>
+
+          <button type="reset" onclick="window.history.back();" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
     </form>

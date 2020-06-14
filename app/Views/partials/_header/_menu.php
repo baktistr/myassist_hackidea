@@ -24,11 +24,13 @@
         <a href="<?= base_url('/sertifikat-lahan');?>" class="kt-menu__link "><span
             class="kt-menu__link-text">Sertifikat</span></a>
       </div>
+      <?php if ($_SESSION['token']['role'] === 'admin') { ?>
       <div
         class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel <?= $subheader == 'User Control' ? 'kt-menu__item--here' : ''; ?>">
         <a href="<?= base_url('/user-control');?>" class="kt-menu__link "><span
             class="kt-menu__link-text">User Control</span></a>
       </div>
+      <?php } ?>
       <!-- <div
         class="kt-menu__item kt-menu__item--submenu kt-menu__item--rel <?= $subheader == 'User Control' ? 'kt-menu__item--here' : ''; ?>">
           <img src="<?php base_url() ?>assets/media/logos/brand-logo-crop.png" class="kt-header__brand-logo-default" style="height: 100%;"/>

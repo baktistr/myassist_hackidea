@@ -80,7 +80,7 @@
           <div id="kt-widget-slider-13-2" class="kt-slider carousel slide" data-ride="carousel" data-interval="6000">
             <div class="kt-slider__head">
               <div class="kt-slider__label">Aset Mapping</div>
-              <!-- <div class="kt-slider__nav">
+              <div class="kt-slider__nav">
                 <a class="kt-slider__nav-prev carousel-control-prev" href="#kt-widget-slider-13-2" role="button"
                   data-slide="prev">
                   <i class="fa fa-angle-left"></i>
@@ -89,16 +89,17 @@
                   data-slide="next">
                   <i class="fa fa-angle-right"></i>
                 </a>
-              </div> -->
+              </div>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active kt-slider__body">
                 <div class="kt-widget-13">
-                  <div class="kt-widget-13__body">                    
+                  <div class="kt-widget-13__body">
+                    <h5 class="text-dark mb-4">Regional</h5>
                     <div class="kt-widget-13__desc">
                       <div class="kt-widget-9__chart">
                         <!--Doc: For the chart initialization refer to "widgetSalesStatisticsChart" function in "src\theme\app\scripts\custom\dashboard.js" -->
-                        <canvas id="aset_mapping" height="100"></canvas>
+                        <canvas id="aset_mapping" height="250"></canvas>
                       </div>
                     </div>
                   </div>
@@ -173,69 +174,122 @@
 
   <script>
   var asetMappingChart = function() {
-    if (!document.getElementById('aset_mapping')) {
-      return;
+  if (!document.getElementById('aset_mapping')) {
+    return;
+  }
+    
+    var aset = <?php echo json_encode($asset_mapping); ?>;
+    var label = new Array();
+    for (var i = 0; i < aset.length; i++) {
+      label.push(`Regional ${aset[i].area_regional}`)
     }
-    
-    var json_mapping = <?= json_encode($asset_mapping) ?>;
-    
-    var label_mapping = [];
-    var data_q1 = [];
-    var data_q2 = [];
-    var data_q3 = [];
-    var data_q4 = [];
-    json_mapping.forEach(function(item, index){
-      label_mapping.push('Regional '+item.area_regional)
-      data_q1.push(item.q1)
-      data_q2.push(item.q2)
-      data_q3.push(item.q3)
-      data_q4.push(item.q4)
-    });
-    
-    var ctx = document.getElementById('aset_mapping').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: label_mapping,
-          datasets: [{
-              label: "q1",
-              backgroundColor: "#6e4ff5",
-              borderColor: "#6e4ff5",
-              borderWidth: 1,
-              data: data_q1
-          }, {
-              label: "q2",
-              backgroundColor: "#f6aa33",
-              borderColor: "#f6aa33",
-              borderWidth: 1,
-              data: data_q2
-          }, {
-              label: "q3",
-              backgroundColor: "#6bff33",
-              borderColor: "#6bff33",
-              borderWidth: 1,
-              data: data_q3
-          }, {
-              label: "q4",
-              backgroundColor: "#fc33ff",
-              borderColor: "#fc33ff",
-              borderWidth: 1,
-              data: data_q4
-          }]
-        },
-        options: {
-            responsive: !0,
-            legend: {
-                position: "top"
-            },
-            title: {
-                display: !0,
-                text: "Aset Mapping Chart"
-            }
+
+  var color = Chart.helpers.color;
+  var barChartData = {
+    labels: label,
+    datasets: []
+  };
+
+ for (var i = 0; i < aset.length + 1; i++) {
+    console.log(aset[i])
+    barChartData.labels = label,
+    barChartData.datasets.push(
+      {
+        label: `q${i + 1}`,
+        backgroundColor: color(KTApp.getStateColor('brand')).alpha(1).rgbString(),
+        borderWidth: 0,
+        data: [aset[i], aset[i], aset[i], aset[i]]
+      }
+    )
+  };
+
+  var ctx = document.getElementById('aset_mapping').getContext('2d');
+  var myBar = new Chart(ctx, {
+    type: 'bar',
+    data: barChartData,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scales: {
+        xAxes: [{
+          categoryPercentage: 0.35,
+          barPercentage: 0.70,
+          display: true,
+          scaleLabel: {
+            display: false,
+            labelString: 'Month'
+          },
+          gridLines: false,
+          ticks: {
+            display: true,
+            beginAtZero: true,
+            fontColor: KTApp.getBaseColor('shape', 3),
+            fontSize: 13,
+            padding: 10
+          }
+        }],
+        yAxes: [{
+          categoryPercentage: 0.35,
+          barPercentage: 0.70,
+          display: true,
+          scaleLabel: {
+            display: false,
+            labelString: 'Value'
+          },
+          gridLines: {
+            color: KTApp.getBaseColor('shape', 2),
+            drawBorder: false,
+            offsetGridLines: false,
+            drawTicks: false,
+            borderDash: [3, 4],
+            zeroLineWidth: 1,
+            zeroLineColor: KTApp.getBaseColor('shape', 2),
+            zeroLineBorderDash: [3, 4]
+          },
+          ticks: {
+            max: 70,
+            stepSize: 10,
+            display: true,
+            beginAtZero: true,
+            fontColor: KTApp.getBaseColor('shape', 3),
+            fontSize: 13,
+            padding: 10
+          }
+        }]
+      },
+      title: {
+        display: false
+      },
+      hover: {
+        mode: 'index'
+      },
+      tooltips: {
+        enabled: true,
+        intersect: false,
+        mode: 'nearest',
+        bodySpacing: 5,
+        yPadding: 10,
+        xPadding: 10,
+        caretPadding: 0,
+        displayColors: false,
+        backgroundColor: KTApp.getStateColor('brand'),
+        titleFontColor: '#ffffff',
+        cornerRadius: 4,
+        footerSpacing: 0,
+        titleSpacing: 0
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0,
+          top: 5,
+          bottom: 5
         }
-    });  
-    
-    };
+      }
+    }
+  });
+  };
   // end chart 2
   </script>
 

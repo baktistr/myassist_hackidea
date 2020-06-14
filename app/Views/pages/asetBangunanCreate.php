@@ -84,7 +84,8 @@
       <div class="kt-portlet__foot">
         <div class="">
           <button id="btn_submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-secondary">Cancel</button>
+
+          <button type="reset" onclick="window.history.back();" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
     </form>
