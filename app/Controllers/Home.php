@@ -78,7 +78,7 @@ class Home extends BaseController
 			'title' => 'Sertifikat Lahan',
 			'isi' => 'pages/sertifikatLahan',
 			'subheader' => 'Data Sertifikat',
-			'sertifikat' => model('sertifikat_model')->findAll()
+			'sertifikat' => model('Sertifikat_model')->findAll()
 		];
 		echo view('index', $data);
 	}
