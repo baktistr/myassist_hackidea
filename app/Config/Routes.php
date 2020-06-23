@@ -79,7 +79,7 @@ $routes->post('/user-control-edit-(:segment)', 'UserController::update/$1', ['fi
 $routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1', ['filter' => 'RoleUD']);
 
 //routes for API
-$routes->group('api', ['filter' => 'AuthAPI'], function($routes){
+$routes->group('api', function($routes){
 	//api lahan
 	$routes->resource('lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);
 	$routes->get('lahan/(:segment)', 'Api\Lahan::show/$1');
