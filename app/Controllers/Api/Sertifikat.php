@@ -15,7 +15,9 @@ class Sertifikat extends ResourceController
 
   public function index()
   {
-    return $this->respond($this->model->findAll());
+    $params_query = $this->request->getGet();      
+    $sertifikat = $this->model->join('lahan', 'lahan.id_areal_fix_old=id_areal')->like($params_query)->get()->getResultArray();
+    return $this->respond($sertifikat);
   }
 
   public function create()

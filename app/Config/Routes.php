@@ -82,6 +82,7 @@ $routes->get('/user-control-delete-(:segment)', 'UserController::delete/$1', ['f
 $routes->group('api', function($routes){
 	//api lahan
 	$routes->resource('lahan', ['controller' => 'Api\Lahan', 'except' => 'show,new,edit']);
+	$routes->get('lahan/id/(:segment)', 'Api\Lahan::show_lahan/$1');
 	$routes->get('lahan/(:segment)', 'Api\Lahan::show/$1');
 	$routes->get('lahan/(:segment)/sertifikat', 'Api\Lahan::show_sertifikat/$1');
 	$routes->get('lahan/(:segment)/bangunan', 'Api\Lahan::show_bangunan/$1');

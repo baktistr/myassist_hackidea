@@ -17,9 +17,18 @@ class Lahan extends ResourceController
 
   public function index()
   {        
-    $lahan = $this->model->get()->getResultArray();
-    
+    $params_query = $this->request->getGet();         
+    $lahan = $this->model->like($params_query)->get()->getResultArray();  
     return $this->respond($lahan);  
+  }
+
+  public function show_lahan($id_lahan=NULL)
+  {
+    $lahan = $this->model->where('lahan_id', $id_lahan)->get()->getRowArray();
+    if(empty($lahan)) {        
+      return $this->failNotFound('Lahan dengan id areal tidak ditemukan');      
+    }
+    return $this->respond($lahan);
   }
 
   public function show($id_areal=NULL)
