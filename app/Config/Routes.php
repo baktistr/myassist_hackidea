@@ -56,9 +56,9 @@ $routes->post('/aset-lahan-edit-(:segment)', 'LahanController::update/$1', ['fil
 $routes->get('/aset-lahan-delete-(:segment)', 'LahanController::delete/$1', ['filter' => 'RoleUD']);
 
 // get data wilayah
-$routes->get('/get-kota-(:segment)', 'LahanController::getKota/$1');
-$routes->get('/get-kecamatan-(:segment)', 'LahanController::getKecamatan/$1');
-$routes->get('/get-desa-(:segment)', 'LahanController::getDesa/$1');
+$routes->get('/get-kota-(:segment)', 'WilayahController::getKota/$1');
+$routes->get('/get-kecamatan-(:segment)', 'WilayahController::getKecamatan/$1');
+$routes->get('/get-desa-(:segment)', 'WilayahController::getDesa/$1');
 
 //crud bangunan
 $routes->get('/aset-bangunan-create', 'BangunanController::create');

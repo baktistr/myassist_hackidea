@@ -24,21 +24,32 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Provinsi</label>
-            <input type="text" class="form-control" name="provinsi" placeholder="Enter provinsi">
+            <select name="provinsi" id="provinsi_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+              <?php foreach ($provinsi as $key => $value) { ?>
+              <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+              <?php } ?>
+            </select>
           </div>
           <div class="form-group col-md-6">
             <label>Kodya</label>
-            <input type="text" class="form-control" placeholder="Enter nama kodya" name="kodya">
+            <select name="kodya" id="kota_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Kecamatan</label>
-            <input type="text" class="form-control" placeholder="Enter nama kecamatan" name="kecamatan">
+            <select name="kecamatan" id="kecamatan_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
           <div class="form-group col-md-6">
             <label>Kelurahan</label>
-            <input type="text" class="form-control" placeholder="Enter nama kelurahan" name="kelurahan">
+            <select name="kelurahan" id="desa_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
@@ -121,3 +132,67 @@
 </div>
 
 <!-- end:: Content -->
+
+<script>
+$(document).ready(function() {
+  $("#provinsi_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-kota-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#kota_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+
+  $("#kota_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-kecamatan-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#kecamatan_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+
+  $("#kecamatan_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-desa-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#desa_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+});
+</script>

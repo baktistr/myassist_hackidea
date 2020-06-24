@@ -2,12 +2,14 @@
 namespace App\Controllers;
 
 use App\Models\Sertifikat_model;
+use App\Models\Provinsi_model;
 
 class SertifikatController extends BaseController
 {
   public function __construct() 
 	{
-		$this->sertifikat = new Sertifikat_model();
+    $this->sertifikat = new Sertifikat_model();
+		$this->provinsi = new Provinsi_model();
 	}
 
   public function create()
@@ -15,7 +17,8 @@ class SertifikatController extends BaseController
     $data=[
       'title' => 'Create Sertifikat Lahan',
       'isi' => 'pages/sertifikatLahanCreate',
-      'subheader' => 'Data Asset Sertifikat'
+      'subheader' => 'Data Asset Sertifikat',
+			'provinsi' => $this->provinsi->findAll()
     ];
     echo view('index', $data);
   }
