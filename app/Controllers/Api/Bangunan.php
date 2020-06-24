@@ -15,7 +15,9 @@ class Bangunan extends ResourceController
 
   public function index()
   {
-    return $this->respond($this->model->findAll());
+    $params_query = $this->request->getGet();         
+    $bangunan = $this->model->like($params_query)->get()->getResultArray();
+    return $this->respond($bangunan);
   }
 
   public function create()

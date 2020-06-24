@@ -16,7 +16,7 @@ class Lahan extends ResourceController
   protected $format       = 'json';
 
   public function index()
-  {        
+  { 
     $params_query = $this->request->getGet();         
     $lahan = $this->model->like($params_query)->get()->getResultArray();  
     return $this->respond($lahan);  
