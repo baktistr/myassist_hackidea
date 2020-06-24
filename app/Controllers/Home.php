@@ -2,6 +2,7 @@
 
 use App\Models\Gedung_model;
 use App\Models\Sertifikat_model;
+use App\Models\Provinsi_model;
 use App\Models\Lahan_model;
 use App\Models\User_model;
 use App\Models\Riwayat_sengketa_model;
