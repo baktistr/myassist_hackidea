@@ -2,6 +2,10 @@
 namespace App\Controllers;
 
 use App\Models\Lahan_model;
+use App\Models\Provinsi_model;
+use App\Models\Kabupaten_model;
+use App\Models\Kecamatan_model;
+use App\Models\Desa_model;
 use App\Models\Sertifikat_model;
 use App\Models\Gedung_model;
 
@@ -9,7 +13,11 @@ class LahanController extends BaseController
 {	
 	public function __construct() 
 	{
-		$this->lahan = new Lahan_model();	
+		$this->lahan = new Lahan_model();
+		$this->provinsi = new Provinsi_model();
+		$this->kabupaten = new Kabupaten_model();
+		$this->kecamatan = new Kecamatan_model();
+		$this->desa = new Desa_model();
 	}
 
 	public function create()
@@ -17,7 +25,8 @@ class LahanController extends BaseController
 		$data=[
 			'title' => 'Aset Lahan',
 			'isi' => 'pages/asetLahanCreate',
-      'subheader' => 'Data Asset Lahan'
+			'subheader' => 'Data Asset Lahan',
+			'provinsi' => $this->provinsi->findAll()
 		];
 		echo view('index', $data);
 	}
@@ -97,6 +106,24 @@ class LahanController extends BaseController
 	    } else {
 	      return redirect()->to('/aset-lahan')->with('msg','Data is not exist', 'dark');
 	    }
+	}
+
+	public function getKota($id)
+	{
+		$kabupaten = model('Kabupaten_model')->where('province_id', $id)->findAll();
+		echo json_encode($kabupaten);
+	}
+
+	public function getKecamatan($id)
+	{
+		$kecamatan = model('Kecamatan_model')->where('regency_id', $id)->findAll();
+		echo json_encode($kecamatan);
+	}
+
+	public function getDesa($id)
+	{
+		$desa = model('Desa_model')->where('district_id', $id)->findAll();
+		echo json_encode($desa);
 	}
 	//--------------------------------------------------------------------
 }

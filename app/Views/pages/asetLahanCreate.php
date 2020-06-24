@@ -3,6 +3,7 @@
   width: "100%";
   height: 300px;
 }
+
 </style>
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 
@@ -37,21 +38,32 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Provinsi</label>
-            <input type="text" class="form-control" placeholder="Masukkan provinsi" name="provinsi_nama">
+            <select name="provinsi_nama" id="provinsi_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+              <?php foreach ($provinsi as $key => $value) { ?>
+              <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+              <?php } ?>
+            </select>
           </div>
           <div class="form-group col-md-6">
             <label>Kota</label>
-            <input type="text" class="form-control" placeholder="Masukkan nama kota" name="kota_nama">
+            <select name="kota_nama" id="kota_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Kecamatan</label>
-            <input type="text" class="form-control" placeholder="Masukkan nama kecamatan" name="kecamatan_nama">
+            <select name="kecamatan_nama" id="kecamatan_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
           <div class="form-group col-md-6">
             <label>Desa</label>
-            <input type="text" class="form-control" placeholder="Masukkan nama desa" name="desa_nama">
+            <select name="desa_nama" id="desa_nama" class="form-control">
+              <option value="0">-PILIH-</option>
+            </select>
           </div>
         </div>
         <div class="form-group">
@@ -136,7 +148,6 @@
       <div class="kt-portlet__foot">
         <div class="kt-form__actions">
           <button type="submit" class="btn btn-primary">Submit</button>
-
           <button type="reset" onclick="window.history.back();" class="btn btn-secondary">Cancel</button>
         </div>
       </div>
@@ -147,3 +158,67 @@
 </div>
 
 <!-- end:: Content -->
+
+<script>
+$(document).ready(function() {
+  $("#provinsi_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-kota-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#kota_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+
+  $("#kota_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-kecamatan-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#kecamatan_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+
+  $("#kecamatan_nama").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-desa-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          html += `<option value="${data[i].id}">${data[i].name}</option>`;
+        }
+        $('#desa_nama').html(html);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+});
+</script>
