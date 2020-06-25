@@ -59,6 +59,7 @@ $routes->get('/aset-lahan-delete-(:segment)', 'LahanController::delete/$1', ['fi
 $routes->get('/get-kota-(:segment)', 'WilayahController::getKota/$1');
 $routes->get('/get-kecamatan-(:segment)', 'WilayahController::getKecamatan/$1');
 $routes->get('/get-desa-(:segment)', 'WilayahController::getDesa/$1');
+$routes->get('/get-witel-(:segment)', 'WilayahController::getIdWitel/$1');
 
 //crud bangunan
 $routes->get('/aset-bangunan-create', 'BangunanController::create');

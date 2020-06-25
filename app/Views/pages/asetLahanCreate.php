@@ -114,15 +114,21 @@
         </div>
         <div class="form-group">
           <label>Kode Provinsi</label>
-          <input type="number" class="form-control" value="12" name="kode_prov">
+          <input type="number" class="form-control" id="kode_prov" placeholder="Pilih provinsi terlebih dahulu" readonly
+            name="kode_prov">
         </div>
         <div class="form-group">
           <label>WITEL</label>
-          <input type="text" class="form-control" placeholder="Masukkan penggunaan" name="witel">
+          <select name="witel" id="witel" class="form-control">
+            <?php foreach($witel as $key => $value) { ?>
+            <option value="<?= $value['witel'];?>"> <?= $value['witel']; ?></option>
+            <?php } ?>
+          </select>
         </div>
         <div class="form-group">
           <label>Kode WITEL</label>
-          <input type="number" class="form-control" value="16" name="kode_witel">
+          <input type="number" class="form-control" id="kode_witel" readonly name="kode_witel"
+            placeholder="Pilih witel terlebih dahulu">
         </div>
         <div class="form-group">
           <label>Kode Lokasi</label>
@@ -161,6 +167,26 @@
 
 <script>
 $(document).ready(function() {
+  $("#witel").change(function() {
+    var id = $(this).val();
+    $.ajax({
+      url: "<?= base_url();?>/get-witel-" + id,
+      method: "GET",
+      async: false,
+      dataType: 'json',
+      success: (data) => {
+        var kd_witel = ''
+        for (var i = 0; i < data.length; i++) {
+          kd_witel = data[i].id_witel;
+        }
+        $('#kode_witel').val(kd_witel);
+      },
+      error: (error) => {
+        console.error(error)
+      }
+    })
+  })
+
   $("#provinsi_nama").change(function() {
     var id = $(this).val();
     $.ajax({
@@ -170,9 +196,12 @@ $(document).ready(function() {
       dataType: 'json',
       success: (data) => {
         var html = '';
+        var kd_provinsi = ''
         for (var i = 0; i < data.length; i++) {
+          kd_provinsi = data[i].province_id
           html += `<option value="${data[i].id}">${data[i].name}</option>`;
         }
+        $('#kode_prov').val(kd_provinsi)
         $('#kota_nama').html(html);
       },
       error: (error) => {
