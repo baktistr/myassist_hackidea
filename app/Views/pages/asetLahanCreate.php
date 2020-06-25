@@ -1,5 +1,5 @@
 <style type="text/css">
-#mapLahan {
+#map {
   width: "100%";
   height: 300px;
 }
