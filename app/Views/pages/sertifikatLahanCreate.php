@@ -65,8 +65,12 @@
           </select>
         </div>
         <div class="form-group">
-          <label>WITEL</label>
-          <input type="text" class="form-control" placeholder="Enter WITEL" name="witel">
+          <label>Witel</label>
+          <select name="witel" id="witel" class="form-control">
+            <?php foreach($witel as $key => $value) { ?>
+            <option value="<?= $value['witel'];?>"> <?= $value['witel']; ?></option>
+            <?php } ?>
+          </select>
         </div>
         <div class="form-group">
           <label>Luas</label>

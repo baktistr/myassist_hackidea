@@ -118,7 +118,7 @@
             name="kode_prov">
         </div>
         <div class="form-group">
-          <label>WITEL</label>
+          <label>Witel</label>
           <select name="witel" id="witel" class="form-control">
             <?php foreach($witel as $key => $value) { ?>
             <option value="<?= $value['witel'];?>"> <?= $value['witel']; ?></option>

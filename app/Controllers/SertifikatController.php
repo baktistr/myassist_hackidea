@@ -3,13 +3,21 @@ namespace App\Controllers;
 
 use App\Models\Sertifikat_model;
 use App\Models\Provinsi_model;
+use App\Models\Kabupaten_model;
+use App\Models\Kecamatan_model;
+use App\Models\Desa_model;
+use App\Models\Witel_model;
 
 class SertifikatController extends BaseController
 {
   public function __construct() 
 	{
     $this->sertifikat = new Sertifikat_model();
-		$this->provinsi = new Provinsi_model();
+    $this->provinsi = new Provinsi_model();
+    $this->kota = new Kabupaten_model();
+		$this->kecamatan = new Kecamatan_model();
+		$this->desa = new Desa_model();
+		$this->witel = new Witel_model();
 	}
 
   public function create()
@@ -18,7 +26,8 @@ class SertifikatController extends BaseController
       'title' => 'Create Sertifikat Lahan',
       'isi' => 'pages/sertifikatLahanCreate',
       'subheader' => 'Data Asset Sertifikat',
-			'provinsi' => $this->provinsi->findAll()
+      'provinsi' => $this->provinsi->findAll(),
+			'witel' => $this->witel->findAll(),
     ];
     echo view('index', $data);
   }
@@ -63,6 +72,16 @@ class SertifikatController extends BaseController
   {
     $data = $this->request->getPost();
     $file = $this->request->getFile('scan_sertifikat');
+
+    $provinsi = $this->provinsi->select('name')->where('id', $this->request->getVar('provinsi'))->first();
+		$kota = $this->kota->select('name')->where('id', $this->request->getVar('kodya'))->first();
+		$kecamatan = $this->kecamatan->select('name')->where('id', $this->request->getVar('kecamatan'))->first();
+    $desa = $this->desa->select('name')->where('id', $this->request->getVar('kelurahan'))->first();
+    
+    $data['provinsi'] = $provinsi['name'];
+		$data['kodya']	= $kota['name'];
+		$data['kecamatan']	= $kecamatan['name'];
+    $data['kelurahan']	= $desa['name'];
 
     if($file && $file->getExtension()=='pdf') {      
       if($this->sertifikat->insert($data)) {
