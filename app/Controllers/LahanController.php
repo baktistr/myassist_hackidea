@@ -3,6 +3,10 @@ namespace App\Controllers;
 
 use App\Models\Lahan_model;
 use App\Models\Provinsi_model;
+use App\Models\Kabupaten_model;
+use App\Models\Kecamatan_model;
+use App\Models\Desa_model;
+use App\Models\Witel_model;
 use App\Models\Sertifikat_model;
 use App\Models\Gedung_model;
 
@@ -12,6 +16,10 @@ class LahanController extends BaseController
 	{
 		$this->lahan = new Lahan_model();
 		$this->provinsi = new Provinsi_model();
+		$this->kota = new Kabupaten_model();
+		$this->kecamatan = new Kecamatan_model();
+		$this->desa = new Desa_model();
+		$this->witel = new Witel_model();
 	}
 
 	public function create()
@@ -20,7 +28,8 @@ class LahanController extends BaseController
 			'title' => 'Aset Lahan',
 			'isi' => 'pages/asetLahanCreate',
 			'subheader' => 'Data Asset Lahan',
-			'provinsi' => $this->provinsi->findAll()
+			'provinsi' => $this->provinsi->findAll(),
+			'witel' => $this->witel->findAll(),
 		];
 		echo view('index', $data);
 	}
@@ -65,6 +74,17 @@ class LahanController extends BaseController
 	public function store()
 	{			
 		$data = $this->request->getPost();
+		
+		$provinsi = $this->provinsi->select('name')->where('id', $this->request->getVar('provinsi_nama'))->first();
+		$kota = $this->kota->select('name')->where('id', $this->request->getVar('kota_nama'))->first();
+		$kecamatan = $this->kecamatan->select('name')->where('id', $this->request->getVar('kecamatan_nama'))->first();
+		$desa = $this->desa->select('name')->where('id', $this->request->getVar('desa_nama'))->first();
+
+		
+		$data['provinsi_nama'] = $provinsi['name'];
+		$data['kota_nama']	= $kota['name'];
+		$data['kecamatan_nama']	= $kecamatan['name'];
+		$data['desa_nama']	= $desa['name'];
 		
 		if(!empty($data)) {
 			if($this->lahan->insert($data) === FALSE) {	
