@@ -1,5 +1,5 @@
 <style type="text/css">
-#map {
+#mapBangunan {
   width: "100%";
   height: 300px;
 }
@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="form-group col-md-6">
-            <div id="map"></div>
+            <div id="mapBangunan"></div>
           </div>
         </div>
       </div>
@@ -94,3 +94,9 @@
 </div>
 
 <!-- end:: Content -->
+
+<script>
+var currentLat = <?= $bangunan['lat']; ?>;
+var currentLong = <?= $bangunan['long']; ?>;
+</script>
+<script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/mapBangunan.js"></script>

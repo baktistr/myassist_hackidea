@@ -1,5 +1,5 @@
 <style type="text/css">
-#map {
+#mapLahan {
   width: "100%";
   height: 300px;
 }
@@ -147,7 +147,7 @@
             <small class="text-danger">Atur lat/long melalui peta.</small>
           </div>
           <div class="form-group col-md-6">
-            <div id="map"></div>
+            <div id="mapLahan"></div>
           </div>
         </div>
       </div>
@@ -251,3 +251,5 @@ $(document).ready(function() {
   })
 });
 </script>
+
+<script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/mapLahan.js"></script>

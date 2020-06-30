@@ -1,8 +1,9 @@
 <style type="text/css">
-#map {
+#mapLahan {
   width: "100%";
   height: 300px;
 }
+
 </style>
 <?php echo view('./partials/_subheader/subheader-v1.php'); ?>
 
@@ -143,7 +144,7 @@
             <small class="text-danger">Jika ingin mengganti nilai di atas, klik pada peta.</small>
           </div>
           <div class="form-group col-md-6">
-            <div id="map"></div>
+            <div id="mapLahan"></div>
           </div>
         </div>
       </div>
@@ -161,3 +162,10 @@
 </div>
 
 <!-- end:: Content -->
+
+<script>
+var currentLat = <?= $lahan['lat']; ?>;
+var currentLong = <?= $lahan['long']; ?>;
+</script>
+
+<script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/mapLahan.js"></script>

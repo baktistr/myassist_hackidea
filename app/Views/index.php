@@ -28,12 +28,6 @@ License: You must have a valid license purchased only from https://themes.getboo
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
 
 
-  <!--begin::Page Vendors Styles(used by this page) -->
-  <link href="<?php base_url() ?>assets/plugins/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet"
-    type="text/css" />
-
-  <!--end::Page Vendors Styles -->
-
   <!--begin::Global Theme Styles(used by all pages) -->
   <link href="<?php base_url() ?>assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
   <link href="<?php base_url() ?>assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
@@ -100,27 +94,13 @@ License: You must have a valid license purchased only from https://themes.getboo
 
   <!--end::Global Theme Bundle -->
 
-  <!--begin::Page Vendors(used by this page) -->
-  <script src="<?php base_url() ?>assets/plugins/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript">
-  </script>
-
-  <!--end::Page Vendors -->
-
   <!--begin::Page Scripts(used by this page) -->
   <script src="<?php base_url() ?>assets/js/pages/dashboard.js" type="text/javascript"></script>
-
-  <!--begin::Page Scripts(used by this page) -->
-  <script src="<?php base_url() ?>assets/js/pages/components/charts/flotcharts.js" type="text/javascript"></script>
-
-  <!--begin::Page Vendors(used by this page) -->
-  <script src="<?php base_url() ?>assets/plugins/custom/flot/flot.bundle.js" type="text/javascript"></script>
-
-
   <!-- SERTIFIKAT KEEN DATATABLE -->
   <!--begin::Page Scripts(used by this page) -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpXF0AVZRKfHJj3H9fv-0OOgGNaN6ROj8&callback=initMap"
     type="text/javascript"></script>
-  <script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/map.js"></script>
+  <!-- <script type="text/javascript" src="<?php base_url() ?>assets/js/pages/components/maps/map.js"></script> -->
   <!--end::Page Scripts -->
 
 </body>
